@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-19T19:33:27Z",
- "decision_time_local": "2026-11-19T19:33:27",
+ "generated_at": "2026-11-19T19:36:36Z",
+ "decision_time_local": "2026-11-19T19:36:36",
  "night": {
   "from": "2026-11-19 18:00:00",
   "to": "2026-11-20 08:00:00"
@@ -3145,7 +3145,7 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-19T19:33:27Z",
+   "fetched_at": "2026-11-19T19:36:36Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {
