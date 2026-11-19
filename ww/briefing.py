@@ -9,13 +9,15 @@ def template_briefing(f):
     else:
         lines.append("Recommendation: NO GRITTING NEEDED on current forecast.")
     if f.get("first_departure"):
-        lines.append(f"First truck should leave at {f['first_departure']} ({f['first_route']}).")
+        lines.append(f"First truck leaves the yard at {f['first_departure']} and starts on {f['first_route']}.")
     if f.get("coldest_route"):
         lines.append(f"Coldest route is {f['coldest_route']} with a forecast road surface minimum of {f['coldest_ts']} C.")
     if f["n_review"]:
         lines.append(f"{f['n_review']} routes are flagged REVIEW because the rules engine and the trained model disagree.")
-    if f.get("peak_trucks", 0) > f.get("trucks_available", 99):
-        lines.append(f"The plan needs {f['peak_trucks']} trucks at once but only {f['trucks_available']} are available, so departures need staggering.")
+    if f.get("n_late", 0) > 0:
+        lines.append(f"Even with all {f['trucks_available']} trucks, {f['n_late']} routes cannot be finished before ice is forecast, so Priority 1 should go first.")
+    elif f.get("trucks_used"):
+        lines.append(f"The plan uses {f['trucks_used']} of {f['trucks_available']} trucks.")
     lines.append(f"Confidence is {f['confidence']}: the rules engine and the trained model agree on most routes." if f["confidence"] != "LOW" else "Confidence is LOW: the rules engine and the trained model disagree on many routes, so check the flagged routes.")
     lines.append("This is a recommendation only. The Duty Engineer makes the final decision.")
     return " ".join(lines)

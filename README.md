@@ -10,6 +10,8 @@ Live page: `https://<your-username>.github.io/winter-watch/`
 - `ww/engine.py`: rules engine (lapse rate, surface temp estimate, GO / MARGINAL / NO-GO, departure time)
 - `scripts/backtest_and_train.py`: backtest and cross-check logistic regression model (held-out winters)
 - `scripts/build_senior.py`: route promotion analysis
+- `ww/scheduler.py`: assigns roads to trucks as chained runs, each finished before forecast ice
+- `scripts/apply_official_list.py`: applies Cavan County Council's designated Priority 1 and 2 routes
 - `scripts/run_forecast.py`: live forecast, decision, briefing, writes `docs/data/latest.json`
 - `.github/workflows/forecast.yml`: runs daily in the afternoon. The AI key lives only in GitHub Secrets and is read only by this job. The browser only ever sees the finished JSON.
 

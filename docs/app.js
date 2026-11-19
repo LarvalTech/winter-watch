@@ -27,8 +27,8 @@ function duty() {
   const f = L.facts;
   const PL = L.routes.filter(r => r.designated);
   const go = PL.filter(r => r.status === "GO"), mg = PL.filter(r => r.status === "MARGINAL");
-  const first = go.filter(r => r.depart).sort((x, y) => x.depart.localeCompare(y.depart))[0];
-  const verdict = {GO: ["❄", "GRIT TONIGHT", first ? `First truck out at <b>${first.depart}</b> on ${first.ref}. ${go.length} routes need gritting.` : `${go.length} routes need gritting.`],
+  const T = L.trucks || [], first = T[0];
+  const verdict = {GO: ["❄", "GRIT TONIGHT", first ? `First truck leaves the yard at <b>${first.leaves_yard}</b>. ${go.length} routes need gritting, using <b>${L.fleet.trucks_used} of ${L.fleet.trucks_available}</b> trucks.` : `${go.length} routes need gritting.`],
     MARGINAL: ["⚠", "BORDERLINE · YOUR CALL", `No route is clearly icy, but ${mg.length} are borderline. Check the routes below and decide.`],
     "NO-GO": ["✓", "NO GRITTING NEEDED", "No route is forecast to reach icy conditions tonight."]}[L.decision];
   $("#banner").className = "b-" + L.decision;
@@ -42,26 +42,42 @@ function duty() {
   const tile = (big, label, sub, cls = "") => `<div class="tile ${cls}"><div class="big">${big}</div><div class="lab">${label}</div><div class="sub">${sub}</div></div>`;
   $("#tiles").innerHTML =
     tile(`${n(go.length, "", "S5")}<span class="of"> / ${PL.length}</span>`, "routes to grit", `${n(mg.length, "", "S5")} borderline`, go.length ? "t-GO" : "t-NO-GO") +
-    tile(first ? n(first.depart, "", "S1", "S5") : "–", "first truck leaves", first ? `${first.ref} ${first.name}` : "no departures needed") +
+    tile(first ? n(first.leaves_yard, "", "S1", "S5") : "–", "first truck leaves", first ? `Truck 1 starts on ${first.stops[0].ref}` : "no departures needed") +
     tile(n(cold.surface_min_c, "°C", "S1", "S4", "S5"), "coldest road surface", `${cold.ref} ${cold.name}`) +
     tile(n(L.facts.n_review, "", "S5", "S6"), "routes to review", L.facts.n_review ? "rules and model disagree" : "rules and model agree", L.facts.n_review ? "t-MARGINAL" : "");
-  const groups = {};
-  PL.filter(r => r.depart && r.status !== "NO-GO").forEach(r => (groups[r.depart] = groups[r.depart] || []).push(r));
-  const F = L.fleet;
-  const fleetNote = `<div class="fleet ${F.over_capacity ? "over" : ""}"><b>${F.over_capacity ? "⚠ More trucks needed than available." : "✓ Fits the fleet."}</b>
-    This plan has up to ${n(F.peak_trucks_needed, " trucks", "S5", "S7")} running at once (peak about ${F.peak_time}). The Machinery Yard has ${n(F.trucks_available, " trucks", "S7")} (plan ${F.edition}).
-    ${F.over_capacity ? "Stagger departures or start Priority 1 first." : ""} Each route is timed on its own, assuming a truck is free when needed.</div>`;
-  $("#timeline").innerHTML = Object.keys(groups).length ? fleetNote + `<h2>Truck departures tonight <span class="mute" style="font-weight:400">· ${fmtLocal(L.night.from)} to ${fmtLocal(L.night.to)} · click a route for detail</span></h2>` +
-    Object.keys(groups).sort().map(t => `<div class="trow"><span class="ttime">${t}</span><span>${groups[t].map(r =>
-      `<button class="rchip c-${r.status}" onclick="pick('${r.ref}')" title="${r.name}, ${r.length_km} km, ${r.status}">${r.ref}${r.priority === 1 ? " ★" : ""}${r.review ? " ⚑" : ""}</button>`).join("")}</span></div>`).join("") +
-    `<div class="mute" style="font-size:12px;margin-top:6px">★ Priority 1 route · ⚑ rules and model disagree · red = GO · amber = borderline</div>` : "";
+  const F = L.fleet, mins = t => { const [h, m] = t.split(":").map(Number); return (h < 12 ? h + 24 : h) * 60 + m; };
+  const hm = m => `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m`, A = F.assumptions;
+  const fleetNote = `<div class="fleet ${F.over_capacity ? "over" : ""}"><b>${F.over_capacity ? "⚠ Not every road can be finished before ice, even with all trucks: " + F.late_routes.join(", ") + "." : "✓ Fits the fleet."}</b>
+    Uses ${n(F.trucks_used, " of " + F.trucks_available + " trucks", "S5", "S7")}. Each truck does a chained run of several roads, longest ${n(hm(F.longest_run_min), "", "S5")}. The council quotes 4 to 6 hours for a run ${src("S9")}. Roads are treated just before ice is forecast, with a ${A.safety_margin_min} minute margin. ${F.over_capacity ? "Priority 1 roads were scheduled first." : ""}</div>`;
+  if (!T.length) { $("#timeline").innerHTML = ""; }
+  else {
+    const lo = Math.min(...T.map(t => mins(t.leaves_yard))) - 15, hi = Math.max(...T.map(t => mins(t.finish))) + 15, span = hi - lo, pos = m => ((m - lo) / span * 100).toFixed(2) + "%";
+    const ticks = []; for (let m = Math.ceil(lo / 60) * 60; m <= hi; m += 60) ticks.push(m);
+    const lane = t => {
+      let prev = mins(t.leaves_yard), seg = "";
+      t.stops.forEach(s => {
+        const st = mins(s.start), en = mins(s.end);
+        if (st > prev) seg += `<span class="drive" style="left:${pos(prev)};width:${((st - prev) / span * 100).toFixed(2)}%" title="Driving ${s.drive_min} min"></span>`;
+        seg += `<button class="seg c-${s.status}${s.late ? " late" : ""}" style="left:${pos(st)};width:${Math.max((en - st) / span * 100, 2.2).toFixed(2)}%" onclick="pick('${s.ref}')" title="${s.ref} ${s.name}: ${s.start} to ${s.end}, ice from ${s.ice_onset} (${s.slack_min} min to spare)">${s.ref}</button><span class="ice" style="left:${pos(mins(s.ice_onset))}" title="${s.ref} ice from ${s.ice_onset}">▾</span>`;
+        prev = en;
+      });
+      return `<div class="lane"><div class="lhead"><b>Truck ${t.truck}</b><span class="mute"> leaves ${t.leaves_yard}${t.leave_now ? " (now)" : ""}</span></div><div class="track">${ticks.map(m => `<i class="tick" style="left:${pos(m)}"></i>`).join("")}${seg}</div></div>`;
+    };
+    const rows = t => `<tr><td><b>Truck ${t.truck}</b></td><td>${n(t.leaves_yard, "", "S5")}</td><td>${n(t.finish, "", "S5")}</td><td>${n(hm(t.run_min), "", "S5")}</td><td>${n(t.km, " km", "S2")}</td>
+      <td>${t.stops.map(s => `<button class="rchip c-${s.status}" onclick="pick('${s.ref}')" title="${s.name}">${s.ref}${s.priority === 1 ? " ★" : ""}</button><span class="mute" style="font-size:12px">${s.start} to ${s.end}${s.drive_min >= 5 ? ", " + s.drive_min + " min drive" : ""}, ${s.slack_min} min spare</span>`).join(" → ")}</td></tr>`;
+    $("#timeline").innerHTML = fleetNote + `<h2>Truck plan tonight <span class="mute" style="font-weight:400">· ${fmtLocal(L.night.from)} to ${fmtLocal(L.night.to)} · click a road for detail</span></h2>
+      <div class="axis"><div class="lhead"></div><div class="track">${ticks.map(m => `<span class="tl" style="left:${pos(m)}">${String(Math.floor(m / 60) % 24).padStart(2, "0")}:00</span>`).join("")}</div></div>
+      ${T.map(lane).join("")}
+      <div class="mute" style="font-size:12px;margin:6px 0 10px">Coloured blocks = roads being treated (red GO, amber borderline) · grey = driving between roads · ▾ = when ice is forecast on that road · each truck starts at the yard (assumed Cavan town, exact location not published)</div>
+      <div class="scroll"><table class="lim"><tr><th>Truck</th><th>Leaves yard</th><th>Finishes</th><th>Run</th><th>Treats</th><th>Roads in order ★ = Priority 1</th></tr>${T.map(rows).join("")}</table></div>`;
+  }
   const b = L.briefing;
   $("#brief").innerHTML = `<h2>Written summary <span class="tag">${b.source === "llm" ? "AI-written · numbers validated" : "template (no AI)"}</span></h2><p class="mute">${b.text}</p>
     <p class="mute" style="font-size:12px">Every number in this text is checked against the computed data before display. ${b.detail}</p>`;
-  $("#plan").innerHTML = `<tr><th>Route</th><th>Class</th><th>Status</th><th>Depart</th><th>Surface min</th><th>Ice from</th><th>km</th><th>Model p</th></tr>` +
+  $("#plan").innerHTML = `<tr><th>Route</th><th>Class</th><th>Status</th><th>Truck · starts</th><th>Surface min</th><th>Ice from</th><th>km</th><th>Model p</th></tr>` +
     PL.map(r => `<tr class="row" data-ref="${r.ref}"><td><b>${r.ref}</b> <span class="mute">${r.name}</span></td><td>P${r.priority}</td>
     <td><span class="pill p-${r.status}">${r.status}</span>${r.review ? '<span class="chip" title="Rules engine and model disagree. Cautious call shown.">REVIEW</span>' : ""}</td>
-    <td>${r.depart ? n(r.depart + (r.depart_is_now ? " now" : ""), "", "S1", "S5") : "–"}</td><td>${n(r.surface_min_c, "°C", "S1", "S4", "S5")}</td>
+    <td>${r.depart ? "T" + r.truck + " · " + n(r.depart, "", "S1", "S5") : "–"}</td><td>${n(r.surface_min_c, "°C", "S1", "S4", "S5")}</td>
     <td>${r.ice_onset ? n(r.ice_onset, "", "S1", "S5") : "–"}</td><td>${n(r.length_km, "", "S2")}</td><td>${n(r.model_prob, "", "S3", "S6")}</td></tr>`).join("");
   document.querySelectorAll("#plan tr.row").forEach(tr => tr.onclick = () => pick(tr.dataset.ref));
   if (!MAP) {
@@ -135,7 +151,8 @@ function method() {
   <li>Forecast air temperature and dew point are adjusted to each route's elevation (${T.lapse_air_c_per_m} °C/m air, ${T.lapse_dew_c_per_m} °C/m dew point).</li>
   <li>Road surface temperature is <b>estimated</b>, not measured: air temperature minus up to ${T.clear_sky_cooling_c} °C of night-time cooling on clear, calm nights.</li>
   <li><b>GO</b>: surface ≤ ${T.go_surface_c} °C while damp (rain, or air within ${T.moist_depression_c} °C of dew point). <b>MARGINAL</b>: cold but dry, or ≤ ${T.marginal_surface_c} °C and damp. Otherwise NO-GO.</li>
-  <li>Departure = ice onset minus drive time (route length at ${T.truck_speed_kmh} km/h) minus ${T.mobilise_min} min mobilisation.</li>
+  <li><b>Truck plan:</b> each road gets a deadline, its forecast ice onset minus ${L.fleet.assumptions.safety_margin_min} minutes. Roads are assigned to trucks, Priority 1 first, and each truck chains several roads in deadline order, driving between them. A road is treated at ${L.fleet.assumptions.treat_kmh} km/h (this includes turning and salt reloads), the driving between roads is straight-line distance x ${L.fleet.assumptions.road_factor} at ${L.fleet.assumptions.deadhead_kmh} km/h, and each run is capped at ${L.fleet.assumptions.max_run_min / 60} hours including ${L.fleet.assumptions.mobilise_min} minutes of mobilisation. A new truck is used only when a road cannot be added to an existing run without finishing late, up to the ${L.fleet.trucks_available} trucks the plan lists. Trucks leave as late as possible so that every road is finished just before ice.</li>
+  <li class="mute">These timings are assumptions, not council data. The 20 km/h rate was chosen so that a long run on the fleet takes about 4 to 6 hours, the window the council quotes (S9). The yard is assumed to be in Cavan town because the council does not publish its exact location, and the plan ignores crew rosters, breakdowns and Municipal District mini salters.</li>
   <li>A logistic-regression model trained on history gives an independent second opinion. If the two disagree the route is marked REVIEW and the more cautious call is shown.</li>
   <li>An AI model, when a key is configured, only turns the numbers into a short briefing. A validator rejects any text containing a number not in the data. If it fails, a fixed template is used.</li></ol></div>
   <div class="card"><h2>Cross-check model accuracy (held-out winters ${m.test_winters.join(", ")})</h2>

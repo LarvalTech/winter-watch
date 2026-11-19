@@ -44,3 +44,10 @@ textarea,input,select{background:#0f1b2d;color:var(--ink);border:1px solid var(-
 .fleet{border:1px solid var(--no);background:#12301f;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-size:14px}.fleet.over{border-color:var(--mg);background:#2e2412}
 .policy{font-size:13px;color:#c8d4e6}
 .src td:nth-child(2){word-break:break-word;overflow-wrap:anywhere}.lim a{overflow-wrap:anywhere}
+.lane,.axis{display:flex;align-items:center;gap:8px;margin:4px 0}.lhead{width:130px;flex:none;font-size:13px}
+.track{position:relative;flex:1;height:30px;background:#0f1b2d;border-radius:6px;overflow:hidden}.axis .track{height:16px;background:none;overflow:visible}
+.tick{position:absolute;top:0;bottom:0;width:1px;background:#27395a}.tl{position:absolute;font-size:11px;color:var(--mute);transform:translateX(-50%)}
+.seg{position:absolute;top:3px;height:24px;border:0;border-radius:4px;font-size:11px;font-weight:700;color:#fff;cursor:pointer;padding:0;overflow:hidden;white-space:nowrap}
+.seg.c-GO{background:var(--go)}.seg.c-MARGINAL{background:var(--mg);color:#222}.seg.late{outline:2px dashed #fff}
+.drive{position:absolute;top:13px;height:4px;background:#5c6c8a;border-radius:2px}.ice{position:absolute;top:-4px;font-size:14px;color:#fff;transform:translateX(-50%);pointer-events:none;text-shadow:0 0 3px #000}
+.lim td:nth-child(-n+5){white-space:nowrap}
