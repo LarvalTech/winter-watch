@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Winter Watch · County Cavan roads</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div><h1>❄ Winter Watch</h1><p class="sub">Gritting decision support · County Cavan roads team</p></div>
+  <div id="stamp" class="stamp"></div>
+</header>
+<nav>
+  <button data-tab="duty" class="on">Duty Engineer · tonight</button>
+  <button data-tab="senior">Senior Engineer · next winter</button>
+  <button data-tab="method">Sources &amp; method</button>
+</nav>
+<main>
+  <section id="duty">
+    <div id="banner"></div>
+    <div id="brief" class="card"></div>
+    <div class="grid">
+      <div class="card"><h2>Route plan</h2><div class="scroll"><table id="plan"></table></div></div>
+      <div class="card"><div id="map"></div><div id="detail"></div></div>
+    </div>
+    <div class="card" id="decide"></div>
+  </section>
+  <section id="senior" hidden></section>
+  <section id="method" hidden></section>
+</main>
+<footer>Advisory tool built for a college project. Not an operational system. A person makes the final decision.</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

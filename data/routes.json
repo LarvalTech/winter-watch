@@ -1,0 +1,497 @@
+[
+ {
+  "ref": "N16",
+  "name": "Sligo Road",
+  "class": "trunk",
+  "current_priority": 1,
+  "length_km": 7.2,
+  "elev_mean_m": 59,
+  "elev_max_m": 74,
+  "elev_min_m": 51,
+  "n_elev_samples": 7,
+  "centroid": [
+   54.2874,
+   -7.9201
+  ]
+ },
+ {
+  "ref": "N3",
+  "name": "Dublin Road",
+  "class": "trunk",
+  "current_priority": 1,
+  "length_km": 56.0,
+  "elev_mean_m": 94,
+  "elev_max_m": 153,
+  "elev_min_m": 47,
+  "n_elev_samples": 53,
+  "centroid": [
+   53.952,
+   -7.2477
+  ]
+ },
+ {
+  "ref": "N54",
+  "name": "Clones Road",
+  "class": "primary",
+  "current_priority": 1,
+  "length_km": 9.1,
+  "elev_mean_m": 61,
+  "elev_max_m": 75,
+  "elev_min_m": 49,
+  "n_elev_samples": 8,
+  "centroid": [
+   54.0815,
+   -7.3671
+  ]
+ },
+ {
+  "ref": "N55",
+  "name": "Athlone Road",
+  "class": "primary",
+  "current_priority": 1,
+  "length_km": 26.2,
+  "elev_mean_m": 85,
+  "elev_max_m": 106,
+  "elev_min_m": 66,
+  "n_elev_samples": 24,
+  "centroid": [
+   53.9075,
+   -7.4114
+  ]
+ },
+ {
+  "ref": "N87",
+  "name": "Bawn Road",
+  "class": "primary",
+  "current_priority": 1,
+  "length_km": 28.3,
+  "elev_mean_m": 69,
+  "elev_max_m": 111,
+  "elev_min_m": 52,
+  "n_elev_samples": 27,
+  "centroid": [
+   54.1304,
+   -7.6327
+  ]
+ },
+ {
+  "ref": "R154",
+  "name": "Ballinagh Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 25.1,
+  "elev_mean_m": 90,
+  "elev_max_m": 124,
+  "elev_min_m": 52,
+  "n_elev_samples": 24,
+  "centroid": [
+   53.8746,
+   -7.3381
+  ]
+ },
+ {
+  "ref": "R162",
+  "name": "Shercock Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 18.1,
+  "elev_mean_m": 123,
+  "elev_max_m": 175,
+  "elev_min_m": 99,
+  "n_elev_samples": 17,
+  "centroid": [
+   53.9661,
+   -6.8659
+  ]
+ },
+ {
+  "ref": "R164",
+  "name": "Kells Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 3.2,
+  "elev_mean_m": 140,
+  "elev_max_m": 152,
+  "elev_min_m": 126,
+  "n_elev_samples": 3,
+  "centroid": [
+   53.8954,
+   -6.8181
+  ]
+ },
+ {
+  "ref": "R165",
+  "name": "Bailieborough Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 50.0,
+  "elev_mean_m": 133,
+  "elev_max_m": 200,
+  "elev_min_m": 60,
+  "n_elev_samples": 48,
+  "centroid": [
+   53.9425,
+   -7.0194
+  ]
+ },
+ {
+  "ref": "R178",
+  "name": "Bailieborough Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 26.3,
+  "elev_mean_m": 138,
+  "elev_max_m": 193,
+  "elev_min_m": 94,
+  "n_elev_samples": 25,
+  "centroid": [
+   53.9187,
+   -6.9809
+  ]
+ },
+ {
+  "ref": "R179",
+  "name": "Carrickmacross Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 2.8,
+  "elev_mean_m": 35,
+  "elev_max_m": 38,
+  "elev_min_m": 32,
+  "n_elev_samples": 2,
+  "centroid": [
+   53.9144,
+   -6.7862
+  ]
+ },
+ {
+  "ref": "R181",
+  "name": "Lough Egish Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 2.4,
+  "elev_mean_m": 114,
+  "elev_max_m": 117,
+  "elev_min_m": 110,
+  "n_elev_samples": 2,
+  "centroid": [
+   54.0097,
+   -6.9086
+  ]
+ },
+ {
+  "ref": "R188",
+  "name": "Cootehill Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 23.4,
+  "elev_mean_m": 82,
+  "elev_max_m": 113,
+  "elev_min_m": 60,
+  "n_elev_samples": 22,
+  "centroid": [
+   54.0408,
+   -7.2178
+  ]
+ },
+ {
+  "ref": "R190",
+  "name": "Ballybay Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 5.0,
+  "elev_mean_m": 104,
+  "elev_max_m": 116,
+  "elev_min_m": 88,
+  "n_elev_samples": 4,
+  "centroid": [
+   54.0721,
+   -7.057
+  ]
+ },
+ {
+  "ref": "R191",
+  "name": "Bailieborough Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 28.8,
+  "elev_mean_m": 126,
+  "elev_max_m": 192,
+  "elev_min_m": 70,
+  "n_elev_samples": 27,
+  "centroid": [
+   53.9416,
+   -7.0093
+  ]
+ },
+ {
+  "ref": "R192",
+  "name": "Cootehill Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 10.2,
+  "elev_mean_m": 105,
+  "elev_max_m": 135,
+  "elev_min_m": 86,
+  "n_elev_samples": 9,
+  "centroid": [
+   54.0446,
+   -6.9957
+  ]
+ },
+ {
+  "ref": "R194",
+  "name": "Granard Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 37.1,
+  "elev_mean_m": 102,
+  "elev_max_m": 152,
+  "elev_min_m": 65,
+  "n_elev_samples": 36,
+  "centroid": [
+   53.8318,
+   -7.1875
+  ]
+ },
+ {
+  "ref": "R195",
+  "name": "Oldcastle Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 5.8,
+  "elev_mean_m": 99,
+  "elev_max_m": 120,
+  "elev_min_m": 86,
+  "n_elev_samples": 5,
+  "centroid": [
+   53.8289,
+   -7.1231
+  ]
+ },
+ {
+  "ref": "R196",
+  "name": "New Inn Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 5.4,
+  "elev_mean_m": 108,
+  "elev_max_m": 115,
+  "elev_min_m": 98,
+  "n_elev_samples": 5,
+  "centroid": [
+   53.8815,
+   -7.1937
+  ]
+ },
+ {
+  "ref": "R197",
+  "name": "Belturbet Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 7.1,
+  "elev_mean_m": 54,
+  "elev_max_m": 64,
+  "elev_min_m": 48,
+  "n_elev_samples": 6,
+  "centroid": [
+   54.0994,
+   -7.4205
+  ]
+ },
+ {
+  "ref": "R198",
+  "name": "Cavan Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 22.7,
+  "elev_mean_m": 71,
+  "elev_max_m": 117,
+  "elev_min_m": 49,
+  "n_elev_samples": 22,
+  "centroid": [
+   53.9575,
+   -7.4745
+  ]
+ },
+ {
+  "ref": "R199",
+  "name": "Newtown Gore Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 16.3,
+  "elev_mean_m": 62,
+  "elev_max_m": 73,
+  "elev_min_m": 52,
+  "n_elev_samples": 15,
+  "centroid": [
+   54.0133,
+   -7.5459
+  ]
+ },
+ {
+  "ref": "R200",
+  "name": "Bellavally Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 24.8,
+  "elev_mean_m": 163,
+  "elev_max_m": 329,
+  "elev_min_m": 54,
+  "n_elev_samples": 24,
+  "centroid": [
+   54.1791,
+   -7.8703
+  ]
+ },
+ {
+  "ref": "R201",
+  "name": "Drumlane Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 18.0,
+  "elev_mean_m": 56,
+  "elev_max_m": 66,
+  "elev_min_m": 47,
+  "n_elev_samples": 17,
+  "centroid": [
+   54.0295,
+   -7.5204
+  ]
+ },
+ {
+  "ref": "R202",
+  "name": "Ballinamore Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 6.9,
+  "elev_mean_m": 85,
+  "elev_max_m": 96,
+  "elev_min_m": 73,
+  "n_elev_samples": 6,
+  "centroid": [
+   54.1295,
+   -7.7402
+  ]
+ },
+ {
+  "ref": "R203",
+  "name": "Carrigallen Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 4.4,
+  "elev_mean_m": 73,
+  "elev_max_m": 92,
+  "elev_min_m": 53,
+  "n_elev_samples": 4,
+  "centroid": [
+   53.9398,
+   -7.5971
+  ]
+ },
+ {
+  "ref": "R205",
+  "name": "Ballinamore Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 13.1,
+  "elev_mean_m": 63,
+  "elev_max_m": 76,
+  "elev_min_m": 51,
+  "n_elev_samples": 12,
+  "centroid": [
+   54.0936,
+   -7.631
+  ]
+ },
+ {
+  "ref": "R206",
+  "name": "Blacklion Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 15.7,
+  "elev_mean_m": 108,
+  "elev_max_m": 157,
+  "elev_min_m": 62,
+  "n_elev_samples": 15,
+  "centroid": [
+   54.236,
+   -7.9139
+  ]
+ },
+ {
+  "ref": "R207",
+  "name": "Blacklion Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 12.9,
+  "elev_mean_m": 80,
+  "elev_max_m": 98,
+  "elev_min_m": 57,
+  "n_elev_samples": 12,
+  "centroid": [
+   54.2389,
+   -7.9675
+  ]
+ },
+ {
+  "ref": "R212",
+  "name": "Dublin Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 17.3,
+  "elev_mean_m": 94,
+  "elev_max_m": 141,
+  "elev_min_m": 68,
+  "n_elev_samples": 17,
+  "centroid": [
+   54.0297,
+   -7.325
+  ]
+ },
+ {
+  "ref": "R394",
+  "name": "Finea Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 9.0,
+  "elev_mean_m": 80,
+  "elev_max_m": 107,
+  "elev_min_m": 64,
+  "n_elev_samples": 8,
+  "centroid": [
+   53.8124,
+   -7.4174
+  ]
+ },
+ {
+  "ref": "R901",
+  "name": "Main Street",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 0.9,
+  "elev_mean_m": 70,
+  "elev_max_m": 70,
+  "elev_min_m": 70,
+  "n_elev_samples": 1,
+  "centroid": [
+   53.9912,
+   -7.3602
+  ]
+ },
+ {
+  "ref": "R935",
+  "name": "Ballinagh Road",
+  "class": "secondary",
+  "current_priority": 2,
+  "length_km": 2.1,
+  "elev_mean_m": 82,
+  "elev_max_m": 84,
+  "elev_min_m": 81,
+  "n_elev_samples": 2,
+  "centroid": [
+   53.9735,
+   -7.3559
+  ]
+ }
+]

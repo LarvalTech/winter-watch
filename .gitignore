@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+data/history/
+data/osm_roads_raw.json
+.DS_Store
