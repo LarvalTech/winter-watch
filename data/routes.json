@@ -1,20 +1,5 @@
 [
  {
-  "ref": "N16",
-  "name": "Sligo Road",
-  "class": "trunk",
-  "current_priority": 2,
-  "length_km": 7.2,
-  "elev_mean_m": 59,
-  "elev_max_m": 74,
-  "elev_min_m": 51,
-  "n_elev_samples": 7,
-  "centroid": [
-   54.2874,
-   -7.9201
-  ]
- },
- {
   "ref": "N3",
   "name": "Dublin Road",
   "class": "trunk",
@@ -27,7 +12,8 @@
   "centroid": [
    53.952,
    -7.2477
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "N54",
@@ -42,7 +28,8 @@
   "centroid": [
    54.0815,
    -7.3671
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "N55",
@@ -57,7 +44,8 @@
   "centroid": [
    53.9075,
    -7.4114
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "N87",
@@ -72,7 +60,8 @@
   "centroid": [
    54.1304,
    -7.6327
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R154",
@@ -87,7 +76,8 @@
   "centroid": [
    53.8746,
    -7.3381
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R162",
@@ -102,7 +92,8 @@
   "centroid": [
    53.9661,
    -6.8659
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R164",
@@ -117,7 +108,8 @@
   "centroid": [
    53.8954,
    -6.8181
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R165",
@@ -132,7 +124,8 @@
   "centroid": [
    53.9425,
    -7.0194
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R178",
@@ -147,13 +140,14 @@
   "centroid": [
    53.9187,
    -6.9809
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R179",
   "name": "Carrickmacross Road",
   "class": "secondary",
-  "current_priority": 2,
+  "current_priority": 3,
   "length_km": 2.8,
   "elev_mean_m": 35,
   "elev_max_m": 38,
@@ -162,13 +156,14 @@
   "centroid": [
    53.9144,
    -6.7862
-  ]
+  ],
+  "designated": false
  },
  {
   "ref": "R181",
   "name": "Lough Egish Road",
   "class": "secondary",
-  "current_priority": 2,
+  "current_priority": 3,
   "length_km": 2.4,
   "elev_mean_m": 114,
   "elev_max_m": 117,
@@ -177,7 +172,8 @@
   "centroid": [
    54.0097,
    -6.9086
-  ]
+  ],
+  "designated": false
  },
  {
   "ref": "R188",
@@ -192,7 +188,8 @@
   "centroid": [
    54.0408,
    -7.2178
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R190",
@@ -207,7 +204,8 @@
   "centroid": [
    54.0721,
    -7.057
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R191",
@@ -222,7 +220,8 @@
   "centroid": [
    53.9416,
    -7.0093
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R192",
@@ -237,7 +236,8 @@
   "centroid": [
    54.0446,
    -6.9957
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R194",
@@ -252,13 +252,14 @@
   "centroid": [
    53.8318,
    -7.1875
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R195",
   "name": "Oldcastle Road",
   "class": "secondary",
-  "current_priority": 2,
+  "current_priority": 3,
   "length_km": 5.8,
   "elev_mean_m": 99,
   "elev_max_m": 120,
@@ -267,13 +268,14 @@
   "centroid": [
    53.8289,
    -7.1231
-  ]
+  ],
+  "designated": false
  },
  {
   "ref": "R196",
   "name": "New Inn Road",
   "class": "secondary",
-  "current_priority": 2,
+  "current_priority": 3,
   "length_km": 5.4,
   "elev_mean_m": 108,
   "elev_max_m": 115,
@@ -282,7 +284,8 @@
   "centroid": [
    53.8815,
    -7.1937
-  ]
+  ],
+  "designated": false
  },
  {
   "ref": "R197",
@@ -297,7 +300,8 @@
   "centroid": [
    54.0994,
    -7.4205
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R198",
@@ -312,7 +316,8 @@
   "centroid": [
    53.9575,
    -7.4745
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R199",
@@ -327,7 +332,8 @@
   "centroid": [
    54.0133,
    -7.5459
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R200",
@@ -342,7 +348,8 @@
   "centroid": [
    54.1791,
    -7.8703
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R201",
@@ -357,7 +364,8 @@
   "centroid": [
    54.0295,
    -7.5204
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R202",
@@ -372,7 +380,8 @@
   "centroid": [
    54.1295,
    -7.7402
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R203",
@@ -387,7 +396,8 @@
   "centroid": [
    53.9398,
    -7.5971
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R205",
@@ -402,7 +412,8 @@
   "centroid": [
    54.0936,
    -7.631
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R206",
@@ -417,7 +428,8 @@
   "centroid": [
    54.236,
    -7.9139
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R207",
@@ -432,7 +444,8 @@
   "centroid": [
    54.2389,
    -7.9675
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R212",
@@ -447,13 +460,14 @@
   "centroid": [
    54.0297,
    -7.325
-  ]
+  ],
+  "designated": true
  },
  {
   "ref": "R394",
   "name": "Finea Road",
   "class": "secondary",
-  "current_priority": 2,
+  "current_priority": 3,
   "length_km": 9.0,
   "elev_mean_m": 80,
   "elev_max_m": 107,
@@ -462,13 +476,14 @@
   "centroid": [
    53.8124,
    -7.4174
-  ]
+  ],
+  "designated": false
  },
  {
   "ref": "R901",
   "name": "Main Street",
   "class": "secondary",
-  "current_priority": 2,
+  "current_priority": 3,
   "length_km": 0.9,
   "elev_mean_m": 70,
   "elev_max_m": 70,
@@ -477,7 +492,8 @@
   "centroid": [
    53.9912,
    -7.3602
-  ]
+  ],
+  "designated": false
  },
  {
   "ref": "R935",
@@ -492,6 +508,7 @@
   "centroid": [
    53.9735,
    -7.3559
-  ]
+  ],
+  "designated": true
  }
 ]

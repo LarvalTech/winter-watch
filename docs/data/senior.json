@@ -1,6 +1,6 @@
 {
  "p1_km": 120,
- "network_km": 542,
+ "network_km": 534,
  "rec_km": 24.8,
  "p1_km_after": 144,
  "winters": [
@@ -314,29 +314,6 @@
    "flag": ""
   },
   {
-   "ref": "R181",
-   "name": "Lough Egish Road",
-   "current_priority": 2,
-   "length_km": 2.4,
-   "elev_mean_m": 114,
-   "elev_max_m": 117,
-   "go_nights_mean": 25.6,
-   "go_nights_by_winter": {
-    "2018/19": 21,
-    "2019/20": 26,
-    "2020/21": 30,
-    "2021/22": 12,
-    "2022/23": 30,
-    "2023/24": 27,
-    "2024/25": 33
-   },
-   "go_nights_min": 12,
-   "go_nights_max": 33,
-   "need_rank": 14,
-   "winters_above_p1_median": 2,
-   "flag": ""
-  },
-  {
    "ref": "R192",
    "name": "Cootehill Road",
    "current_priority": 2,
@@ -355,14 +332,37 @@
    },
    "go_nights_min": 13,
    "go_nights_max": 36,
-   "need_rank": 15,
+   "need_rank": 14,
    "winters_above_p1_median": 2,
    "flag": ""
   },
   {
+   "ref": "R181",
+   "name": "Lough Egish Road",
+   "current_priority": 3,
+   "length_km": 2.4,
+   "elev_mean_m": 114,
+   "elev_max_m": 117,
+   "go_nights_mean": 25.6,
+   "go_nights_by_winter": {
+    "2018/19": 21,
+    "2019/20": 26,
+    "2020/21": 30,
+    "2021/22": 12,
+    "2022/23": 30,
+    "2023/24": 27,
+    "2024/25": 33
+   },
+   "go_nights_min": 12,
+   "go_nights_max": 33,
+   "need_rank": 15,
+   "winters_above_p1_median": 2,
+   "flag": "ADD_TO_PLAN_CANDIDATE"
+  },
+  {
    "ref": "R901",
    "name": "Main Street",
-   "current_priority": 2,
+   "current_priority": 3,
    "length_km": 0.9,
    "elev_mean_m": 70,
    "elev_max_m": 70,
@@ -500,7 +500,7 @@
   {
    "ref": "R196",
    "name": "New Inn Road",
-   "current_priority": 2,
+   "current_priority": 3,
    "length_km": 5.4,
    "elev_mean_m": 108,
    "elev_max_m": 115,
@@ -523,7 +523,7 @@
   {
    "ref": "R195",
    "name": "Oldcastle Road",
-   "current_priority": 2,
+   "current_priority": 3,
    "length_km": 5.8,
    "elev_mean_m": 99,
    "elev_max_m": 120,
@@ -540,29 +540,6 @@
    "go_nights_min": 11,
    "go_nights_max": 30,
    "need_rank": 23,
-   "winters_above_p1_median": 0,
-   "flag": ""
-  },
-  {
-   "ref": "R212",
-   "name": "Dublin Road",
-   "current_priority": 2,
-   "length_km": 17.3,
-   "elev_mean_m": 94,
-   "elev_max_m": 141,
-   "go_nights_mean": 21.4,
-   "go_nights_by_winter": {
-    "2018/19": 17,
-    "2019/20": 19,
-    "2020/21": 25,
-    "2021/22": 8,
-    "2022/23": 26,
-    "2023/24": 24,
-    "2024/25": 31
-   },
-   "go_nights_min": 8,
-   "go_nights_max": 31,
-   "need_rank": 24,
    "winters_above_p1_median": 0,
    "flag": ""
   },
@@ -585,30 +562,30 @@
    },
    "go_nights_min": 9,
    "go_nights_max": 29,
-   "need_rank": 25,
+   "need_rank": 24,
    "winters_above_p1_median": 0,
    "flag": ""
   },
   {
-   "ref": "N16",
-   "name": "Sligo Road",
+   "ref": "R212",
+   "name": "Dublin Road",
    "current_priority": 2,
-   "length_km": 7.2,
-   "elev_mean_m": 59,
-   "elev_max_m": 74,
-   "go_nights_mean": 20.1,
+   "length_km": 17.3,
+   "elev_mean_m": 94,
+   "elev_max_m": 141,
+   "go_nights_mean": 21.4,
    "go_nights_by_winter": {
-    "2018/19": 13,
-    "2019/20": 18,
+    "2018/19": 17,
+    "2019/20": 19,
     "2020/21": 25,
-    "2021/22": 7,
-    "2022/23": 28,
-    "2023/24": 22,
-    "2024/25": 28
+    "2021/22": 8,
+    "2022/23": 26,
+    "2023/24": 24,
+    "2024/25": 31
    },
-   "go_nights_min": 7,
-   "go_nights_max": 28,
-   "need_rank": 26,
+   "go_nights_min": 8,
+   "go_nights_max": 31,
+   "need_rank": 25,
    "winters_above_p1_median": 0,
    "flag": ""
   },
@@ -631,7 +608,7 @@
    },
    "go_nights_min": 9,
    "go_nights_max": 30,
-   "need_rank": 27,
+   "need_rank": 26,
    "winters_above_p1_median": 0,
    "flag": ""
   },
@@ -654,14 +631,14 @@
    },
    "go_nights_min": 6,
    "go_nights_max": 30,
-   "need_rank": 28,
+   "need_rank": 27,
    "winters_above_p1_median": 0,
    "flag": ""
   },
   {
    "ref": "R394",
    "name": "Finea Road",
-   "current_priority": 2,
+   "current_priority": 3,
    "length_km": 9.0,
    "elev_mean_m": 80,
    "elev_max_m": 107,
@@ -677,7 +654,7 @@
    },
    "go_nights_min": 7,
    "go_nights_max": 31,
-   "need_rank": 29,
+   "need_rank": 28,
    "winters_above_p1_median": 0,
    "flag": ""
   },
@@ -700,7 +677,7 @@
    },
    "go_nights_min": 7,
    "go_nights_max": 27,
-   "need_rank": 30,
+   "need_rank": 29,
    "winters_above_p1_median": 0,
    "flag": ""
   },
@@ -723,7 +700,7 @@
    },
    "go_nights_min": 7,
    "go_nights_max": 27,
-   "need_rank": 31,
+   "need_rank": 30,
    "winters_above_p1_median": 0,
    "flag": ""
   },
@@ -746,14 +723,14 @@
    },
    "go_nights_min": 6,
    "go_nights_max": 26,
-   "need_rank": 32,
+   "need_rank": 31,
    "winters_above_p1_median": 0,
    "flag": ""
   },
   {
    "ref": "R179",
    "name": "Carrickmacross Road",
-   "current_priority": 2,
+   "current_priority": 3,
    "length_km": 2.8,
    "elev_mean_m": 35,
    "elev_max_m": 38,
@@ -769,7 +746,7 @@
    },
    "go_nights_min": 4,
    "go_nights_max": 22,
-   "need_rank": 33,
+   "need_rank": 32,
    "winters_above_p1_median": 0,
    "flag": ""
   }
@@ -780,5 +757,45 @@
   "R206",
   "R202",
   "R197"
- ]
+ ],
+ "validation": {
+  "rows": [
+   {
+    "winter": "2018/19",
+    "actual_callouts": 42,
+    "tool_nights": 36
+   },
+   {
+    "winter": "2019/20",
+    "actual_callouts": 61,
+    "tool_nights": 58
+   },
+   {
+    "winter": "2020/21",
+    "actual_callouts": 61,
+    "tool_nights": 49
+   },
+   {
+    "winter": "2021/22",
+    "actual_callouts": 46,
+    "tool_nights": 31
+   },
+   {
+    "winter": "2022/23",
+    "actual_callouts": 50,
+    "tool_nights": 46
+   }
+  ],
+  "correlation": 0.87,
+  "actual_mean": 52.0,
+  "tool_mean": 44.0,
+  "source": "Cavan County Council Winter Service Plan 2023/2024 (October 2023), section A8 and A9"
+ },
+ "fleet": {
+  "trucks": 9,
+  "mini_salters": 7,
+  "salt_storage_tonnes": 2750,
+  "salt_runs_capacity": 30,
+  "edition": "2023/24"
+ }
 }

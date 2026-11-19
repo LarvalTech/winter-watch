@@ -14,6 +14,8 @@ def template_briefing(f):
         lines.append(f"Coldest route is {f['coldest_route']} with a forecast road surface minimum of {f['coldest_ts']} C.")
     if f["n_review"]:
         lines.append(f"{f['n_review']} routes are flagged REVIEW because the rules engine and the trained model disagree.")
+    if f.get("peak_trucks", 0) > f.get("trucks_available", 99):
+        lines.append(f"The plan needs {f['peak_trucks']} trucks at once but only {f['trucks_available']} are available, so departures need staggering.")
     lines.append(f"Confidence is {f['confidence']}: the rules engine and the trained model agree on most routes." if f["confidence"] != "LOW" else "Confidence is LOW: the rules engine and the trained model disagree on many routes, so check the flagged routes.")
     lines.append("This is a recommendation only. The Duty Engineer makes the final decision.")
     return " ".join(lines)

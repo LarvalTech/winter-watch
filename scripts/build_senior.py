@@ -21,7 +21,9 @@ def consistent(ref): return sum(per.loc[ref, w] > p1_by_w[w] for w in winters)
 df["winters_above_p1_median"] = df.ref.map(consistent)
 df["flag"] = ""
 df.loc[(df.current_priority == 2) & (df.go_nights_mean > t1_median) & (df.winters_above_p1_median >= 5), "flag"] = "PROMOTE_CANDIDATE"
-df.loc[(df.current_priority == 1) & (df.go_nights_mean < df[df.current_priority == 2].go_nights_mean.median()), "flag"] = "REVIEW_WEATHER_NEED_LOW"
+p2_median = df[df.current_priority == 2].go_nights_mean.median()
+df.loc[(df.current_priority == 1) & (df.go_nights_mean < p2_median), "flag"] = "REVIEW_WEATHER_NEED_LOW"
+df.loc[(df.current_priority == 3) & (df.go_nights_mean > p2_median), "flag"] = "ADD_TO_PLAN_CANDIDATE"
 cand = df[df.flag == "PROMOTE_CANDIDATE"].sort_values(["winters_above_p1_median", "go_nights_mean"], ascending=False)
 p1_km = float(df[df.current_priority == 1].length_km.sum()); total_km = float(df.length_km.sum())
 rec_row = None if cand.empty else cand.iloc[0]
@@ -30,6 +32,17 @@ out = {"p1_km": round(p1_km), "network_km": round(total_km),
        "p1_km_after": None if rec_row is None else round(p1_km + float(rec_row["length_km"])),
        "winters": winters, "p1_median_go_nights": round(float(t1_median), 1), "routes": df.to_dict("records"),
        "recommendation": None if cand.empty else cand.iloc[0]["ref"], "candidates": cand.ref.tolist()}
+fleet = json.load(open("data/fleet.json"))
+des = {r for r, v in routes.items() if v["designated"]}
+rows = []
+for w, actual in fleet["callouts"].items():
+    d = N[(N.winter == w) & N.ref.isin(des) & (N.status == "GO")]
+    rows.append({"winter": w, "actual_callouts": actual, "tool_nights": int(d.night.nunique())})
+a = np.array([r["actual_callouts"] for r in rows]); t = np.array([r["tool_nights"] for r in rows])
+out["validation"] = {"rows": rows, "correlation": round(float(np.corrcoef(a, t)[0, 1]), 2), "actual_mean": round(float(a.mean()), 1),
+                     "tool_mean": round(float(t.mean()), 1), "source": fleet["source"]}
+out["fleet"] = {k: fleet[k] for k in ["trucks", "mini_salters", "salt_storage_tonnes", "salt_runs_capacity", "edition"]}
 json.dump(out, open("docs/data/senior.json", "w"), indent=1)
+print(out["validation"])
 print(df[["ref", "current_priority", "elev_mean_m", "go_nights_mean", "winters_above_p1_median", "flag"]].head(14).to_string())
 print("recommend:", out["recommendation"], out["candidates"])

@@ -25,7 +25,8 @@ async function load() {
 
 function duty() {
   const f = L.facts;
-  const go = L.routes.filter(r => r.status === "GO"), mg = L.routes.filter(r => r.status === "MARGINAL");
+  const PL = L.routes.filter(r => r.designated);
+  const go = PL.filter(r => r.status === "GO"), mg = PL.filter(r => r.status === "MARGINAL");
   const first = go.filter(r => r.depart).sort((x, y) => x.depart.localeCompare(y.depart))[0];
   const verdict = {GO: ["❄", "GRIT TONIGHT", first ? `First truck out at <b>${first.depart}</b> on ${first.ref}. ${go.length} routes need gritting.` : `${go.length} routes need gritting.`],
     MARGINAL: ["⚠", "BORDERLINE · YOUR CALL", `No route is clearly icy, but ${mg.length} are borderline. Check the routes below and decide.`],
@@ -37,16 +38,20 @@ function duty() {
   $("#banner").innerHTML = `<span class="bigicon">${verdict[0]}</span><div><div class="verdict">${verdict[1]}</div><div class="action">${verdict[2]}</div>
     <div class="conf" title="Share of routes where the rules engine and the trained model agree: ${C.agree} of ${C.total}">Confidence <span class="dots">${"●".repeat(dots)}<span class="off">${"●".repeat(3 - dots)}</span></span> <b>${C.level}</b>
     <span class="why">· rules and model agree on ${C.agree} of ${C.total} routes${C.level === "LOW" ? ", so check the flagged routes" : ""}</span></div></div>`;
-  const cold = L.routes.reduce((m, r) => r.surface_min_c < m.surface_min_c ? r : m);
+  const cold = PL.reduce((m, r) => r.surface_min_c < m.surface_min_c ? r : m);
   const tile = (big, label, sub, cls = "") => `<div class="tile ${cls}"><div class="big">${big}</div><div class="lab">${label}</div><div class="sub">${sub}</div></div>`;
   $("#tiles").innerHTML =
-    tile(`${n(go.length, "", "S5")}<span class="of"> / ${L.routes.length}</span>`, "routes to grit", `${n(mg.length, "", "S5")} borderline`, go.length ? "t-GO" : "t-NO-GO") +
+    tile(`${n(go.length, "", "S5")}<span class="of"> / ${PL.length}</span>`, "routes to grit", `${n(mg.length, "", "S5")} borderline`, go.length ? "t-GO" : "t-NO-GO") +
     tile(first ? n(first.depart, "", "S1", "S5") : "–", "first truck leaves", first ? `${first.ref} ${first.name}` : "no departures needed") +
     tile(n(cold.surface_min_c, "°C", "S1", "S4", "S5"), "coldest road surface", `${cold.ref} ${cold.name}`) +
     tile(n(L.facts.n_review, "", "S5", "S6"), "routes to review", L.facts.n_review ? "rules and model disagree" : "rules and model agree", L.facts.n_review ? "t-MARGINAL" : "");
   const groups = {};
-  L.routes.filter(r => r.depart && r.status !== "NO-GO").forEach(r => (groups[r.depart] = groups[r.depart] || []).push(r));
-  $("#timeline").innerHTML = Object.keys(groups).length ? `<h2>Truck departures tonight <span class="mute" style="font-weight:400">· ${fmtLocal(L.night.from)} to ${fmtLocal(L.night.to)} · click a route for detail</span></h2>` +
+  PL.filter(r => r.depart && r.status !== "NO-GO").forEach(r => (groups[r.depart] = groups[r.depart] || []).push(r));
+  const F = L.fleet;
+  const fleetNote = `<div class="fleet ${F.over_capacity ? "over" : ""}"><b>${F.over_capacity ? "⚠ More trucks needed than available." : "✓ Fits the fleet."}</b>
+    This plan has up to ${n(F.peak_trucks_needed, " trucks", "S5", "S7")} running at once (peak about ${F.peak_time}). The Machinery Yard has ${n(F.trucks_available, " trucks", "S7")} (plan ${F.edition}).
+    ${F.over_capacity ? "Stagger departures or start Priority 1 first." : ""} Each route is timed on its own, assuming a truck is free when needed.</div>`;
+  $("#timeline").innerHTML = Object.keys(groups).length ? fleetNote + `<h2>Truck departures tonight <span class="mute" style="font-weight:400">· ${fmtLocal(L.night.from)} to ${fmtLocal(L.night.to)} · click a route for detail</span></h2>` +
     Object.keys(groups).sort().map(t => `<div class="trow"><span class="ttime">${t}</span><span>${groups[t].map(r =>
       `<button class="rchip c-${r.status}" onclick="pick('${r.ref}')" title="${r.name}, ${r.length_km} km, ${r.status}">${r.ref}${r.priority === 1 ? " ★" : ""}${r.review ? " ⚑" : ""}</button>`).join("")}</span></div>`).join("") +
     `<div class="mute" style="font-size:12px;margin-top:6px">★ Priority 1 route · ⚑ rules and model disagree · red = GO · amber = borderline</div>` : "";
@@ -54,7 +59,7 @@ function duty() {
   $("#brief").innerHTML = `<h2>Written summary <span class="tag">${b.source === "llm" ? "AI-written · numbers validated" : "template (no AI)"}</span></h2><p class="mute">${b.text}</p>
     <p class="mute" style="font-size:12px">Every number in this text is checked against the computed data before display. ${b.detail}</p>`;
   $("#plan").innerHTML = `<tr><th>Route</th><th>Class</th><th>Status</th><th>Depart</th><th>Surface min</th><th>Ice from</th><th>km</th><th>Model p</th></tr>` +
-    L.routes.map(r => `<tr class="row" data-ref="${r.ref}"><td><b>${r.ref}</b> <span class="mute">${r.name}</span></td><td>P${r.priority}</td>
+    PL.map(r => `<tr class="row" data-ref="${r.ref}"><td><b>${r.ref}</b> <span class="mute">${r.name}</span></td><td>P${r.priority}</td>
     <td><span class="pill p-${r.status}">${r.status}</span>${r.review ? '<span class="chip" title="Rules engine and model disagree. Cautious call shown.">REVIEW</span>' : ""}</td>
     <td>${r.depart ? n(r.depart + (r.depart_is_now ? " now" : ""), "", "S1", "S5") : "–"}</td><td>${n(r.surface_min_c, "°C", "S1", "S4", "S5")}</td>
     <td>${r.ice_onset ? n(r.ice_onset, "", "S1", "S5") : "–"}</td><td>${n(r.length_km, "", "S2")}</td><td>${n(r.model_prob, "", "S3", "S6")}</td></tr>`).join("");
@@ -64,9 +69,9 @@ function duty() {
     L_.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {attribution: "© OpenStreetMap contributors"}).addTo(MAP);
   }
   const by = Object.fromEntries(L.routes.map(r => [r.ref, r]));
-  L_.geoJSON(GEO, {style: ft => ({color: COL[by[ft.properties.ref]?.status] || "#888", weight: 4, opacity: .9}),
+  L_.geoJSON(GEO, {style: ft => ({color: by[ft.properties.ref]?.designated ? COL[by[ft.properties.ref].status] : "#6b7a93", weight: by[ft.properties.ref]?.designated ? 4 : 2, opacity: by[ft.properties.ref]?.designated ? .9 : .6, dashArray: by[ft.properties.ref]?.designated ? null : "4 4"}),
     onEachFeature: (ft, ly) => { layers[ft.properties.ref] = ly; ly.on("click", () => pick(ft.properties.ref)); ly.bindTooltip(ft.properties.ref); }}).addTo(MAP);
-  MAP.invalidateSize(); MAP.fitBounds(L_.geoJSON(GEO).getBounds()); pick(L.routes[0].ref); decideUI();
+  MAP.invalidateSize(); MAP.fitBounds(L_.geoJSON(GEO).getBounds()); pick(PL[0].ref); decideUI();
 }
 
 function chart(r) {
@@ -116,16 +121,16 @@ function senior() {
   const heat = v => `<span class="heat" style="background:hsl(${210 - 210 * v / mx},70%,60%)" title="${v} grit-worthy nights">${v}</span>`;
   $("#senior").innerHTML = `<div class="card rec"><h2>Recommendation for next winter</h2>${rec ? `<p style="font-size:18px"><b>Move ${rec.ref} ${rec.name} up from Priority ${rec.current_priority} to Priority 1.</b></p>
   <p>Over ${SEN.winters.length} winters (${SEN.winters[0]} to ${SEN.winters.at(-1)}) it needed gritting on ${n(rec.go_nights_mean, " nights a winter", "S3", "S4", "S5")} on average. The median Priority 1 route needed ${n(SEN.p1_median_go_nights, "", "S3", "S5")}. It beat that median in ${n(rec.winters_above_p1_median, " of " + SEN.winters.length + " winters", "S3", "S5")}. Mean elevation ${n(rec.elev_mean_m, " m", "S4")}, peak ${n(rec.elev_max_m, " m", "S4")}.</p>
-  <div class="capbox"><b>Capacity check before deciding.</b> Moving ${rec.ref} up would grow Priority 1 from ${n(SEN.p1_km, " km", "S2")} to ${n(SEN.p1_km_after, " km", "S2")} (+${n(rec.length_km, " km", "S2")}) out of ${n(SEN.network_km, " km", "S2")} of modelled routes. Cavan's salting run has to finish in about 4 to 6 hours with the trucks and crews available, so a promotion only works if it fits that window or another route moves down. This tool does not know the fleet size, depot locations or salt stock. <a href="#" onclick="tab('method');return false">See limits on the plan</a>.</div>
+  <div class="capbox"><b>Capacity check before deciding.</b> Moving ${rec.ref} up would grow Priority 1 from ${n(SEN.p1_km, " km", "S2")} to ${n(SEN.p1_km_after, " km", "S2")} (+${n(rec.length_km, " km", "S2")}) out of ${n(SEN.network_km, " km", "S2")} of modelled routes. Cavan's salting run has to finish in about 4 to 6 hours with the trucks and crews available, so a promotion only works if it fits that window or another route moves down. The council's plan lists one Machinery Yard with ${n(SEN.fleet.trucks, " trucks", "S7")} and salt storage for about ${n(SEN.fleet.salt_runs_capacity, " runs", "S7")}, but this tool does not know crew availability or current salt stock. <a href="#" onclick="tab('method');return false">See limits on the plan</a>.</div>
   <p class="mute">Other candidates: ${SEN.candidates.filter(c => c !== rec.ref).join(", ") || "none"}. Weather need only: traffic volume, collision history and depot location are not included. The Senior Engineer decides.</p>` : "No route meets the promotion test."}</div>
   <div class="card"><h2>All routes ranked by modelled gritting need</h2><div class="scroll"><table><tr><th>#</th><th>Route</th><th>Current</th><th>Elev (m)</th><th>Avg nights</th><th>By winter (${SEN.winters.join(" ")})</th><th>Flag</th></tr>
-  ${SEN.routes.map(r => `<tr><td>${r.need_rank}</td><td><b>${r.ref}</b> <span class="mute">${r.name}</span></td><td>P${r.current_priority}</td><td>${n(r.elev_mean_m, "", "S4")}</td><td>${n(r.go_nights_mean, "", "S3", "S5")}</td>
+  ${SEN.routes.map(r => `<tr><td>${r.need_rank}</td><td><b>${r.ref}</b> <span class="mute">${r.name}</span></td><td>${r.current_priority === 3 ? "Not on plan" : "P" + r.current_priority}</td><td>${n(r.elev_mean_m, "", "S4")}</td><td>${n(r.go_nights_mean, "", "S3", "S5")}</td>
   <td>${SEN.winters.map(w => heat(r.go_nights_by_winter[w])).join("")}</td><td>${r.flag ? `<span class="chip">${r.flag.replaceAll("_", " ")}</span>` : ""}</td></tr>`).join("")}</table></div></div>`;
 }
 
 function method() {
   const m = L.sources.S6.metrics, T = L.thresholds, pc = x => (x * 100).toFixed(0) + "%";
-  $("#method").innerHTML = `<div class="card"><h2>Data sources</h2><table>${Object.entries(L.sources).map(([k, s]) => `<tr><td><b>${k}</b></td><td>${s.name}${s.url ? ` · <a style="color:#6ea8fe" href="${s.url}">${s.url}</a>` : ""}<br><span class="mute">${s.what}${s.fetched_at ? " · fetched " + fmtUTC(s.fetched_at) : ""}</span></td></tr>`).join("")}</table></div>
+  $("#method").innerHTML = `<div class="card"><h2>Data sources, documents and council policy</h2><p class="mute">S1 to S6 are data and models. S7 to S10 are the council documents, public statements and comparison plans that shape how the tool is set up and what it says about limits. The Cavan plan is the 2023/24 edition, the latest linked on the council website when checked on 19/11/2026, and may have changed since.</p><table class="lim src">${Object.entries(L.sources).map(([k, s]) => `<tr><td><b>${k}</b></td><td>${s.name}${s.url ? ` · <a style="color:#6ea8fe" href="${s.url}">${s.url}</a>` : ""}<br><span class="mute">${s.what}${s.fetched_at ? " · fetched " + fmtUTC(s.fetched_at) : ""}</span>${s.policy ? `<br><span class="policy"><b>Policy:</b> ${s.policy}</span>` : ""}</td></tr>`).join("")}</table></div>
   <div class="card"><h2>How the call is made</h2><ol>
   <li>Forecast air temperature and dew point are adjusted to each route's elevation (${T.lapse_air_c_per_m} °C/m air, ${T.lapse_dew_c_per_m} °C/m dew point).</li>
   <li>Road surface temperature is <b>estimated</b>, not measured: air temperature minus up to ${T.clear_sky_cooling_c} °C of night-time cooling on clear, calm nights.</li>
@@ -136,17 +141,22 @@ function method() {
   <div class="card"><h2>Cross-check model accuracy (held-out winters ${m.test_winters.join(", ")})</h2>
   <p>AUC ${n(m.model_auc.toFixed(2), "", "S6")} · model precision ${n(pc(m.model_precision), "", "S6")}, recall ${n(pc(m.model_recall), "", "S6")} · rules precision ${n(pc(m.rules_precision), "", "S5")}, recall ${n(pc(m.rules_recall), "", "S5")} · agreement ${n(pc(m.agreement_rate), "", "S5", "S6")}.<br>
   <span class="mute">Truth label is modelled ground temperature (ERA5-Land) while damp, which is not measured road ice. Trained on ${m.n_train} route-nights, tested on ${m.n_test}.</span></p></div>
+  ${SEN.validation ? `<div class="card"><h2>Checked against real gritting call-outs</h2>
+  <p>Cavan's plan lists how many nights crews were called out each winter (${src("S7")}). The tool counts nights when at least one designated route is a GO.</p>
+  <table><tr><th>Winter</th><th>Actual call-outs</th><th>Tool: nights with a GO route</th></tr>${SEN.validation.rows.map(r => `<tr><td>${r.winter}</td><td>${n(r.actual_callouts, "", "S7")}</td><td>${n(r.tool_nights, "", "S3", "S5")}</td></tr>`).join("")}</table>
+  <p>Correlation ${n(SEN.validation.correlation, "", "S3", "S5", "S7")}. Average ${n(SEN.validation.tool_mean, "", "S5")} nights for the tool against ${n(SEN.validation.actual_mean, "", "S7")} actual, so the tool undercounts by about ${Math.round((1 - SEN.validation.tool_mean / SEN.validation.actual_mean) * 100)}%.
+  <span class="mute">Only 5 winters, so this supports the method but does not prove it. The council's season runs October to April and ours stops at March, and crews may grit on marginal nights.</span></p></div>` : ""}
   <div class="card"><h2>Limits on the Council's gritting plan</h2>
   <p class="mute">Cavan, like other Irish councils, treats a priority network rather than every road. Real constraints that this tool cannot see or resolve:</p>
   <table class="lim">
-  <tr><td><b>Priority network only</b></td><td>Priority 1 is N3, N54, N55 and N87. Priority 2 is the regional roads on the council's map. Local roads are not treated routinely. Roughly 500 to 650 km is salted per night, about 20% of Cavan's 3,000+ km. <a style="color:#6ea8fe" href="https://www.cavancoco.ie/services/roads-transportation/severe-weather/current-salting-routes/">Cavan County Council</a>, <a style="color:#6ea8fe" href="https://www.anglocelt.ie/2026/02/01/it-is-not-physically-possible-to-salt-all-routes-council/">Anglo Celt, 01/02/2026</a>, <a style="color:#6ea8fe" href="https://www.northernsound.ie/news/beyond-the-operation-capacity-to-add-more-roads-to-cavan-road-salting-network-188407">Northern Sound, 25/01/2022</a></td></tr>
+  <tr><td><b>Priority network only</b></td><td>Priority 1 is N3, N54, N55 and N87 (N16 is also listed but is salted by Leitrim County Council, so the tool leaves it out). Priority 2 is 22 named regional roads plus some local roads (S7). Six roads in the tool (R179, R181, R195, R196, R394, R901) are not on the plan and are shown greyed on the map. Local roads are not treated routinely. Roughly 500 to 650 km is salted per night, about 20% of Cavan's 3,000+ km. <a style="color:#6ea8fe" href="https://www.cavancoco.ie/services/roads-transportation/severe-weather/current-salting-routes/">Cavan County Council</a>, <a style="color:#6ea8fe" href="https://www.anglocelt.ie/2026/02/01/it-is-not-physically-possible-to-salt-all-routes-council/">Anglo Celt, 01/02/2026</a>, <a style="color:#6ea8fe" href="https://www.northernsound.ie/news/beyond-the-operation-capacity-to-add-more-roads-to-cavan-road-salting-network-188407">Northern Sound, 25/01/2022</a></td></tr>
   <tr><td><b>Time window</b></td><td>A salting run takes about 4 to 6 hours, so routes cannot all be treated at once and a long route needs an early start. Source: Cavan Director of Services (Anglo Celt, 01/02/2026).</td></tr>
-  <tr><td><b>Fleet, crews, budget, salt</b></td><td>The council says it is "at the limit of what can be done", and adding a route means taking something away. About 90 tonnes of salt is used on a night's run. Sources as above.</td></tr>
+  <tr><td><b>Fleet, crews, budget, salt</b></td><td>The Machinery Yard has 9 trucks (11 spreaders) plus 7 mini salters and 2 tractor spreaders across the Municipal Districts, and salt storage for about 30 runs (S7). The council says it is "at the limit of what can be done" and about 90 tonnes of salt is used on a night's run (S8, S9). The Duty view compares each night's plan with the 9 trucks.</td></tr>
   <tr><td><b>Forecast accuracy</b></td><td>Many Irish nights are marginal, close to 0 °C. Mayo County Council's plan notes Met Éireann guarantees about 80% forecast accuracy. <a style="color:#6ea8fe" href="https://www.mayo.ie/getmedia/8b901efa-7151-4fad-87a9-d41a8d74b16c/Winter-Service-Plan-2025-2026.pdf">Mayo Winter Service Plan 2025/26</a></td></tr>
   <tr><td><b>Rain after salting</b></td><td>Heavy rain can wash salt away, and frost after rain can undo the treatment. Source: Cavan County Council salting page.</td></tr>
   <tr><td><b>Severe, prolonged cold</b></td><td>Councils reduce treatment to Priority 1 only when resources run short. Mayo and Monaghan plans say so explicitly.</td></tr>
   <tr><td><b>Local discretion</b></td><td>School bus routes, emergency access and traffic data influence decisions on local roads, and none of that is in this tool.</td></tr></table></div>
-  <div class="card"><h2>Limitations</h2><ul><li>Routes are built from OpenStreetMap trunk, primary and secondary roads. Priority 1 (N3, N54, N55, N87) follows the council's published list. Every R road is treated as Priority 2, but the council's official Priority 2 list is only available as a map, so some of these roads may not actually be salted.</li>
+  <div class="card"><h2>Limitations</h2><ul><li>Routes are built from OpenStreetMap trunk, primary and secondary roads and matched to the council's designated list (S7, 2023/24 edition). The list is only a route list; the council's own map has the exact roads, including local roads that this tool does not model.</li>
   <li>No road-weather-station or thermal-mapping data. Surface temperature is a simple estimate.</li><li>History is reanalysis (ERA5, about 9 to 25 km grid), not station readings.</li>
   <li>Need ranking uses weather and elevation only, with no traffic, collisions or depot locations.</li><li>Decisions are logged in the browser only.</li></ul></div>`;
 }

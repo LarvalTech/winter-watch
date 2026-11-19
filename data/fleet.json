@@ -1,0 +1,15 @@
+{
+  "source": "Cavan County Council Winter Service Plan 2023/2024 (October 2023), section A8 and A9",
+  "url": "https://www.cavancoco.ie/file-library/roads-and-transport/Severe-weather/cavan-county-council-winter-service-plan-2023-2024.pdf",
+  "edition": "2023/24",
+  "trucks": 9,
+  "salt_spreaders": 11,
+  "mini_salters": 7,
+  "tractor_spreaders": 2,
+  "machinery_yard": 1,
+  "salt_storage_tonnes": 2750,
+  "salt_runs_capacity": 30,
+  "rwis_stations": ["N3 Virginia", "N3 Butlersbridge"],
+  "forecast_accuracy_stated": "about 85% at best",
+  "callouts": {"2018/19": 42, "2019/20": 61, "2020/21": 61, "2021/22": 46, "2022/23": 50}
+}

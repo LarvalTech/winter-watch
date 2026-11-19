@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-19T20:35:50Z",
- "decision_time_local": "2026-11-19T20:35:50",
+ "generated_at": "2026-11-19T20:49:43Z",
+ "decision_time_local": "2026-11-19T20:49:43",
  "night": {
   "from": "2026-11-19 18:00:00",
   "to": "2026-11-20 08:00:00"
@@ -8,24 +8,33 @@
  "decision": "GO",
  "confidence": {
   "level": "LOW",
-  "agree": 13,
-  "total": 33,
-  "percent": 39
+  "agree": 9,
+  "total": 26,
+  "percent": 35
+ },
+ "fleet": {
+  "trucks_available": 9,
+  "peak_trucks_needed": 7,
+  "peak_time": "07:15",
+  "over_capacity": false,
+  "edition": "2023/24"
  },
  "facts": {
   "decision": "GO",
-  "n_routes": 33,
-  "n_go": 20,
-  "n_marginal": 3,
-  "n_review": 20,
-  "first_departure": "03:15",
-  "first_route": "N16",
+  "n_routes": 26,
+  "n_go": 17,
+  "n_marginal": 2,
+  "n_review": 17,
+  "peak_trucks": 7,
+  "trucks_available": 9,
+  "first_departure": "03:45",
+  "first_route": "R200",
   "coldest_route": "R190",
   "coldest_ts": -3.8,
   "confidence": "LOW"
  },
  "briefing": {
-  "text": "Recommendation: GRIT TONIGHT. 20 of 33 routes are forecast to reach icy-road conditions. First truck should leave at 03:15 (N16). Coldest route is R190 with a forecast road surface minimum of -3.8 C. 20 routes are flagged REVIEW because the rules engine and the trained model disagree. Confidence is LOW: the rules engine and the trained model disagree on many routes, so check the flagged routes. This is a recommendation only. The Duty Engineer makes the final decision.",
+  "text": "Recommendation: GRIT TONIGHT. 17 of 26 routes are forecast to reach icy-road conditions. First truck should leave at 03:45 (R200). Coldest route is R190 with a forecast road surface minimum of -3.8 C. 17 routes are flagged REVIEW because the rules engine and the trained model disagree. Confidence is LOW: the rules engine and the trained model disagree on many routes, so check the flagged routes. This is a recommendation only. The Duty Engineer makes the final decision.",
   "source": "template",
   "detail": "template fallback (no LLM_API_KEY set)"
  },
@@ -34,6 +43,7 @@
    "ref": "N3",
    "name": "Dublin Road",
    "priority": 1,
+   "designated": true,
    "length_km": 56.0,
    "elev_mean_m": 94,
    "status": "GO",
@@ -128,6 +138,7 @@
    "ref": "N54",
    "name": "Clones Road",
    "priority": 1,
+   "designated": true,
    "length_km": 9.1,
    "elev_mean_m": 61,
    "status": "GO",
@@ -222,6 +233,7 @@
    "ref": "N55",
    "name": "Athlone Road",
    "priority": 1,
+   "designated": true,
    "length_km": 26.2,
    "elev_mean_m": 85,
    "status": "GO",
@@ -313,103 +325,10 @@
    ]
   },
   {
-   "ref": "N16",
-   "name": "Sligo Road",
-   "priority": 2,
-   "length_km": 7.2,
-   "elev_mean_m": 59,
-   "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.92,
-   "review": true,
-   "surface_min_c": -2.2,
-   "air_min_c": -1.1,
-   "precip_mm": 0.0,
-   "ice_onset": "04:00",
-   "depart": "03:15",
-   "depart_is_now": false,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "20:00",
-     "surface_c": 4.7,
-     "air_c": 4.9
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.8,
-     "air_c": 4.9
-    },
-    {
-     "t": "02:00",
-     "surface_c": 3.2,
-     "air_c": 3.8
-    },
-    {
-     "t": "03:00",
-     "surface_c": 1.2,
-     "air_c": 2.2
-    },
-    {
-     "t": "04:00",
-     "surface_c": 0.8,
-     "air_c": 1.5
-    },
-    {
-     "t": "05:00",
-     "surface_c": -2.2,
-     "air_c": -1.0
-    },
-    {
-     "t": "06:00",
-     "surface_c": -1.5,
-     "air_c": -0.4
-    },
-    {
-     "t": "07:00",
-     "surface_c": -2.1,
-     "air_c": -1.0
-    },
-    {
-     "t": "08:00",
-     "surface_c": -2.2,
-     "air_c": -1.1
-    }
-   ]
-  },
-  {
    "ref": "R200",
    "name": "Bellavally Road",
    "priority": 2,
+   "designated": true,
    "length_km": 24.8,
    "elev_mean_m": 163,
    "status": "GO",
@@ -504,6 +423,7 @@
    "ref": "R206",
    "name": "Blacklion Road",
    "priority": 2,
+   "designated": true,
    "length_km": 15.7,
    "elev_mean_m": 108,
    "status": "GO",
@@ -598,6 +518,7 @@
    "ref": "R165",
    "name": "Bailieborough Road",
    "priority": 2,
+   "designated": true,
    "length_km": 50.0,
    "elev_mean_m": 133,
    "status": "GO",
@@ -692,6 +613,7 @@
    "ref": "R190",
    "name": "Ballybay Road",
    "priority": 2,
+   "designated": true,
    "length_km": 5.0,
    "elev_mean_m": 104,
    "status": "GO",
@@ -786,6 +708,7 @@
    "ref": "R197",
    "name": "Belturbet Road",
    "priority": 2,
+   "designated": true,
    "length_km": 7.1,
    "elev_mean_m": 54,
    "status": "GO",
@@ -880,6 +803,7 @@
    "ref": "R202",
    "name": "Ballinamore Road",
    "priority": 2,
+   "designated": true,
    "length_km": 6.9,
    "elev_mean_m": 85,
    "status": "GO",
@@ -974,6 +898,7 @@
    "ref": "R178",
    "name": "Bailieborough Road",
    "priority": 2,
+   "designated": true,
    "length_km": 26.3,
    "elev_mean_m": 138,
    "status": "GO",
@@ -1068,6 +993,7 @@
    "ref": "R191",
    "name": "Bailieborough Road",
    "priority": 2,
+   "designated": true,
    "length_km": 28.8,
    "elev_mean_m": 126,
    "status": "GO",
@@ -1162,6 +1088,7 @@
    "ref": "R188",
    "name": "Cootehill Road",
    "priority": 2,
+   "designated": true,
    "length_km": 23.4,
    "elev_mean_m": 82,
    "status": "GO",
@@ -1256,6 +1183,7 @@
    "ref": "R192",
    "name": "Cootehill Road",
    "priority": 2,
+   "designated": true,
    "length_km": 10.2,
    "elev_mean_m": 105,
    "status": "GO",
@@ -1350,6 +1278,7 @@
    "ref": "R162",
    "name": "Shercock Road",
    "priority": 2,
+   "designated": true,
    "length_km": 18.1,
    "elev_mean_m": 123,
    "status": "GO",
@@ -1444,6 +1373,7 @@
    "ref": "R212",
    "name": "Dublin Road",
    "priority": 2,
+   "designated": true,
    "length_km": 17.3,
    "elev_mean_m": 94,
    "status": "GO",
@@ -1535,103 +1465,10 @@
    ]
   },
   {
-   "ref": "R181",
-   "name": "Lough Egish Road",
-   "priority": 2,
-   "length_km": 2.4,
-   "elev_mean_m": 114,
-   "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.93,
-   "review": true,
-   "surface_min_c": -2.1,
-   "air_min_c": -0.9,
-   "precip_mm": 0.0,
-   "ice_onset": "08:00",
-   "depart": "07:15",
-   "depart_is_now": false,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 5.7,
-     "air_c": 5.9
-    },
-    {
-     "t": "19:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.3,
-     "air_c": 5.5
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "05:00",
-     "surface_c": 2.3,
-     "air_c": 3.0
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.2,
-     "air_c": 2.6
-    },
-    {
-     "t": "07:00",
-     "surface_c": 2.0,
-     "air_c": 2.4
-    },
-    {
-     "t": "08:00",
-     "surface_c": -2.1,
-     "air_c": -0.9
-    }
-   ]
-  },
-  {
    "ref": "R203",
    "name": "Carrigallen Road",
    "priority": 2,
+   "designated": true,
    "length_km": 4.4,
    "elev_mean_m": 73,
    "status": "GO",
@@ -1723,103 +1560,10 @@
    ]
   },
   {
-   "ref": "R901",
-   "name": "Main Street",
-   "priority": 2,
-   "length_km": 0.9,
-   "elev_mean_m": 70,
-   "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.92,
-   "review": true,
-   "surface_min_c": -1.8,
-   "air_min_c": -0.9,
-   "precip_mm": 0.0,
-   "ice_onset": "08:00",
-   "depart": "07:15",
-   "depart_is_now": false,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.6,
-     "air_c": 6.6
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.0,
-     "air_c": 5.2
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.2,
-     "air_c": 4.5
-    },
-    {
-     "t": "05:00",
-     "surface_c": 1.6,
-     "air_c": 1.9
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.1,
-     "air_c": 2.3
-    },
-    {
-     "t": "07:00",
-     "surface_c": 1.5,
-     "air_c": 1.8
-    },
-    {
-     "t": "08:00",
-     "surface_c": -1.8,
-     "air_c": -0.9
-    }
-   ]
-  },
-  {
    "ref": "R935",
    "name": "Ballinagh Road",
    "priority": 2,
+   "designated": true,
    "length_km": 2.1,
    "elev_mean_m": 82,
    "status": "GO",
@@ -1911,9 +1655,200 @@
    ]
   },
   {
+   "ref": "R181",
+   "name": "Lough Egish Road",
+   "priority": 3,
+   "designated": false,
+   "length_km": 2.4,
+   "elev_mean_m": 114,
+   "status": "GO",
+   "rules_status": "MARGINAL",
+   "model_prob": 0.93,
+   "review": true,
+   "surface_min_c": -2.1,
+   "air_min_c": -0.9,
+   "precip_mm": 0.0,
+   "ice_onset": "08:00",
+   "depart": "07:15",
+   "depart_is_now": false,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 5.7,
+     "air_c": 5.9
+    },
+    {
+     "t": "19:00",
+     "surface_c": 6.0,
+     "air_c": 6.1
+    },
+    {
+     "t": "20:00",
+     "surface_c": 5.8,
+     "air_c": 5.9
+    },
+    {
+     "t": "21:00",
+     "surface_c": 5.8,
+     "air_c": 5.9
+    },
+    {
+     "t": "22:00",
+     "surface_c": 5.3,
+     "air_c": 5.5
+    },
+    {
+     "t": "23:00",
+     "surface_c": 5.6,
+     "air_c": 5.7
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.6,
+     "air_c": 5.7
+    },
+    {
+     "t": "01:00",
+     "surface_c": 5.2,
+     "air_c": 5.3
+    },
+    {
+     "t": "02:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
+     "t": "03:00",
+     "surface_c": 5.0,
+     "air_c": 5.1
+    },
+    {
+     "t": "04:00",
+     "surface_c": 4.9,
+     "air_c": 4.9
+    },
+    {
+     "t": "05:00",
+     "surface_c": 2.3,
+     "air_c": 3.0
+    },
+    {
+     "t": "06:00",
+     "surface_c": 2.2,
+     "air_c": 2.6
+    },
+    {
+     "t": "07:00",
+     "surface_c": 2.0,
+     "air_c": 2.4
+    },
+    {
+     "t": "08:00",
+     "surface_c": -2.1,
+     "air_c": -0.9
+    }
+   ]
+  },
+  {
+   "ref": "R901",
+   "name": "Main Street",
+   "priority": 3,
+   "designated": false,
+   "length_km": 0.9,
+   "elev_mean_m": 70,
+   "status": "GO",
+   "rules_status": "MARGINAL",
+   "model_prob": 0.92,
+   "review": true,
+   "surface_min_c": -1.8,
+   "air_min_c": -0.9,
+   "precip_mm": 0.0,
+   "ice_onset": "08:00",
+   "depart": "07:15",
+   "depart_is_now": false,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 6.6,
+     "air_c": 6.6
+    },
+    {
+     "t": "19:00",
+     "surface_c": 5.7,
+     "air_c": 5.8
+    },
+    {
+     "t": "20:00",
+     "surface_c": 5.9,
+     "air_c": 5.9
+    },
+    {
+     "t": "21:00",
+     "surface_c": 5.7,
+     "air_c": 5.7
+    },
+    {
+     "t": "22:00",
+     "surface_c": 5.3,
+     "air_c": 5.4
+    },
+    {
+     "t": "23:00",
+     "surface_c": 5.0,
+     "air_c": 5.2
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
+     "t": "01:00",
+     "surface_c": 5.4,
+     "air_c": 5.5
+    },
+    {
+     "t": "02:00",
+     "surface_c": 5.0,
+     "air_c": 5.0
+    },
+    {
+     "t": "03:00",
+     "surface_c": 5.1,
+     "air_c": 5.1
+    },
+    {
+     "t": "04:00",
+     "surface_c": 4.2,
+     "air_c": 4.5
+    },
+    {
+     "t": "05:00",
+     "surface_c": 1.6,
+     "air_c": 1.9
+    },
+    {
+     "t": "06:00",
+     "surface_c": 2.1,
+     "air_c": 2.3
+    },
+    {
+     "t": "07:00",
+     "surface_c": 1.5,
+     "air_c": 1.8
+    },
+    {
+     "t": "08:00",
+     "surface_c": -1.8,
+     "air_c": -0.9
+    }
+   ]
+  },
+  {
    "ref": "R154",
    "name": "Ballinagh Road",
    "priority": 2,
+   "designated": true,
    "length_km": 25.1,
    "elev_mean_m": 90,
    "status": "MARGINAL",
@@ -2008,6 +1943,7 @@
    "ref": "R164",
    "name": "Kells Road",
    "priority": 2,
+   "designated": true,
    "length_km": 3.2,
    "elev_mean_m": 140,
    "status": "MARGINAL",
@@ -2101,7 +2037,8 @@
   {
    "ref": "R196",
    "name": "New Inn Road",
-   "priority": 2,
+   "priority": 3,
+   "designated": false,
    "length_km": 5.4,
    "elev_mean_m": 108,
    "status": "MARGINAL",
@@ -2196,6 +2133,7 @@
    "ref": "N87",
    "name": "Bawn Road",
    "priority": 1,
+   "designated": true,
    "length_km": 28.3,
    "elev_mean_m": 69,
    "status": "NO-GO",
@@ -2287,103 +2225,10 @@
    ]
   },
   {
-   "ref": "R179",
-   "name": "Carrickmacross Road",
-   "priority": 2,
-   "length_km": 2.8,
-   "elev_mean_m": 35,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.1,
-   "review": false,
-   "surface_min_c": 1.4,
-   "air_min_c": 2.3,
-   "precip_mm": 0.0,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.9,
-     "air_c": 7.0
-    },
-    {
-     "t": "19:00",
-     "surface_c": 6.7,
-     "air_c": 6.8
-    },
-    {
-     "t": "20:00",
-     "surface_c": 6.5,
-     "air_c": 6.6
-    },
-    {
-     "t": "21:00",
-     "surface_c": 6.5,
-     "air_c": 6.6
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 6.2
-    },
-    {
-     "t": "23:00",
-     "surface_c": 6.3,
-     "air_c": 6.4
-    },
-    {
-     "t": "00:00",
-     "surface_c": 6.4,
-     "air_c": 6.4
-    },
-    {
-     "t": "01:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "02:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "03:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "04:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "05:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
-    },
-    {
-     "t": "06:00",
-     "surface_c": 3.8,
-     "air_c": 4.2
-    },
-    {
-     "t": "07:00",
-     "surface_c": 2.0,
-     "air_c": 2.9
-    },
-    {
-     "t": "08:00",
-     "surface_c": 1.4,
-     "air_c": 2.3
-    }
-   ]
-  },
-  {
    "ref": "R194",
    "name": "Granard Road",
    "priority": 2,
+   "designated": true,
    "length_km": 37.1,
    "elev_mean_m": 102,
    "status": "NO-GO",
@@ -2475,103 +2320,10 @@
    ]
   },
   {
-   "ref": "R195",
-   "name": "Oldcastle Road",
-   "priority": 2,
-   "length_km": 5.8,
-   "elev_mean_m": 99,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.09,
-   "review": false,
-   "surface_min_c": 2.5,
-   "air_min_c": 2.7,
-   "precip_mm": 0.0,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.1,
-     "air_c": 6.5
-    },
-    {
-     "t": "19:00",
-     "surface_c": 6.4,
-     "air_c": 6.4
-    },
-    {
-     "t": "20:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "21:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "22:00",
-     "surface_c": 6.2,
-     "air_c": 6.2
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.1,
-     "air_c": 5.3
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.4,
-     "air_c": 4.6
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.0,
-     "air_c": 4.2
-    },
-    {
-     "t": "06:00",
-     "surface_c": 3.5,
-     "air_c": 3.8
-    },
-    {
-     "t": "07:00",
-     "surface_c": 2.5,
-     "air_c": 2.7
-    },
-    {
-     "t": "08:00",
-     "surface_c": 2.8,
-     "air_c": 2.9
-    }
-   ]
-  },
-  {
    "ref": "R198",
    "name": "Cavan Road",
    "priority": 2,
+   "designated": true,
    "length_km": 22.7,
    "elev_mean_m": 71,
    "status": "NO-GO",
@@ -2666,6 +2418,7 @@
    "ref": "R199",
    "name": "Newtown Gore Road",
    "priority": 2,
+   "designated": true,
    "length_km": 16.3,
    "elev_mean_m": 62,
    "status": "NO-GO",
@@ -2760,6 +2513,7 @@
    "ref": "R201",
    "name": "Drumlane Road",
    "priority": 2,
+   "designated": true,
    "length_km": 18.0,
    "elev_mean_m": 56,
    "status": "NO-GO",
@@ -2854,6 +2608,7 @@
    "ref": "R205",
    "name": "Ballinamore Road",
    "priority": 2,
+   "designated": true,
    "length_km": 13.1,
    "elev_mean_m": 63,
    "status": "NO-GO",
@@ -2948,6 +2703,7 @@
    "ref": "R207",
    "name": "Blacklion Road",
    "priority": 2,
+   "designated": true,
    "length_km": 12.9,
    "elev_mean_m": 80,
    "status": "NO-GO",
@@ -3039,9 +2795,200 @@
    ]
   },
   {
+   "ref": "R179",
+   "name": "Carrickmacross Road",
+   "priority": 3,
+   "designated": false,
+   "length_km": 2.8,
+   "elev_mean_m": 35,
+   "status": "NO-GO",
+   "rules_status": "NO-GO",
+   "model_prob": 0.1,
+   "review": false,
+   "surface_min_c": 1.4,
+   "air_min_c": 2.3,
+   "precip_mm": 0.0,
+   "ice_onset": null,
+   "depart": null,
+   "depart_is_now": false,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 6.9,
+     "air_c": 7.0
+    },
+    {
+     "t": "19:00",
+     "surface_c": 6.7,
+     "air_c": 6.8
+    },
+    {
+     "t": "20:00",
+     "surface_c": 6.5,
+     "air_c": 6.6
+    },
+    {
+     "t": "21:00",
+     "surface_c": 6.5,
+     "air_c": 6.6
+    },
+    {
+     "t": "22:00",
+     "surface_c": 5.9,
+     "air_c": 6.2
+    },
+    {
+     "t": "23:00",
+     "surface_c": 6.3,
+     "air_c": 6.4
+    },
+    {
+     "t": "00:00",
+     "surface_c": 6.4,
+     "air_c": 6.4
+    },
+    {
+     "t": "01:00",
+     "surface_c": 6.1,
+     "air_c": 6.1
+    },
+    {
+     "t": "02:00",
+     "surface_c": 6.1,
+     "air_c": 6.1
+    },
+    {
+     "t": "03:00",
+     "surface_c": 6.1,
+     "air_c": 6.1
+    },
+    {
+     "t": "04:00",
+     "surface_c": 5.8,
+     "air_c": 5.8
+    },
+    {
+     "t": "05:00",
+     "surface_c": 5.0,
+     "air_c": 5.1
+    },
+    {
+     "t": "06:00",
+     "surface_c": 3.8,
+     "air_c": 4.2
+    },
+    {
+     "t": "07:00",
+     "surface_c": 2.0,
+     "air_c": 2.9
+    },
+    {
+     "t": "08:00",
+     "surface_c": 1.4,
+     "air_c": 2.3
+    }
+   ]
+  },
+  {
+   "ref": "R195",
+   "name": "Oldcastle Road",
+   "priority": 3,
+   "designated": false,
+   "length_km": 5.8,
+   "elev_mean_m": 99,
+   "status": "NO-GO",
+   "rules_status": "NO-GO",
+   "model_prob": 0.09,
+   "review": false,
+   "surface_min_c": 2.5,
+   "air_min_c": 2.7,
+   "precip_mm": 0.0,
+   "ice_onset": null,
+   "depart": null,
+   "depart_is_now": false,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 6.1,
+     "air_c": 6.5
+    },
+    {
+     "t": "19:00",
+     "surface_c": 6.4,
+     "air_c": 6.4
+    },
+    {
+     "t": "20:00",
+     "surface_c": 6.1,
+     "air_c": 6.1
+    },
+    {
+     "t": "21:00",
+     "surface_c": 6.1,
+     "air_c": 6.1
+    },
+    {
+     "t": "22:00",
+     "surface_c": 6.2,
+     "air_c": 6.2
+    },
+    {
+     "t": "23:00",
+     "surface_c": 5.6,
+     "air_c": 5.6
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.1,
+     "air_c": 5.3
+    },
+    {
+     "t": "01:00",
+     "surface_c": 5.4,
+     "air_c": 5.4
+    },
+    {
+     "t": "02:00",
+     "surface_c": 4.6,
+     "air_c": 4.6
+    },
+    {
+     "t": "03:00",
+     "surface_c": 4.4,
+     "air_c": 4.6
+    },
+    {
+     "t": "04:00",
+     "surface_c": 4.8,
+     "air_c": 4.8
+    },
+    {
+     "t": "05:00",
+     "surface_c": 4.0,
+     "air_c": 4.2
+    },
+    {
+     "t": "06:00",
+     "surface_c": 3.5,
+     "air_c": 3.8
+    },
+    {
+     "t": "07:00",
+     "surface_c": 2.5,
+     "air_c": 2.7
+    },
+    {
+     "t": "08:00",
+     "surface_c": 2.8,
+     "air_c": 2.9
+    }
+   ]
+  },
+  {
    "ref": "R394",
    "name": "Finea Road",
-   "priority": 2,
+   "priority": 3,
+   "designated": false,
    "length_km": 9.0,
    "elev_mean_m": 80,
    "status": "NO-GO",
@@ -3152,13 +3099,13 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-19T20:35:50Z",
+   "fetched_at": "2026-11-19T20:49:43Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {
-   "name": "OpenStreetMap (Overpass)",
+   "name": "OpenStreetMap (Overpass), filtered to the council's designated routes",
    "url": "https://overpass-api.de",
-   "what": "trunk/primary/secondary roads in County Cavan with ref tags; routes built by grouping on ref"
+   "what": "trunk/primary/secondary roads in County Cavan with ref tags; routes built by grouping on ref. Priority 1 and 2 follow S7. N16 is excluded (salted by Leitrim County Council). Six R roads are not on the council plan (R179, R181, R195, R196, R394, R901) and are kept for analysis only."
   },
   "S3": {
    "name": "ERA5 / ERA5-Land via Open-Meteo archive",
@@ -3199,6 +3146,27 @@
     "rules_recall": 0.9231974921630094,
     "agreement_rate": 0.959679439018282
    }
+  },
+  "S7": {
+   "name": "Cavan County Council Winter Service Plan 2023/2024 (October 2023)",
+   "url": "https://www.cavancoco.ie/file-library/roads-and-transport/Severe-weather/cavan-county-council-winter-service-plan-2023-2024.pdf",
+   "what": "PRIMARY DOCUMENT. Table 1: designated Priority 1 and 2 routes and levels of service. A7: Duty Engineer decision-making, Met Eireann forecasts, Vaisala Manager, two road weather stations on the N3 (Virginia, Butlersbridge), forecasting accurate to about 85% at best. A8: resources, one Machinery Yard with 9 trucks and 11 spreaders, 7 mini salters in the three Municipal Districts, 2,750 t salt storage (about 30 runs). A9: call-outs per winter 2007/08 to 2022/23, used to validate the backtest.",
+   "policy": "Priority 1 treated during all weather events. Priority 2 treated in normal winter service but may be interrupted in severe weather. Priority 1 treated to the exclusion of all others when resources are limited. Priority 3 only intermittent at Municipal District Engineers' discretion."
+  },
+  "S8": {
+   "name": "Cavan County Council: Current Salting Routes and Winter Service Plan pages",
+   "url": "https://www.cavancoco.ie/services/roads-transportation/severe-weather/current-salting-routes/",
+   "what": "Public statements: Priority 1 is N3, N54, N55, N87; about 90 tonnes of salt covers about 500 km a night; Ice Cast alerts; salt does not guarantee safe speeds and frost after rain can undo treatment."
+  },
+  "S9": {
+   "name": "Press reports of council statements",
+   "url": "https://www.anglocelt.ie/2026/02/01/it-is-not-physically-possible-to-salt-all-routes-council/",
+   "what": "Anglo Celt 01/02/2026 (645 km salted per night, 4 to 6 hour salting window, 'not physically possible to salt all routes'); Northern Sound 25/01/2022 (about 20% of network salted, no capacity to extend); Anglo Celt 12/12/2024 (councillor requests to extend routes, rain undoing salting)."
+  },
+  "S10": {
+   "name": "Other councils' Winter Service Plans, used for comparison only",
+   "url": "https://monaghan.ie/roadtransport/wp-content/uploads/sites/15/2025/10/WinterServicePlan-website2025-2026.pdf",
+   "what": "Monaghan 2025/26 (8 gritters, about 610 km, treatment time 2 to 5 hours), Mayo 2025/26 (Met Eireann about 80% forecast accuracy, 10% of regional roads and 95% of local roads not salted), Galway 2025/26 and Louth. Not used in any calculation."
   }
  }
 }
