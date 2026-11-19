@@ -83,10 +83,14 @@ function pick(ref) {
   selected = ref; const r = L.routes.find(x => x.ref === ref);
   document.querySelectorAll("#plan tr.row").forEach(t => t.classList.toggle("sel", t.dataset.ref === ref));
   Object.entries(layers).forEach(([k, ly]) => ly.setStyle({weight: k === ref ? 8 : 4}));
+  const pct = Math.round(r.model_prob * 100), modelSays = r.model_prob >= 0.5 ? "icy" : "not icy";
+  const kv = (label, val) => `<div class="kv"><div class="k">${label}</div><div class="v">${val}</div></div>`;
   $("#detail").innerHTML = `<h2>${r.ref} ${r.name} <span class="pill p-${r.status}">${r.status}</span></h2>
+  ${r.review ? `<div class="flagbox"><span class="flag">⚑</span><div><b>Rules and model disagree</b><br>Rules engine says <b>${r.rules_status}</b>, model says ${modelSays} (${n(pct, "% ice risk", "S6")}). The cautious call (<b>${r.status}</b>) is shown. Please review.</div></div>` : ""}
   <div class="mute">Estimated road surface (colour) vs air temperature (grey) tonight ${src("S1", "S5")}</div>${chart(r)}
-  <p>Rules engine: <b>${r.rules_status}</b>${src("S5")} · Model: ${n(Math.round(r.model_prob * 100), "% ice risk", "S6")} · Air min ${n(r.air_min_c, "°C", "S1")} · Precip ${n(r.precip_mm, " mm", "S1")}<br>
-  Mean elevation ${n(r.elev_mean_m, " m", "S4")} · ${n(r.length_km, " km", "S2")} ${r.review ? "<br><b>Rules and model disagree. The cautious call is shown. Please review.</b>" : ""}</p>`;
+  <div class="grp"><h3>Road features</h3><div class="kvs">${kv("Mean elevation", n(r.elev_mean_m, " m", "S4"))}${kv("Length", n(r.length_km, " km", "S2"))}</div></div>
+  <div class="grp"><h3>Weather prediction</h3><div class="kvs">${kv("Air minimum", n(r.air_min_c, "°C", "S1"))}${kv("Precipitation", n(r.precip_mm, " mm", "S1"))}</div></div>
+  <div class="grp"><h3>Status prediction</h3><div class="kvs">${kv("Rules engine", `<span class="pill p-${r.rules_status}">${r.rules_status}</span>${src("S5")}`)}${kv("Model ice risk", n(pct, "%", "S6"))}</div></div>`;
 }
 
 const LOGK = "winterwatch_decisions";
