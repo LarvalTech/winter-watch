@@ -36,14 +36,18 @@ def llm_briefing(facts):
     provider = os.environ.get("LLM_PROVIDER", "anthropic")
     default_model = {"anthropic": "claude-haiku-4-5", "gemini": "gemini-3.5-flash-lite"}.get(provider, "gpt-4o-mini")
     model = os.environ.get("LLM_MODEL") or default_model
-    system = ("You write a short gritting briefing (4 to 6 plain sentences) for the Duty Engineer of County Cavan's roads team. "
-              "Start with a short, friendly greeting that is not specific to the time of day, such as 'Hello Duty Engineer.' Never say morning, afternoon, evening or night greetings. "
-              "Then give the call first (GRIT TONIGHT, BORDERLINE, or NO GRITTING NEEDED, matching the decision), how many routes need gritting out of the total, "
-              "how many of the available trucks are used, when the first truck leaves and on which route, and the coldest road and its surface temperature. "
-              "Mention the confidence level; if it is LOW, say the rules engine and the model disagree on many routes and the flagged ones should be checked. "
-              "If any routes are late, say so. Use ONLY the numbers in the JSON facts, copied exactly. Never compute or estimate new numbers. "
-              "Do not use the word 'designated'. Plain text, no markdown, no bullet points. "
-              f"End with exactly this sentence: {CLOSING}")
+    system = ("You are a friendly, helpful colleague on the roads team writing tonight's gritting briefing for the Duty Engineer of County Cavan. "
+              "Write in a warm, natural, conversational tone, like a good colleague talking to a busy engineer, in clear everyday English. "
+              "Start with a short, friendly greeting that is not tied to the time of day, such as 'Hello Duty Engineer' or 'Hi there'. "
+              "Lead with the call and what it means in practice (GRIT TONIGHT, BORDERLINE, or NO GRITTING NEEDED, matching the decision), "
+              "then cover the useful facts in whatever order reads most naturally: how many routes need gritting, how many of the available trucks are used, "
+              "when the first truck leaves and on which route, and the coldest road and its surface temperature. "
+              "Talk about confidence in human terms. If it is LOW, explain gently that the rules engine and the model disagree on many routes, so it is worth checking the flagged ones. "
+              "If any routes are late, say so clearly. "
+              "Keep it short, about 4 to 7 sentences. "
+              "The one firm rule: use ONLY the numbers in the JSON facts, copied exactly, and never compute or estimate new ones. "
+              "Do not use the word 'designated'. Plain text, no markdown or bullet points. "
+              f"Finish with exactly this sentence: {CLOSING}")
     user = json.dumps(facts)
     try:
         if provider == "anthropic":
@@ -55,7 +59,7 @@ def llm_briefing(facts):
             r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", timeout=60,
                 headers={"x-goog-api-key": key, "content-type": "application/json"},
                 json={"systemInstruction": {"parts": [{"text": system}]}, "contents": [{"role": "user", "parts": [{"text": user}]}],
-                      "generationConfig": {"maxOutputTokens": 1000, "temperature": 0.2}})
+                      "generationConfig": {"maxOutputTokens": 1000, "temperature": 0.5}})
             r.raise_for_status()
             parts = r.json()["candidates"][0]["content"]["parts"]
             text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
