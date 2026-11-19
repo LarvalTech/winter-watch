@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-19T20:07:05Z",
- "decision_time_local": "2026-11-19T20:07:05",
+ "generated_at": "2026-11-19T20:35:50Z",
+ "decision_time_local": "2026-11-19T20:35:50",
  "night": {
   "from": "2026-11-19 18:00:00",
   "to": "2026-11-20 08:00:00"
@@ -18,112 +18,18 @@
   "n_go": 20,
   "n_marginal": 3,
   "n_review": 20,
-  "first_departure": "02:45",
-  "first_route": "R200",
+  "first_departure": "03:15",
+  "first_route": "N16",
   "coldest_route": "R190",
   "coldest_ts": -3.8,
   "confidence": "LOW"
  },
  "briefing": {
-  "text": "Recommendation: GRIT TONIGHT. 20 of 33 routes are forecast to reach icy-road conditions. First truck should leave at 02:45 (R200). Coldest route is R190 with a forecast road surface minimum of -3.8 C. 20 routes are flagged REVIEW because the rules engine and the trained model disagree. Confidence is LOW: the rules engine and the trained model disagree on many routes, so check the flagged routes. This is a recommendation only. The Duty Engineer makes the final decision.",
+  "text": "Recommendation: GRIT TONIGHT. 20 of 33 routes are forecast to reach icy-road conditions. First truck should leave at 03:15 (N16). Coldest route is R190 with a forecast road surface minimum of -3.8 C. 20 routes are flagged REVIEW because the rules engine and the trained model disagree. Confidence is LOW: the rules engine and the trained model disagree on many routes, so check the flagged routes. This is a recommendation only. The Duty Engineer makes the final decision.",
   "source": "template",
   "detail": "template fallback (no LLM_API_KEY set)"
  },
  "routes": [
-  {
-   "ref": "N16",
-   "name": "Sligo Road",
-   "priority": 1,
-   "length_km": 7.2,
-   "elev_mean_m": 59,
-   "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.92,
-   "review": true,
-   "surface_min_c": -2.2,
-   "air_min_c": -1.1,
-   "precip_mm": 0.0,
-   "ice_onset": "04:00",
-   "depart": "03:15",
-   "depart_is_now": false,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "02:00",
-     "surface_c": 3.7,
-     "air_c": 3.9
-    },
-    {
-     "t": "03:00",
-     "surface_c": 1.1,
-     "air_c": 2.4
-    },
-    {
-     "t": "04:00",
-     "surface_c": -1.6,
-     "air_c": -0.2
-    },
-    {
-     "t": "05:00",
-     "surface_c": -2.2,
-     "air_c": -1.0
-    },
-    {
-     "t": "06:00",
-     "surface_c": -1.5,
-     "air_c": -0.4
-    },
-    {
-     "t": "07:00",
-     "surface_c": -2.1,
-     "air_c": -1.0
-    },
-    {
-     "t": "08:00",
-     "surface_c": -2.2,
-     "air_c": -1.1
-    }
-   ]
-  },
   {
    "ref": "N3",
    "name": "Dublin Road",
@@ -136,35 +42,35 @@
    "review": true,
    "surface_min_c": -2.0,
    "air_min_c": -1.1,
-   "precip_mm": 0.4,
+   "precip_mm": 0.0,
    "ice_onset": "07:00",
    "depart": "04:45",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.3,
-     "air_c": 6.3
+     "surface_c": 6.1,
+     "air_c": 6.2
     },
     {
      "t": "19:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": 5.5,
+     "air_c": 5.5
     },
     {
      "t": "20:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
+     "surface_c": 5.5,
+     "air_c": 5.6
     },
     {
      "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
+     "surface_c": 5.6,
+     "air_c": 5.6
     },
     {
      "t": "22:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
+     "surface_c": 4.9,
+     "air_c": 5.1
     },
     {
      "t": "23:00",
@@ -173,8 +79,8 @@
     },
     {
      "t": "00:00",
-     "surface_c": 4.9,
-     "air_c": 5.0
+     "surface_c": 5.3,
+     "air_c": 5.3
     },
     {
      "t": "01:00",
@@ -183,18 +89,18 @@
     },
     {
      "t": "02:00",
+     "surface_c": 4.9,
+     "air_c": 4.9
+    },
+    {
+     "t": "03:00",
      "surface_c": 4.5,
      "air_c": 4.5
     },
     {
-     "t": "03:00",
-     "surface_c": 3.8,
-     "air_c": 3.8
-    },
-    {
      "t": "04:00",
-     "surface_c": 2.7,
-     "air_c": 2.9
+     "surface_c": 4.2,
+     "air_c": 4.2
     },
     {
      "t": "05:00",
@@ -230,30 +136,30 @@
    "review": true,
    "surface_min_c": -2.2,
    "air_min_c": -1.3,
-   "precip_mm": 0.0,
+   "precip_mm": 0.2,
    "ice_onset": "06:00",
    "depart": "05:00",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
+     "surface_c": 6.2,
+     "air_c": 6.2
     },
     {
      "t": "19:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
+     "surface_c": 5.4,
+     "air_c": 5.5
     },
     {
      "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 5.7,
+     "air_c": 5.7
     },
     {
      "t": "21:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 5.6,
+     "air_c": 5.6
     },
     {
      "t": "22:00",
@@ -262,33 +168,33 @@
     },
     {
      "t": "23:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": 5.7,
+     "air_c": 5.7
     },
     {
      "t": "00:00",
+     "surface_c": 5.6,
+     "air_c": 5.6
+    },
+    {
+     "t": "01:00",
      "surface_c": 5.3,
      "air_c": 5.3
     },
     {
-     "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 5.0
-    },
-    {
      "t": "02:00",
-     "surface_c": 4.7,
-     "air_c": 4.8
+     "surface_c": 5.2,
+     "air_c": 5.2
     },
     {
      "t": "03:00",
-     "surface_c": 3.7,
-     "air_c": 3.7
+     "surface_c": 4.8,
+     "air_c": 4.8
     },
     {
      "t": "04:00",
-     "surface_c": 2.2,
-     "air_c": 2.2
+     "surface_c": 2.6,
+     "air_c": 2.7
     },
     {
      "t": "05:00",
@@ -331,58 +237,58 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 6.1
+     "surface_c": 6.1,
+     "air_c": 6.2
     },
     {
      "t": "19:00",
-     "surface_c": 5.6,
-     "air_c": 5.8
+     "surface_c": 5.5,
+     "air_c": 5.7
     },
     {
      "t": "20:00",
-     "surface_c": 5.3,
-     "air_c": 5.5
+     "surface_c": 5.2,
+     "air_c": 5.4
     },
     {
      "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
+     "surface_c": 5.3,
+     "air_c": 5.4
     },
     {
      "t": "22:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.4,
+     "surface_c": 5.5,
      "air_c": 5.5
     },
     {
+     "t": "23:00",
+     "surface_c": 5.2,
+     "air_c": 5.3
+    },
+    {
      "t": "00:00",
-     "surface_c": 4.6,
+     "surface_c": 4.7,
      "air_c": 4.9
     },
     {
      "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": 5.2,
+     "air_c": 5.2
     },
     {
      "t": "02:00",
-     "surface_c": 4.8,
-     "air_c": 4.9
+     "surface_c": 4.2,
+     "air_c": 4.3
     },
     {
      "t": "03:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
+     "surface_c": 5.0,
+     "air_c": 5.0
     },
     {
      "t": "04:00",
-     "surface_c": 4.3,
-     "air_c": 4.3
+     "surface_c": 4.7,
+     "air_c": 4.7
     },
     {
      "t": "05:00",
@@ -407,6 +313,100 @@
    ]
   },
   {
+   "ref": "N16",
+   "name": "Sligo Road",
+   "priority": 2,
+   "length_km": 7.2,
+   "elev_mean_m": 59,
+   "status": "GO",
+   "rules_status": "MARGINAL",
+   "model_prob": 0.92,
+   "review": true,
+   "surface_min_c": -2.2,
+   "air_min_c": -1.1,
+   "precip_mm": 0.0,
+   "ice_onset": "04:00",
+   "depart": "03:15",
+   "depart_is_now": false,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 6.0,
+     "air_c": 6.0
+    },
+    {
+     "t": "19:00",
+     "surface_c": 5.3,
+     "air_c": 5.4
+    },
+    {
+     "t": "20:00",
+     "surface_c": 4.7,
+     "air_c": 4.9
+    },
+    {
+     "t": "21:00",
+     "surface_c": 5.5,
+     "air_c": 5.5
+    },
+    {
+     "t": "22:00",
+     "surface_c": 5.7,
+     "air_c": 5.7
+    },
+    {
+     "t": "23:00",
+     "surface_c": 5.6,
+     "air_c": 5.6
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.5,
+     "air_c": 5.5
+    },
+    {
+     "t": "01:00",
+     "surface_c": 4.8,
+     "air_c": 4.9
+    },
+    {
+     "t": "02:00",
+     "surface_c": 3.2,
+     "air_c": 3.8
+    },
+    {
+     "t": "03:00",
+     "surface_c": 1.2,
+     "air_c": 2.2
+    },
+    {
+     "t": "04:00",
+     "surface_c": 0.8,
+     "air_c": 1.5
+    },
+    {
+     "t": "05:00",
+     "surface_c": -2.2,
+     "air_c": -1.0
+    },
+    {
+     "t": "06:00",
+     "surface_c": -1.5,
+     "air_c": -0.4
+    },
+    {
+     "t": "07:00",
+     "surface_c": -2.1,
+     "air_c": -1.0
+    },
+    {
+     "t": "08:00",
+     "surface_c": -2.2,
+     "air_c": -1.1
+    }
+   ]
+  },
+  {
    "ref": "R200",
    "name": "Bellavally Road",
    "priority": 2,
@@ -419,64 +419,64 @@
    "surface_min_c": -2.5,
    "air_min_c": -1.3,
    "precip_mm": 0.0,
-   "ice_onset": "04:00",
-   "depart": "02:45",
+   "ice_onset": "05:00",
+   "depart": "03:45",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
+     "surface_c": 5.5,
+     "air_c": 5.6
     },
     {
      "t": "19:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
+     "surface_c": 5.2,
+     "air_c": 5.3
     },
     {
      "t": "20:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "21:00",
      "surface_c": 5.1,
      "air_c": 5.1
     },
     {
+     "t": "21:00",
+     "surface_c": 4.7,
+     "air_c": 4.8
+    },
+    {
      "t": "22:00",
-     "surface_c": 5.1,
+     "surface_c": 5.0,
      "air_c": 5.1
     },
     {
      "t": "23:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
+     "t": "01:00",
      "surface_c": 5.0,
      "air_c": 5.0
     },
     {
-     "t": "00:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
      "t": "02:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "surface_c": 4.6,
+     "air_c": 4.6
     },
     {
      "t": "03:00",
-     "surface_c": 2.6,
-     "air_c": 3.2
+     "surface_c": 2.0,
+     "air_c": 2.6
     },
     {
      "t": "04:00",
-     "surface_c": 0.6,
-     "air_c": 1.3
+     "surface_c": 1.9,
+     "air_c": 2.3
     },
     {
      "t": "05:00",
@@ -508,34 +508,34 @@
    "elev_mean_m": 108,
    "status": "GO",
    "rules_status": "MARGINAL",
-   "model_prob": 0.9,
+   "model_prob": 0.89,
    "review": true,
    "surface_min_c": -2.1,
    "air_min_c": -0.9,
    "precip_mm": 0.0,
-   "ice_onset": "04:00",
-   "depart": "03:00",
+   "ice_onset": "05:00",
+   "depart": "04:00",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
+     "surface_c": 5.9,
+     "air_c": 6.0
     },
     {
      "t": "19:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 5.6,
+     "air_c": 5.7
     },
     {
      "t": "20:00",
      "surface_c": 5.4,
-     "air_c": 5.4
+     "air_c": 5.5
     },
     {
      "t": "21:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": 5.1,
+     "air_c": 5.2
     },
     {
      "t": "22:00",
@@ -544,33 +544,33 @@
     },
     {
      "t": "23:00",
+     "surface_c": 5.5,
+     "air_c": 5.6
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.6,
+     "air_c": 5.6
+    },
+    {
+     "t": "01:00",
      "surface_c": 5.4,
      "air_c": 5.4
     },
     {
-     "t": "00:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
-    },
-    {
      "t": "02:00",
      "surface_c": 4.9,
-     "air_c": 4.9
+     "air_c": 5.0
     },
     {
      "t": "03:00",
-     "surface_c": 3.0,
-     "air_c": 3.6
+     "surface_c": 2.3,
+     "air_c": 3.0
     },
     {
      "t": "04:00",
-     "surface_c": 1.0,
-     "air_c": 1.7
+     "surface_c": 2.3,
+     "air_c": 2.7
     },
     {
      "t": "05:00",
@@ -613,8 +613,8 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 6.1
+     "surface_c": 6.2,
+     "air_c": 6.3
     },
     {
      "t": "19:00",
@@ -628,28 +628,28 @@
     },
     {
      "t": "21:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
+     "surface_c": 5.5,
+     "air_c": 5.6
     },
     {
      "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.9
+     "surface_c": 5.4,
+     "air_c": 5.7
     },
     {
      "t": "23:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 5.5,
+     "air_c": 5.7
     },
     {
      "t": "00:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
+     "surface_c": 4.8,
+     "air_c": 5.0
     },
     {
      "t": "01:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
+     "surface_c": 4.6,
+     "air_c": 4.9
     },
     {
      "t": "02:00",
@@ -658,13 +658,13 @@
     },
     {
      "t": "03:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "surface_c": 4.8,
+     "air_c": 4.9
     },
     {
      "t": "04:00",
-     "surface_c": 3.6,
-     "air_c": 3.7
+     "surface_c": 4.7,
+     "air_c": 4.8
     },
     {
      "t": "05:00",
@@ -707,58 +707,58 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.4,
-     "air_c": 5.6
+     "surface_c": 5.6,
+     "air_c": 5.9
     },
     {
      "t": "19:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "20:00",
      "surface_c": 5.8,
      "air_c": 5.8
     },
     {
+     "t": "20:00",
+     "surface_c": 5.6,
+     "air_c": 5.7
+    },
+    {
      "t": "21:00",
+     "surface_c": 5.5,
+     "air_c": 5.6
+    },
+    {
+     "t": "22:00",
+     "surface_c": 5.6,
+     "air_c": 5.6
+    },
+    {
+     "t": "23:00",
      "surface_c": 5.5,
      "air_c": 5.5
     },
     {
-     "t": "22:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
-    },
-    {
-     "t": "23:00",
+     "t": "00:00",
      "surface_c": 5.4,
      "air_c": 5.4
     },
     {
-     "t": "00:00",
+     "t": "01:00",
      "surface_c": 5.0,
-     "air_c": 5.1
+     "air_c": 5.0
     },
     {
-     "t": "01:00",
+     "t": "02:00",
      "surface_c": 4.8,
      "air_c": 4.8
     },
     {
-     "t": "02:00",
-     "surface_c": 3.9,
-     "air_c": 4.1
-    },
-    {
      "t": "03:00",
-     "surface_c": 3.2,
-     "air_c": 3.5
+     "surface_c": 4.7,
+     "air_c": 4.7
     },
     {
      "t": "04:00",
-     "surface_c": 1.8,
-     "air_c": 2.4
+     "surface_c": 4.1,
+     "air_c": 4.1
     },
     {
      "t": "05:00",
@@ -794,65 +794,65 @@
    "review": true,
    "surface_min_c": -2.2,
    "air_min_c": -1.2,
-   "precip_mm": 0.0,
+   "precip_mm": 0.2,
    "ice_onset": "06:00",
    "depart": "05:15",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.1,
-     "air_c": 6.2
+     "surface_c": 6.2,
+     "air_c": 6.3
     },
     {
      "t": "19:00",
-     "surface_c": 5.2,
-     "air_c": 5.4
+     "surface_c": 5.4,
+     "air_c": 5.6
     },
     {
      "t": "20:00",
      "surface_c": 5.8,
-     "air_c": 5.9
+     "air_c": 5.8
     },
     {
      "t": "21:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 5.7,
+     "air_c": 5.7
     },
     {
      "t": "22:00",
-     "surface_c": 5.3,
+     "surface_c": 5.4,
      "air_c": 5.5
     },
     {
      "t": "23:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 5.7,
+     "air_c": 5.8
     },
     {
      "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": 5.6,
+     "air_c": 5.7
     },
     {
      "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 5.1
+     "surface_c": 5.3,
+     "air_c": 5.4
     },
     {
      "t": "02:00",
+     "surface_c": 5.3,
+     "air_c": 5.3
+    },
+    {
+     "t": "03:00",
      "surface_c": 4.8,
      "air_c": 4.9
     },
     {
-     "t": "03:00",
-     "surface_c": 3.7,
-     "air_c": 3.8
-    },
-    {
      "t": "04:00",
-     "surface_c": 2.2,
-     "air_c": 2.3
+     "surface_c": 2.6,
+     "air_c": 2.8
     },
     {
      "t": "05:00",
@@ -900,13 +900,13 @@
     },
     {
      "t": "19:00",
-     "surface_c": 6.0,
+     "surface_c": 6.1,
      "air_c": 6.1
     },
     {
      "t": "20:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 6.0,
+     "air_c": 6.0
     },
     {
      "t": "21:00",
@@ -915,38 +915,38 @@
     },
     {
      "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.9
+     "surface_c": 6.0,
+     "air_c": 6.1
     },
     {
      "t": "23:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "00:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.8,
+     "surface_c": 5.7,
      "air_c": 5.8
     },
     {
+     "t": "00:00",
+     "surface_c": 6.2,
+     "air_c": 6.2
+    },
+    {
+     "t": "01:00",
+     "surface_c": 5.9,
+     "air_c": 5.9
+    },
+    {
      "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
+     "surface_c": 5.1,
+     "air_c": 5.1
     },
     {
      "t": "03:00",
-     "surface_c": 4.0,
-     "air_c": 4.1
+     "surface_c": 4.3,
+     "air_c": 4.3
     },
     {
      "t": "04:00",
-     "surface_c": 2.8,
-     "air_c": 3.4
+     "surface_c": 1.3,
+     "air_c": 2.1
     },
     {
      "t": "05:00",
@@ -989,8 +989,8 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
+     "surface_c": 6.2,
+     "air_c": 6.2
     },
     {
      "t": "19:00",
@@ -1004,28 +1004,28 @@
     },
     {
      "t": "21:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 5.5,
+     "air_c": 5.5
     },
     {
      "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
+     "surface_c": 5.3,
+     "air_c": 5.6
     },
     {
      "t": "23:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
+     "surface_c": 5.4,
+     "air_c": 5.6
     },
     {
      "t": "00:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
+     "surface_c": 4.8,
+     "air_c": 4.9
     },
     {
      "t": "01:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
+     "surface_c": 4.6,
+     "air_c": 4.8
     },
     {
      "t": "02:00",
@@ -1034,13 +1034,13 @@
     },
     {
      "t": "03:00",
-     "surface_c": 4.4,
-     "air_c": 4.4
+     "surface_c": 4.8,
+     "air_c": 4.8
     },
     {
      "t": "04:00",
-     "surface_c": 3.6,
-     "air_c": 3.6
+     "surface_c": 4.7,
+     "air_c": 4.7
     },
     {
      "t": "05:00",
@@ -1072,7 +1072,7 @@
    "elev_mean_m": 126,
    "status": "GO",
    "rules_status": "MARGINAL",
-   "model_prob": 0.72,
+   "model_prob": 0.71,
    "review": true,
    "surface_min_c": -0.5,
    "air_min_c": 0.3,
@@ -1083,43 +1083,43 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
+     "surface_c": 6.3,
+     "air_c": 6.3
     },
     {
      "t": "19:00",
-     "surface_c": 5.7,
+     "surface_c": 5.8,
      "air_c": 5.9
     },
     {
      "t": "20:00",
-     "surface_c": 5.6,
+     "surface_c": 5.7,
      "air_c": 5.7
     },
     {
      "t": "21:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 5.6,
+     "air_c": 5.6
     },
     {
      "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.9
+     "surface_c": 5.4,
+     "air_c": 5.7
     },
     {
      "t": "23:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 5.5,
+     "air_c": 5.7
     },
     {
      "t": "00:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
+     "surface_c": 4.9,
+     "air_c": 5.0
     },
     {
      "t": "01:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
+     "surface_c": 4.7,
+     "air_c": 4.9
     },
     {
      "t": "02:00",
@@ -1128,13 +1128,13 @@
     },
     {
      "t": "03:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "surface_c": 4.9,
+     "air_c": 4.9
     },
     {
      "t": "04:00",
-     "surface_c": 3.6,
-     "air_c": 3.7
+     "surface_c": 4.8,
+     "air_c": 4.8
     },
     {
      "t": "05:00",
@@ -1170,45 +1170,45 @@
    "review": true,
    "surface_min_c": -1.9,
    "air_min_c": -1.0,
-   "precip_mm": 0.4,
+   "precip_mm": 0.0,
    "ice_onset": "07:00",
    "depart": "05:45",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.3,
-     "air_c": 6.4
+     "surface_c": 6.2,
+     "air_c": 6.3
     },
     {
      "t": "19:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": 5.6,
+     "air_c": 5.6
     },
     {
      "t": "20:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 5.6,
+     "air_c": 5.7
     },
     {
      "t": "21:00",
      "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.7,
      "air_c": 5.7
     },
     {
+     "t": "22:00",
+     "surface_c": 5.0,
+     "air_c": 5.2
+    },
+    {
      "t": "23:00",
-     "surface_c": 5.3,
+     "surface_c": 5.2,
      "air_c": 5.3
     },
     {
      "t": "00:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
+     "surface_c": 5.4,
+     "air_c": 5.4
     },
     {
      "t": "01:00",
@@ -1217,18 +1217,18 @@
     },
     {
      "t": "02:00",
+     "surface_c": 5.0,
+     "air_c": 5.0
+    },
+    {
+     "t": "03:00",
      "surface_c": 4.6,
      "air_c": 4.6
     },
     {
-     "t": "03:00",
-     "surface_c": 3.9,
-     "air_c": 3.9
-    },
-    {
      "t": "04:00",
-     "surface_c": 2.8,
-     "air_c": 3.0
+     "surface_c": 4.3,
+     "air_c": 4.3
     },
     {
      "t": "05:00",
@@ -1271,8 +1271,8 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.6,
-     "air_c": 5.8
+     "surface_c": 5.8,
+     "air_c": 6.0
     },
     {
      "t": "19:00",
@@ -1281,8 +1281,8 @@
     },
     {
      "t": "20:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 5.5,
+     "air_c": 5.7
     },
     {
      "t": "21:00",
@@ -1291,38 +1291,38 @@
     },
     {
      "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 4.6,
+     "air_c": 4.8
     },
     {
      "t": "23:00",
+     "surface_c": 5.8,
+     "air_c": 5.8
+    },
+    {
+     "t": "00:00",
      "surface_c": 5.5,
      "air_c": 5.5
     },
     {
-     "t": "00:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
      "t": "01:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 5.0,
+     "air_c": 5.0
     },
     {
      "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
+     "surface_c": 4.7,
+     "air_c": 4.7
     },
     {
      "t": "03:00",
-     "surface_c": 4.2,
-     "air_c": 4.2
+     "surface_c": 4.5,
+     "air_c": 4.5
     },
     {
      "t": "04:00",
-     "surface_c": 3.5,
-     "air_c": 3.6
+     "surface_c": 4.5,
+     "air_c": 4.5
     },
     {
      "t": "05:00",
@@ -1358,15 +1358,15 @@
    "review": true,
    "surface_min_c": -2.1,
    "air_min_c": -1.0,
-   "precip_mm": 0.1,
+   "precip_mm": 0.0,
    "ice_onset": "08:00",
    "depart": "06:45",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
+     "surface_c": 5.6,
+     "air_c": 5.8
     },
     {
      "t": "19:00",
@@ -1375,48 +1375,48 @@
     },
     {
      "t": "20:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "21:00",
      "surface_c": 5.7,
      "air_c": 5.8
     },
     {
+     "t": "21:00",
+     "surface_c": 5.8,
+     "air_c": 5.8
+    },
+    {
      "t": "22:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.4,
+     "surface_c": 5.3,
      "air_c": 5.4
     },
     {
+     "t": "23:00",
+     "surface_c": 5.5,
+     "air_c": 5.6
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.6,
+     "air_c": 5.6
+    },
+    {
+     "t": "01:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
      "t": "02:00",
+     "surface_c": 5.1,
+     "air_c": 5.1
+    },
+    {
+     "t": "03:00",
      "surface_c": 5.0,
      "air_c": 5.0
     },
     {
-     "t": "03:00",
-     "surface_c": 4.4,
-     "air_c": 4.4
-    },
-    {
      "t": "04:00",
-     "surface_c": 3.8,
-     "air_c": 3.9
+     "surface_c": 4.8,
+     "air_c": 4.8
     },
     {
      "t": "05:00",
@@ -1452,25 +1452,25 @@
    "review": true,
    "surface_min_c": -0.9,
    "air_min_c": -0.0,
-   "precip_mm": 0.2,
+   "precip_mm": 0.0,
    "ice_onset": "08:00",
    "depart": "07:00",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.1,
-     "air_c": 6.2
+     "surface_c": 6.2,
+     "air_c": 6.3
     },
     {
      "t": "19:00",
-     "surface_c": 5.1,
-     "air_c": 5.4
+     "surface_c": 5.5,
+     "air_c": 5.6
     },
     {
      "t": "20:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 5.7,
+     "air_c": 5.7
     },
     {
      "t": "21:00",
@@ -1479,38 +1479,38 @@
     },
     {
      "t": "22:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
+     "surface_c": 5.2,
+     "air_c": 5.3
     },
     {
      "t": "23:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
+     "surface_c": 4.6,
+     "air_c": 4.9
     },
     {
      "t": "00:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
+     "surface_c": 5.4,
+     "air_c": 5.4
     },
     {
      "t": "01:00",
-     "surface_c": 3.9,
-     "air_c": 4.2
+     "surface_c": 4.3,
+     "air_c": 4.7
     },
     {
      "t": "02:00",
-     "surface_c": 4.5,
-     "air_c": 4.6
+     "surface_c": 4.9,
+     "air_c": 4.9
     },
     {
      "t": "03:00",
-     "surface_c": 4.3,
-     "air_c": 4.3
+     "surface_c": 4.8,
+     "air_c": 4.8
     },
     {
      "t": "04:00",
-     "surface_c": 2.6,
-     "air_c": 3.0
+     "surface_c": 4.6,
+     "air_c": 4.6
     },
     {
      "t": "05:00",
@@ -1546,15 +1546,15 @@
    "review": true,
    "surface_min_c": -2.1,
    "air_min_c": -0.9,
-   "precip_mm": 0.1,
+   "precip_mm": 0.0,
    "ice_onset": "08:00",
    "depart": "07:15",
    "depart_is_now": false,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.2
+     "surface_c": 5.7,
+     "air_c": 5.9
     },
     {
      "t": "19:00",
@@ -1563,8 +1563,8 @@
     },
     {
      "t": "20:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
+     "surface_c": 5.8,
+     "air_c": 5.9
     },
     {
      "t": "21:00",
@@ -1573,38 +1573,38 @@
     },
     {
      "t": "22:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.4,
+     "surface_c": 5.3,
      "air_c": 5.5
     },
     {
+     "t": "23:00",
+     "surface_c": 5.6,
+     "air_c": 5.7
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.6,
+     "air_c": 5.7
+    },
+    {
+     "t": "01:00",
+     "surface_c": 5.2,
+     "air_c": 5.3
+    },
+    {
      "t": "02:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
+     "t": "03:00",
      "surface_c": 5.0,
      "air_c": 5.1
     },
     {
-     "t": "03:00",
-     "surface_c": 4.4,
-     "air_c": 4.5
-    },
-    {
      "t": "04:00",
-     "surface_c": 3.9,
-     "air_c": 4.0
+     "surface_c": 4.9,
+     "air_c": 4.9
     },
     {
      "t": "05:00",
@@ -1636,7 +1636,7 @@
    "elev_mean_m": 73,
    "status": "GO",
    "rules_status": "MARGINAL",
-   "model_prob": 0.73,
+   "model_prob": 0.72,
    "review": true,
    "surface_min_c": -0.8,
    "air_min_c": 0.1,
@@ -1647,33 +1647,33 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 6.2
+     "surface_c": 5.6,
+     "air_c": 6.0
     },
     {
      "t": "19:00",
-     "surface_c": 5.4,
-     "air_c": 5.7
+     "surface_c": 5.5,
+     "air_c": 5.8
     },
     {
      "t": "20:00",
-     "surface_c": 4.6,
-     "air_c": 4.9
+     "surface_c": 4.5,
+     "air_c": 4.8
     },
     {
      "t": "21:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
-    },
-    {
-     "t": "22:00",
      "surface_c": 5.4,
      "air_c": 5.5
     },
     {
+     "t": "22:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
      "t": "23:00",
      "surface_c": 5.0,
-     "air_c": 5.2
+     "air_c": 5.0
     },
     {
      "t": "00:00",
@@ -1682,23 +1682,23 @@
     },
     {
      "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": 4.8,
+     "air_c": 4.8
     },
     {
      "t": "02:00",
-     "surface_c": 4.1,
-     "air_c": 4.2
+     "surface_c": 4.7,
+     "air_c": 4.7
     },
     {
      "t": "03:00",
-     "surface_c": 4.1,
-     "air_c": 4.1
+     "surface_c": 4.2,
+     "air_c": 4.3
     },
     {
      "t": "04:00",
-     "surface_c": 4.1,
-     "air_c": 4.1
+     "surface_c": 4.7,
+     "air_c": 4.7
     },
     {
      "t": "05:00",
@@ -1741,58 +1741,58 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.3
+     "surface_c": 6.6,
+     "air_c": 6.6
     },
     {
      "t": "19:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "21:00",
      "surface_c": 5.7,
      "air_c": 5.8
     },
     {
-     "t": "22:00",
-     "surface_c": 5.6,
+     "t": "20:00",
+     "surface_c": 5.9,
+     "air_c": 5.9
+    },
+    {
+     "t": "21:00",
+     "surface_c": 5.7,
      "air_c": 5.7
     },
     {
-     "t": "23:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
-    },
-    {
-     "t": "00:00",
+     "t": "22:00",
      "surface_c": 5.3,
      "air_c": 5.4
     },
     {
+     "t": "23:00",
+     "surface_c": 5.0,
+     "air_c": 5.2
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
      "t": "01:00",
-     "surface_c": 4.7,
-     "air_c": 4.8
+     "surface_c": 5.4,
+     "air_c": 5.5
     },
     {
      "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.7
+     "surface_c": 5.0,
+     "air_c": 5.0
     },
     {
      "t": "03:00",
-     "surface_c": 4.4,
-     "air_c": 4.5
+     "surface_c": 5.1,
+     "air_c": 5.1
     },
     {
      "t": "04:00",
-     "surface_c": 3.0,
-     "air_c": 3.2
+     "surface_c": 4.2,
+     "air_c": 4.5
     },
     {
      "t": "05:00",
@@ -1835,58 +1835,58 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.2
+     "surface_c": 6.5,
+     "air_c": 6.5
     },
     {
      "t": "19:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
+     "surface_c": 5.6,
+     "air_c": 5.7
     },
     {
      "t": "20:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
+     "surface_c": 5.8,
+     "air_c": 5.8
     },
     {
      "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.5,
+     "surface_c": 5.6,
      "air_c": 5.6
     },
     {
-     "t": "23:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
-    },
-    {
-     "t": "00:00",
+     "t": "22:00",
      "surface_c": 5.3,
      "air_c": 5.3
     },
     {
+     "t": "23:00",
+     "surface_c": 4.9,
+     "air_c": 5.1
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.1,
+     "air_c": 5.1
+    },
+    {
      "t": "01:00",
-     "surface_c": 4.6,
-     "air_c": 4.7
+     "surface_c": 5.3,
+     "air_c": 5.4
     },
     {
      "t": "02:00",
-     "surface_c": 4.5,
-     "air_c": 4.6
+     "surface_c": 4.9,
+     "air_c": 4.9
     },
     {
      "t": "03:00",
-     "surface_c": 4.4,
-     "air_c": 4.4
+     "surface_c": 5.0,
+     "air_c": 5.0
     },
     {
      "t": "04:00",
-     "surface_c": 2.9,
-     "air_c": 3.1
+     "surface_c": 4.1,
+     "air_c": 4.4
     },
     {
      "t": "05:00",
@@ -1918,7 +1918,7 @@
    "elev_mean_m": 90,
    "status": "MARGINAL",
    "rules_status": "MARGINAL",
-   "model_prob": 0.35,
+   "model_prob": 0.34,
    "review": false,
    "surface_min_c": 0.9,
    "air_min_c": 1.7,
@@ -1929,58 +1929,58 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.8,
-     "air_c": 6.0
+     "surface_c": 6.3,
+     "air_c": 6.4
     },
     {
      "t": "19:00",
-     "surface_c": 5.7,
-     "air_c": 5.9
-    },
-    {
-     "t": "20:00",
      "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.7,
      "air_c": 5.8
     },
     {
+     "t": "20:00",
+     "surface_c": 5.3,
+     "air_c": 5.4
+    },
+    {
+     "t": "21:00",
+     "surface_c": 5.4,
+     "air_c": 5.5
+    },
+    {
      "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 5.5,
+     "air_c": 5.5
     },
     {
      "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
+     "surface_c": 5.0,
+     "air_c": 5.1
     },
     {
      "t": "00:00",
-     "surface_c": 4.8,
-     "air_c": 4.9
+     "surface_c": 4.9,
+     "air_c": 5.0
     },
     {
      "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": 5.0,
+     "air_c": 5.0
     },
     {
      "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.4,
+     "surface_c": 4.2,
      "air_c": 4.4
     },
     {
+     "t": "03:00",
+     "surface_c": 4.8,
+     "air_c": 4.8
+    },
+    {
      "t": "04:00",
-     "surface_c": 4.1,
-     "air_c": 4.1
+     "surface_c": 4.7,
+     "air_c": 4.7
     },
     {
      "t": "05:00",
@@ -2012,7 +2012,7 @@
    "elev_mean_m": 140,
    "status": "MARGINAL",
    "rules_status": "MARGINAL",
-   "model_prob": 0.26,
+   "model_prob": 0.25,
    "review": false,
    "surface_min_c": 0.7,
    "air_min_c": 1.6,
@@ -2023,58 +2023,58 @@
    "hourly": [
     {
      "t": "18:00",
+     "surface_c": 6.2,
+     "air_c": 6.3
+    },
+    {
+     "t": "19:00",
      "surface_c": 6.0,
      "air_c": 6.1
     },
     {
-     "t": "19:00",
+     "t": "20:00",
      "surface_c": 5.8,
      "air_c": 5.9
     },
     {
-     "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
      "t": "21:00",
-     "surface_c": 5.9,
+     "surface_c": 5.8,
      "air_c": 5.9
     },
     {
      "t": "22:00",
+     "surface_c": 5.3,
+     "air_c": 5.5
+    },
+    {
+     "t": "23:00",
      "surface_c": 5.6,
      "air_c": 5.7
     },
     {
-     "t": "23:00",
-     "surface_c": 5.5,
+     "t": "00:00",
+     "surface_c": 5.7,
      "air_c": 5.7
     },
     {
-     "t": "00:00",
+     "t": "01:00",
      "surface_c": 5.4,
      "air_c": 5.4
     },
     {
-     "t": "01:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
-    },
-    {
      "t": "02:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
+     "surface_c": 5.4,
+     "air_c": 5.4
     },
     {
      "t": "03:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
+     "surface_c": 5.4,
+     "air_c": 5.4
     },
     {
      "t": "04:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 5.1,
+     "air_c": 5.1
     },
     {
      "t": "05:00",
@@ -2117,8 +2117,8 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
+     "surface_c": 6.3,
+     "air_c": 6.4
     },
     {
      "t": "19:00",
@@ -2132,43 +2132,43 @@
     },
     {
      "t": "21:00",
+     "surface_c": 5.5,
+     "air_c": 5.6
+    },
+    {
+     "t": "22:00",
      "surface_c": 5.8,
      "air_c": 5.8
     },
     {
-     "t": "22:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
      "t": "23:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
+     "surface_c": 5.2,
+     "air_c": 5.3
     },
     {
      "t": "00:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
+     "surface_c": 5.2,
+     "air_c": 5.3
     },
     {
      "t": "01:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
+     "surface_c": 5.2,
+     "air_c": 5.2
     },
     {
      "t": "02:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
+     "surface_c": 4.3,
+     "air_c": 4.4
     },
     {
      "t": "03:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "surface_c": 4.9,
+     "air_c": 4.9
     },
     {
      "t": "04:00",
-     "surface_c": 4.2,
-     "air_c": 4.2
+     "surface_c": 4.9,
+     "air_c": 4.9
     },
     {
      "t": "05:00",
@@ -2211,18 +2211,18 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
+     "surface_c": 6.2,
+     "air_c": 6.3
     },
     {
      "t": "19:00",
-     "surface_c": 5.6,
-     "air_c": 5.8
+     "surface_c": 5.9,
+     "air_c": 6.0
     },
     {
      "t": "20:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
+     "surface_c": 5.9,
+     "air_c": 5.9
     },
     {
      "t": "21:00",
@@ -2231,38 +2231,38 @@
     },
     {
      "t": "22:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
+     "surface_c": 5.9,
+     "air_c": 6.0
     },
     {
      "t": "23:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 6.0,
+     "air_c": 6.0
     },
     {
      "t": "00:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
+     "surface_c": 6.1,
+     "air_c": 6.1
     },
     {
      "t": "01:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
+     "surface_c": 6.1,
+     "air_c": 6.1
     },
     {
      "t": "02:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 5.8,
+     "air_c": 5.8
     },
     {
      "t": "03:00",
-     "surface_c": 4.3,
-     "air_c": 4.7
+     "surface_c": 4.9,
+     "air_c": 5.1
     },
     {
      "t": "04:00",
-     "surface_c": 4.3,
-     "air_c": 4.6
+     "surface_c": 4.9,
+     "air_c": 5.1
     },
     {
      "t": "05:00",
@@ -2294,7 +2294,7 @@
    "elev_mean_m": 35,
    "status": "NO-GO",
    "rules_status": "NO-GO",
-   "model_prob": 0.11,
+   "model_prob": 0.1,
    "review": false,
    "surface_min_c": 1.4,
    "air_min_c": 2.3,
@@ -2305,58 +2305,58 @@
    "hourly": [
     {
      "t": "18:00",
+     "surface_c": 6.9,
+     "air_c": 7.0
+    },
+    {
+     "t": "19:00",
      "surface_c": 6.7,
      "air_c": 6.8
     },
     {
-     "t": "19:00",
-     "surface_c": 6.4,
+     "t": "20:00",
+     "surface_c": 6.5,
      "air_c": 6.6
     },
     {
-     "t": "20:00",
-     "surface_c": 6.5,
-     "air_c": 6.5
-    },
-    {
      "t": "21:00",
-     "surface_c": 6.6,
+     "surface_c": 6.5,
      "air_c": 6.6
     },
     {
      "t": "22:00",
+     "surface_c": 5.9,
+     "air_c": 6.2
+    },
+    {
+     "t": "23:00",
      "surface_c": 6.3,
      "air_c": 6.4
     },
     {
-     "t": "23:00",
-     "surface_c": 6.2,
+     "t": "00:00",
+     "surface_c": 6.4,
      "air_c": 6.4
     },
     {
-     "t": "00:00",
-     "surface_c": 6.0,
+     "t": "01:00",
+     "surface_c": 6.1,
      "air_c": 6.1
     },
     {
-     "t": "01:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
      "t": "02:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
+     "surface_c": 6.1,
+     "air_c": 6.1
     },
     {
      "t": "03:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
+     "surface_c": 6.1,
+     "air_c": 6.1
     },
     {
      "t": "04:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": 5.8,
+     "air_c": 5.8
     },
     {
      "t": "05:00",
@@ -2399,43 +2399,43 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.9,
-     "air_c": 6.9
+     "surface_c": 6.5,
+     "air_c": 6.7
     },
     {
      "t": "19:00",
-     "surface_c": 6.6,
-     "air_c": 6.6
+     "surface_c": 6.5,
+     "air_c": 6.5
     },
     {
      "t": "20:00",
      "surface_c": 5.8,
-     "air_c": 6.0
-    },
-    {
-     "t": "21:00",
-     "surface_c": 6.0,
      "air_c": 6.1
     },
     {
+     "t": "21:00",
+     "surface_c": 5.9,
+     "air_c": 6.0
+    },
+    {
      "t": "22:00",
-     "surface_c": 6.1,
-     "air_c": 6.2
+     "surface_c": 5.9,
+     "air_c": 6.0
     },
     {
      "t": "23:00",
-     "surface_c": 5.4,
-     "air_c": 5.6
+     "surface_c": 5.8,
+     "air_c": 5.9
     },
     {
      "t": "00:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
+     "surface_c": 4.8,
+     "air_c": 5.1
     },
     {
      "t": "01:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": 5.0,
+     "air_c": 5.1
     },
     {
      "t": "02:00",
@@ -2444,13 +2444,13 @@
     },
     {
      "t": "03:00",
-     "surface_c": 4.1,
-     "air_c": 4.4
+     "surface_c": 4.7,
+     "air_c": 4.8
     },
     {
      "t": "04:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
+     "surface_c": 4.9,
+     "air_c": 5.0
     },
     {
      "t": "05:00",
@@ -2493,13 +2493,13 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.6,
-     "air_c": 6.7
+     "surface_c": 6.1,
+     "air_c": 6.5
     },
     {
      "t": "19:00",
-     "surface_c": 6.5,
-     "air_c": 6.5
+     "surface_c": 6.4,
+     "air_c": 6.4
     },
     {
      "t": "20:00",
@@ -2508,23 +2508,23 @@
     },
     {
      "t": "21:00",
+     "surface_c": 6.1,
+     "air_c": 6.1
+    },
+    {
+     "t": "22:00",
      "surface_c": 6.2,
      "air_c": 6.2
     },
     {
-     "t": "22:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
-    },
-    {
      "t": "23:00",
-     "surface_c": 5.4,
+     "surface_c": 5.6,
      "air_c": 5.6
     },
     {
      "t": "00:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 5.1,
+     "air_c": 5.3
     },
     {
      "t": "01:00",
@@ -2533,18 +2533,18 @@
     },
     {
      "t": "02:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
+     "surface_c": 4.6,
+     "air_c": 4.6
     },
     {
      "t": "03:00",
      "surface_c": 4.4,
-     "air_c": 4.5
+     "air_c": 4.6
     },
     {
      "t": "04:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "surface_c": 4.8,
+     "air_c": 4.8
     },
     {
      "t": "05:00",
@@ -2587,13 +2587,13 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.4
+     "surface_c": 6.6,
+     "air_c": 6.6
     },
     {
      "t": "19:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 5.5,
+     "air_c": 5.7
     },
     {
      "t": "20:00",
@@ -2602,43 +2602,43 @@
     },
     {
      "t": "21:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 5.4,
+     "air_c": 5.5
     },
     {
      "t": "22:00",
      "surface_c": 5.4,
-     "air_c": 5.6
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.5,
      "air_c": 5.5
     },
     {
+     "t": "23:00",
+     "surface_c": 5.3,
+     "air_c": 5.3
+    },
+    {
      "t": "00:00",
-     "surface_c": 5.5,
+     "surface_c": 5.4,
      "air_c": 5.5
     },
     {
      "t": "01:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
+     "surface_c": 5.3,
+     "air_c": 5.4
     },
     {
      "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.7
+     "surface_c": 5.0,
+     "air_c": 5.1
     },
     {
      "t": "03:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
+     "surface_c": 5.1,
+     "air_c": 5.1
     },
     {
      "t": "04:00",
-     "surface_c": 3.9,
-     "air_c": 4.0
+     "surface_c": 4.5,
+     "air_c": 4.6
     },
     {
      "t": "05:00",
@@ -2681,13 +2681,13 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.3,
-     "air_c": 6.5
+     "surface_c": 6.7,
+     "air_c": 6.7
     },
     {
      "t": "19:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
+     "surface_c": 5.6,
+     "air_c": 5.8
     },
     {
      "t": "20:00",
@@ -2696,43 +2696,43 @@
     },
     {
      "t": "21:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
+     "surface_c": 5.4,
+     "air_c": 5.6
     },
     {
      "t": "22:00",
      "surface_c": 5.5,
-     "air_c": 5.7
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.5,
      "air_c": 5.6
     },
     {
+     "t": "23:00",
+     "surface_c": 5.4,
+     "air_c": 5.4
+    },
+    {
      "t": "00:00",
-     "surface_c": 5.5,
+     "surface_c": 5.4,
      "air_c": 5.6
     },
     {
      "t": "01:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
+     "surface_c": 5.4,
+     "air_c": 5.5
     },
     {
      "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.8
+     "surface_c": 5.0,
+     "air_c": 5.2
     },
     {
      "t": "03:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 5.2,
+     "air_c": 5.2
     },
     {
      "t": "04:00",
-     "surface_c": 3.9,
-     "air_c": 4.1
+     "surface_c": 4.6,
+     "air_c": 4.7
     },
     {
      "t": "05:00",
@@ -2775,13 +2775,13 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.3,
-     "air_c": 6.5
+     "surface_c": 6.7,
+     "air_c": 6.7
     },
     {
      "t": "19:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 5.6,
+     "air_c": 5.8
     },
     {
      "t": "20:00",
@@ -2790,43 +2790,43 @@
     },
     {
      "t": "21:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 5.5,
+     "air_c": 5.6
     },
     {
      "t": "22:00",
      "surface_c": 5.5,
-     "air_c": 5.7
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
      "air_c": 5.6
     },
     {
+     "t": "23:00",
+     "surface_c": 5.4,
+     "air_c": 5.4
+    },
+    {
      "t": "00:00",
-     "surface_c": 5.6,
+     "surface_c": 5.5,
      "air_c": 5.6
     },
     {
      "t": "01:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
+     "surface_c": 5.4,
+     "air_c": 5.5
     },
     {
      "t": "02:00",
-     "surface_c": 4.7,
-     "air_c": 4.8
+     "surface_c": 5.1,
+     "air_c": 5.2
     },
     {
      "t": "03:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 5.2,
+     "air_c": 5.2
     },
     {
      "t": "04:00",
-     "surface_c": 4.0,
-     "air_c": 4.1
+     "surface_c": 4.6,
+     "air_c": 4.7
     },
     {
      "t": "05:00",
@@ -2869,18 +2869,18 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
+     "surface_c": 6.2,
+     "air_c": 6.3
     },
     {
      "t": "19:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
+     "surface_c": 5.9,
+     "air_c": 6.0
     },
     {
      "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 5.9,
+     "air_c": 5.9
     },
     {
      "t": "21:00",
@@ -2889,38 +2889,38 @@
     },
     {
      "t": "22:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
+     "surface_c": 6.0,
+     "air_c": 6.0
     },
     {
      "t": "23:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 6.0,
+     "air_c": 6.0
     },
     {
      "t": "00:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
+     "surface_c": 6.1,
+     "air_c": 6.1
     },
     {
      "t": "01:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
+     "surface_c": 6.1,
+     "air_c": 6.1
     },
     {
      "t": "02:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 5.8,
+     "air_c": 5.8
     },
     {
      "t": "03:00",
-     "surface_c": 4.3,
-     "air_c": 4.7
+     "surface_c": 5.0,
+     "air_c": 5.1
     },
     {
      "t": "04:00",
-     "surface_c": 4.4,
-     "air_c": 4.6
+     "surface_c": 5.0,
+     "air_c": 5.1
     },
     {
      "t": "05:00",
@@ -2963,7 +2963,7 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.0,
+     "surface_c": 5.8,
      "air_c": 6.0
     },
     {
@@ -2973,48 +2973,48 @@
     },
     {
      "t": "20:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 5.7,
+     "air_c": 5.7
     },
     {
      "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "01:00",
      "surface_c": 5.3,
      "air_c": 5.3
     },
     {
+     "t": "22:00",
+     "surface_c": 5.6,
+     "air_c": 5.6
+    },
+    {
+     "t": "23:00",
+     "surface_c": 5.7,
+     "air_c": 5.7
+    },
+    {
+     "t": "00:00",
+     "surface_c": 5.7,
+     "air_c": 5.7
+    },
+    {
+     "t": "01:00",
+     "surface_c": 5.2,
+     "air_c": 5.2
+    },
+    {
      "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.8
+     "surface_c": 5.0,
+     "air_c": 5.1
     },
     {
      "t": "03:00",
-     "surface_c": 4.1,
+     "surface_c": 4.2,
      "air_c": 4.5
     },
     {
      "t": "04:00",
-     "surface_c": 4.0,
-     "air_c": 4.3
+     "surface_c": 4.9,
+     "air_c": 4.9
     },
     {
      "t": "05:00",
@@ -3046,7 +3046,7 @@
    "elev_mean_m": 80,
    "status": "NO-GO",
    "rules_status": "NO-GO",
-   "model_prob": 0.4,
+   "model_prob": 0.38,
    "review": false,
    "surface_min_c": 1.0,
    "air_min_c": 1.5,
@@ -3057,53 +3057,53 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 7.0,
-     "air_c": 7.0
+     "surface_c": 6.7,
+     "air_c": 6.8
     },
     {
      "t": "19:00",
-     "surface_c": 6.6,
-     "air_c": 6.6
+     "surface_c": 5.3,
+     "air_c": 5.8
     },
     {
      "t": "20:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
+     "surface_c": 5.8,
+     "air_c": 5.9
     },
     {
      "t": "21:00",
+     "surface_c": 5.8,
+     "air_c": 5.9
+    },
+    {
+     "t": "22:00",
+     "surface_c": 6.1,
+     "air_c": 6.2
+    },
+    {
+     "t": "23:00",
      "surface_c": 6.1,
      "air_c": 6.1
     },
     {
-     "t": "22:00",
-     "surface_c": 6.4,
-     "air_c": 6.4
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.9
-    },
-    {
      "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.6
+     "surface_c": 5.1,
+     "air_c": 5.2
     },
     {
      "t": "01:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
+     "surface_c": 4.6,
+     "air_c": 4.7
     },
     {
      "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.9
+     "surface_c": 5.0,
+     "air_c": 5.0
     },
     {
      "t": "03:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
+     "surface_c": 4.6,
+     "air_c": 4.8
     },
     {
      "t": "04:00",
@@ -3152,7 +3152,7 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-19T20:07:05Z",
+   "fetched_at": "2026-11-19T20:35:50Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {

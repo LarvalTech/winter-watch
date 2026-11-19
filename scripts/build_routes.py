@@ -1,4 +1,6 @@
 import json, math, time, requests, collections, statistics as st
+# Cavan County Council current salting routes page: Priority 1 = N3, N54, N55, N87; Priority 2 = regional roads on its map
+P1_REFS = {"N3", "N54", "N55", "N87"}
 UA = {"User-Agent": "winter-watch-college-project/0.1"}
 els = json.load(open("data/osm_roads_raw.json"))["elements"]
 
@@ -47,7 +49,7 @@ feats, table = [], []
 for ref, r in sorted(routes.items()):
     e = byref[ref]
     name = r["names"].most_common(1)[0][0] if r["names"] else ""
-    tier = 1 if ref.startswith("N") else 2
+    tier = 1 if ref in P1_REFS else 2
     pts = [p for way in r["ways"] for p in way]
     clat = sum(p[0] for p in pts)/len(pts); clon = sum(p[1] for p in pts)/len(pts)
     rec = {"ref": ref, "name": name, "class": r["highway"], "current_priority": tier,

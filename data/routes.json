@@ -3,7 +3,7 @@
   "ref": "N16",
   "name": "Sligo Road",
   "class": "trunk",
-  "current_priority": 1,
+  "current_priority": 2,
   "length_km": 7.2,
   "elev_mean_m": 59,
   "elev_max_m": 74,

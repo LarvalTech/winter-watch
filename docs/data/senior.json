@@ -1,4 +1,8 @@
 {
+ "p1_km": 120,
+ "network_km": 542,
+ "rec_km": 24.8,
+ "p1_km_after": 144,
  "winters": [
   "2018/19",
   "2019/20",
@@ -8,7 +12,7 @@
   "2023/24",
   "2024/25"
  ],
- "p1_median_go_nights": 26.3,
+ "p1_median_go_nights": 26.8,
  "routes": [
   {
    "ref": "R200",
@@ -168,7 +172,7 @@
    "go_nights_min": 12,
    "go_nights_max": 35,
    "need_rank": 7,
-   "winters_above_p1_median": 4,
+   "winters_above_p1_median": 3,
    "flag": ""
   },
   {
@@ -191,7 +195,7 @@
    "go_nights_min": 14,
    "go_nights_max": 33,
    "need_rank": 8,
-   "winters_above_p1_median": 4,
+   "winters_above_p1_median": 3,
    "flag": ""
   },
   {
@@ -214,7 +218,7 @@
    "go_nights_min": 13,
    "go_nights_max": 34,
    "need_rank": 9,
-   "winters_above_p1_median": 4,
+   "winters_above_p1_median": 3,
    "flag": ""
   },
   {
@@ -237,7 +241,7 @@
    "go_nights_min": 12,
    "go_nights_max": 33,
    "need_rank": 10,
-   "winters_above_p1_median": 4,
+   "winters_above_p1_median": 2,
    "flag": ""
   },
   {
@@ -283,7 +287,7 @@
    "go_nights_min": 14,
    "go_nights_max": 34,
    "need_rank": 12,
-   "winters_above_p1_median": 2,
+   "winters_above_p1_median": 1,
    "flag": ""
   },
   {
@@ -306,7 +310,7 @@
    "go_nights_min": 15,
    "go_nights_max": 36,
    "need_rank": 13,
-   "winters_above_p1_median": 3,
+   "winters_above_p1_median": 2,
    "flag": ""
   },
   {
@@ -329,7 +333,7 @@
    "go_nights_min": 12,
    "go_nights_max": 33,
    "need_rank": 14,
-   "winters_above_p1_median": 3,
+   "winters_above_p1_median": 2,
    "flag": ""
   },
   {
@@ -352,7 +356,7 @@
    "go_nights_min": 13,
    "go_nights_max": 36,
    "need_rank": 15,
-   "winters_above_p1_median": 4,
+   "winters_above_p1_median": 2,
    "flag": ""
   },
   {
@@ -421,7 +425,7 @@
    "go_nights_min": 10,
    "go_nights_max": 33,
    "need_rank": 18,
-   "winters_above_p1_median": 3,
+   "winters_above_p1_median": 1,
    "flag": ""
   },
   {
@@ -490,7 +494,7 @@
    "go_nights_min": 13,
    "go_nights_max": 32,
    "need_rank": 21,
-   "winters_above_p1_median": 2,
+   "winters_above_p1_median": 1,
    "flag": ""
   },
   {
@@ -513,7 +517,7 @@
    "go_nights_min": 8,
    "go_nights_max": 30,
    "need_rank": 22,
-   "winters_above_p1_median": 3,
+   "winters_above_p1_median": 1,
    "flag": ""
   },
   {
@@ -588,7 +592,7 @@
   {
    "ref": "N16",
    "name": "Sligo Road",
-   "current_priority": 1,
+   "current_priority": 2,
    "length_km": 7.2,
    "elev_mean_m": 59,
    "elev_max_m": 74,
@@ -606,7 +610,7 @@
    "go_nights_max": 28,
    "need_rank": 26,
    "winters_above_p1_median": 0,
-   "flag": "REVIEW_WEATHER_NEED_LOW"
+   "flag": ""
   },
   {
    "ref": "R207",

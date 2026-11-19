@@ -23,7 +23,12 @@ df["flag"] = ""
 df.loc[(df.current_priority == 2) & (df.go_nights_mean > t1_median) & (df.winters_above_p1_median >= 5), "flag"] = "PROMOTE_CANDIDATE"
 df.loc[(df.current_priority == 1) & (df.go_nights_mean < df[df.current_priority == 2].go_nights_mean.median()), "flag"] = "REVIEW_WEATHER_NEED_LOW"
 cand = df[df.flag == "PROMOTE_CANDIDATE"].sort_values(["winters_above_p1_median", "go_nights_mean"], ascending=False)
-out = {"winters": winters, "p1_median_go_nights": round(float(t1_median), 1), "routes": df.to_dict("records"),
+p1_km = float(df[df.current_priority == 1].length_km.sum()); total_km = float(df.length_km.sum())
+rec_row = None if cand.empty else cand.iloc[0]
+out = {"p1_km": round(p1_km), "network_km": round(total_km),
+       "rec_km": None if rec_row is None else float(rec_row["length_km"]),
+       "p1_km_after": None if rec_row is None else round(p1_km + float(rec_row["length_km"])),
+       "winters": winters, "p1_median_go_nights": round(float(t1_median), 1), "routes": df.to_dict("records"),
        "recommendation": None if cand.empty else cand.iloc[0]["ref"], "candidates": cand.ref.tolist()}
 json.dump(out, open("docs/data/senior.json", "w"), indent=1)
 print(df[["ref", "current_priority", "elev_mean_m", "go_nights_mean", "winters_above_p1_median", "flag"]].head(14).to_string())
