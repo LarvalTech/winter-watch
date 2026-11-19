@@ -54,12 +54,15 @@ cold = min(out_routes, key=lambda x: x["surface_min_c"])
 facts = {"decision": decision, "n_routes": len(out_routes), "n_go": len(go), "n_marginal": len(mg),
          "n_review": sum(x["review"] for x in out_routes), "first_departure": deps[0]["depart"] if deps else None,
          "first_route": deps[0]["ref"] if deps else None, "coldest_route": cold["ref"], "coldest_ts": cold["surface_min_c"]}
+agree = sum(not x["review"] for x in out_routes); share = agree / len(out_routes)
+conf = {"level": "HIGH" if share >= 0.75 else "MEDIUM" if share >= 0.5 else "LOW", "agree": agree, "total": len(out_routes), "percent": round(share * 100)}
+facts["confidence"] = conf["level"]
 text, info = llm_briefing(facts)
 source = "llm"
 if text is None: text, source = template_briefing(facts), "template"
 senior = json.load(open("docs/data/senior.json"))
 latest = {"generated_at": fetched_iso, "decision_time_local": now.isoformat(), "night": {"from": str(n0), "to": str(n1)},
-  "decision": decision, "facts": facts, "briefing": {"text": text, "source": source, "detail": info if source == "llm" else f"template fallback ({info})"},
+  "decision": decision, "confidence": conf, "facts": facts, "briefing": {"text": text, "source": source, "detail": info if source == "llm" else f"template fallback ({info})"},
   "routes": out_routes, "senior_recommendation": senior["recommendation"], "thresholds": CONFIG,
   "sources": {
     "S1": {"name": "Open-Meteo forecast API", "url": URL, "fetched_at": fetched_iso, "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"},

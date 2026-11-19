@@ -3,6 +3,9 @@ let L, SEN, MAP, GEO, layers = {}, selected = null;
 const COL = {GO: "#e5484d", MARGINAL: "#f5a524", "NO-GO": "#30a46c"};
 const src = (...ids) => `<sup class="src" title="Source ${ids.join(', ')}" onclick="goSrc()">${ids.join(",")}</sup>`;
 const n = (v, u = "", ...ids) => `<span class="n">${v}${u}</span>${src(...ids)}`;
+const D2 = v => String(v).padStart(2, "0");
+const fmtLocal = t => { const m = String(t).match(/(\d{4})-(\d{2})-(\d{2})[T ](\d{2}:\d{2})/); return m ? `${m[3]}/${m[2]}/${m[1]} ${m[4]}` : t; };
+const fmtUTC = t => { const d = new Date(t); return d.toLocaleString("en-GB", {timeZone: "Europe/Dublin", day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", hour12: false}).replace(",", ""); };
 window.goSrc = () => tab("method");
 
 function tab(t) {
@@ -15,18 +18,40 @@ document.querySelectorAll("nav button").forEach(b => b.onclick = () => tab(b.dat
 async function load() {
   [L, SEN, GEO] = await Promise.all(["latest", "senior", "routes"].map(f => fetch(`data/${f}.json`.replace("routes.json", "routes.geojson")).then(r => r.json())));
   const age = (Date.now() - new Date(L.generated_at)) / 36e5;
-  $("#stamp").innerHTML = `Forecast fetched ${new Date(L.generated_at).toLocaleString("en-IE")} ${src("S1")}<br>` +
+  $("#stamp").innerHTML = `Forecast fetched ${fmtUTC(L.generated_at)} ${src("S1")}<br>` +
     (age > 6 ? `<b style="color:#f5a524">⚠ Data is ${age.toFixed(0)} h old, do not rely on it</b>` : `${age.toFixed(1)} h ago`);
   duty(); senior(); method();
 }
 
 function duty() {
   const f = L.facts;
-  $("#banner").className = "b-" + L.decision; $("#banner").id = "banner";
-  $("#banner").innerHTML = `${L.decision === "GO" ? "GRIT TONIGHT" : L.decision === "MARGINAL" ? "MARGINAL · engineer judgement" : "NO GRITTING NEEDED"}
-    <small>Night ${L.night.from.slice(5, 16)} → ${L.night.to.slice(5, 16)} · ${n(f.n_go, "", "S5")} GO · ${n(f.n_marginal, "", "S5")} marginal · ${n(f.n_review, "", "S5", "S6")} to review · recommendation only</small>`;
+  const go = L.routes.filter(r => r.status === "GO"), mg = L.routes.filter(r => r.status === "MARGINAL");
+  const first = go.filter(r => r.depart).sort((x, y) => x.depart.localeCompare(y.depart))[0];
+  const verdict = {GO: ["❄", "GRIT TONIGHT", first ? `First truck out at <b>${first.depart}</b> on ${first.ref}. ${go.length} routes need gritting.` : `${go.length} routes need gritting.`],
+    MARGINAL: ["⚠", "BORDERLINE · YOUR CALL", `No route is clearly icy, but ${mg.length} are borderline. Check the routes below and decide.`],
+    "NO-GO": ["✓", "NO GRITTING NEEDED", "No route is forecast to reach icy conditions tonight."]}[L.decision];
+  $("#banner").className = "b-" + L.decision;
+  const C = L.confidence;
+  if (L.decision === "GO" && C.level === "LOW") verdict[1] = 'GRIT TONIGHT <span class="cautious">(cautious call)</span>';
+  const dots = {HIGH: 3, MEDIUM: 2, LOW: 1}[C.level];
+  $("#banner").innerHTML = `<span class="bigicon">${verdict[0]}</span><div><div class="verdict">${verdict[1]}</div><div class="action">${verdict[2]}</div>
+    <div class="conf" title="Share of routes where the rules engine and the trained model agree: ${C.agree} of ${C.total}">Confidence <span class="dots">${"●".repeat(dots)}<span class="off">${"●".repeat(3 - dots)}</span></span> <b>${C.level}</b>
+    <span class="why">· rules and model agree on ${C.agree} of ${C.total} routes${C.level === "LOW" ? ", so check the flagged routes" : ""}</span></div></div>`;
+  const cold = L.routes.reduce((m, r) => r.surface_min_c < m.surface_min_c ? r : m);
+  const tile = (big, label, sub, cls = "") => `<div class="tile ${cls}"><div class="big">${big}</div><div class="lab">${label}</div><div class="sub">${sub}</div></div>`;
+  $("#tiles").innerHTML =
+    tile(`${n(go.length, "", "S5")}<span class="of"> / ${L.routes.length}</span>`, "routes to grit", `${n(mg.length, "", "S5")} borderline`, go.length ? "t-GO" : "t-NO-GO") +
+    tile(first ? n(first.depart, "", "S1", "S5") : "–", "first truck leaves", first ? `${first.ref} ${first.name}` : "no departures needed") +
+    tile(n(cold.surface_min_c, "°C", "S1", "S4", "S5"), "coldest road surface", `${cold.ref} ${cold.name}`) +
+    tile(n(L.facts.n_review, "", "S5", "S6"), "routes to review", L.facts.n_review ? "rules and model disagree" : "rules and model agree", L.facts.n_review ? "t-MARGINAL" : "");
+  const groups = {};
+  L.routes.filter(r => r.depart && r.status !== "NO-GO").forEach(r => (groups[r.depart] = groups[r.depart] || []).push(r));
+  $("#timeline").innerHTML = Object.keys(groups).length ? `<h2>Truck departures tonight <span class="mute" style="font-weight:400">· ${fmtLocal(L.night.from)} to ${fmtLocal(L.night.to)} · click a route for detail</span></h2>` +
+    Object.keys(groups).sort().map(t => `<div class="trow"><span class="ttime">${t}</span><span>${groups[t].map(r =>
+      `<button class="rchip c-${r.status}" onclick="pick('${r.ref}')" title="${r.name}, ${r.length_km} km, ${r.status}">${r.ref}${r.priority === 1 ? " ★" : ""}${r.review ? " ⚑" : ""}</button>`).join("")}</span></div>`).join("") +
+    `<div class="mute" style="font-size:12px;margin-top:6px">★ Priority 1 route · ⚑ rules and model disagree · red = GO · amber = borderline</div>` : "";
   const b = L.briefing;
-  $("#brief").innerHTML = `<h2>Briefing <span class="tag">${b.source === "llm" ? "AI-written · numbers validated" : "template (no AI)"}</span></h2><p>${b.text}</p>
+  $("#brief").innerHTML = `<h2>Written summary <span class="tag">${b.source === "llm" ? "AI-written · numbers validated" : "template (no AI)"}</span></h2><p class="mute">${b.text}</p>
     <p class="mute" style="font-size:12px">Every number in this text is checked against the computed data before display. ${b.detail}</p>`;
   $("#plan").innerHTML = `<tr><th>Route</th><th>Class</th><th>Status</th><th>Depart</th><th>Surface min</th><th>Ice from</th><th>km</th><th>Model p</th></tr>` +
     L.routes.map(r => `<tr class="row" data-ref="${r.ref}"><td><b>${r.ref}</b> <span class="mute">${r.name}</span></td><td>P${r.priority}</td>
@@ -53,6 +78,7 @@ function chart(r) {
   <path d="${line("surface_c")}" fill="none" stroke="${COL[r.status]}" stroke-width="2.5"/>
   ${h.map((x, i) => i % 3 ? "" : `<text x="${X(i)}" y="${H - 4}" fill="#93a4bd" font-size="9" text-anchor="middle">${x.t}</text>`).join("")}</svg>`;
 }
+window.pick = pick;
 function pick(ref) {
   selected = ref; const r = L.routes.find(x => x.ref === ref);
   document.querySelectorAll("#plan tr.row").forEach(t => t.classList.toggle("sel", t.dataset.ref === ref));
@@ -71,7 +97,7 @@ function decideUI() {
   <input id="who" placeholder="Your name"><textarea id="why" rows="2" placeholder="Reason (required if you override)"></textarea>
   <select id="ov"><option value="">Override to…</option><option>GO</option><option>MARGINAL</option><option>NO-GO</option></select>
   <button class="act ok" id="acc">Accept recommendation</button><button class="act ov" id="ovr">Override</button><button class="act ex" id="exp">Export log</button>
-  <div id="log" class="mute" style="margin-top:8px">${log.slice(-5).reverse().map(e => `${e.time.slice(0, 16)} · ${e.who || "?"} · ${e.action} ${e.final} ${e.reason ? "· " + e.reason : ""}`).join("<br>")}</div>`;
+  <div id="log" class="mute" style="margin-top:8px">${log.slice(-5).reverse().map(e => `${fmtUTC(e.time)} · ${e.who || "?"} · ${e.action} ${e.final} ${e.reason ? "· " + e.reason : ""}`).join("<br>")}</div>`;
   const save = (action, final) => {
     if (action === "OVERRIDE" && (!final || !$("#why").value.trim())) return alert("Choose a decision and give a reason.");
     log.push({time: new Date().toISOString(), who: $("#who").value, action, final, tool: L.decision, reason: $("#why").value, forecast_fetched: L.generated_at});
@@ -94,7 +120,7 @@ function senior() {
 
 function method() {
   const m = L.sources.S6.metrics, T = L.thresholds, pc = x => (x * 100).toFixed(0) + "%";
-  $("#method").innerHTML = `<div class="card"><h2>Data sources</h2><table>${Object.entries(L.sources).map(([k, s]) => `<tr><td><b>${k}</b></td><td>${s.name}${s.url ? ` · <a style="color:#6ea8fe" href="${s.url}">${s.url}</a>` : ""}<br><span class="mute">${s.what}${s.fetched_at ? " · fetched " + s.fetched_at : ""}</span></td></tr>`).join("")}</table></div>
+  $("#method").innerHTML = `<div class="card"><h2>Data sources</h2><table>${Object.entries(L.sources).map(([k, s]) => `<tr><td><b>${k}</b></td><td>${s.name}${s.url ? ` · <a style="color:#6ea8fe" href="${s.url}">${s.url}</a>` : ""}<br><span class="mute">${s.what}${s.fetched_at ? " · fetched " + fmtUTC(s.fetched_at) : ""}</span></td></tr>`).join("")}</table></div>
   <div class="card"><h2>How the call is made</h2><ol>
   <li>Forecast air temperature and dew point are adjusted to each route's elevation (${T.lapse_air_c_per_m} °C/m air, ${T.lapse_dew_c_per_m} °C/m dew point).</li>
   <li>Road surface temperature is <b>estimated</b>, not measured: air temperature minus up to ${T.clear_sky_cooling_c} °C of night-time cooling on clear, calm nights.</li>
