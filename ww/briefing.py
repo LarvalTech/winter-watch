@@ -33,7 +33,8 @@ def llm_briefing(facts):
     key = os.environ.get("LLM_API_KEY")
     if not key: return None, "no LLM_API_KEY set"
     provider = os.environ.get("LLM_PROVIDER", "anthropic")
-    model = os.environ.get("LLM_MODEL", "claude-haiku-4-5")
+    default_model = {"anthropic": "claude-haiku-4-5", "gemini": "gemini-3.5-flash-lite"}.get(provider, "gpt-4o-mini")
+    model = os.environ.get("LLM_MODEL") or default_model
     system = ("You write a 3-5 sentence gritting briefing for a roads Duty Engineer in County Cavan. "
               "Use ONLY the numbers in the JSON facts, copied exactly. Never compute or estimate new numbers. "
               "State that the engineer makes the final decision. Plain text, no markdown.")
@@ -44,12 +45,23 @@ def llm_briefing(facts):
                 headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
                 json={"model": model, "max_tokens": 400, "system": system, "messages": [{"role": "user", "content": user}]})
             r.raise_for_status(); text = r.json()["content"][0]["text"]
+        elif provider == "gemini":
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", timeout=60,
+                headers={"x-goog-api-key": key, "content-type": "application/json"},
+                json={"systemInstruction": {"parts": [{"text": system}]}, "contents": [{"role": "user", "parts": [{"text": user}]}],
+                      "generationConfig": {"maxOutputTokens": 1000, "temperature": 0.2}})
+            r.raise_for_status()
+            parts = r.json()["candidates"][0]["content"]["parts"]
+            text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
         else:
             base = os.environ.get("LLM_BASE_URL", "https://api.openai.com/v1")
             r = requests.post(f"{base}/chat/completions", timeout=60, headers={"Authorization": f"Bearer {key}"},
                 json={"model": model, "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]})
             r.raise_for_status(); text = r.json()["choices"][0]["message"]["content"]
     except Exception as e:
-        return None, f"LLM call failed: {type(e).__name__}"
+        code = getattr(getattr(e, "response", None), "status_code", None)
+        return None, f"LLM call failed: {type(e).__name__}" + (f" (HTTP {code})" if code else "")
+    if not text.strip():
+        return None, "LLM returned no text"
     ok, bad = validate(text, facts)
     return (text.strip(), model) if ok else (None, f"validator rejected numbers {bad}")

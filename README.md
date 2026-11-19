@@ -16,7 +16,7 @@ Live page: `https://<your-username>.github.io/winter-watch/`
 - `.github/workflows/forecast.yml`: runs daily in the afternoon. The AI key lives only in GitHub Secrets and is read only by this job. The browser only ever sees the finished JSON.
 
 ## AI key (optional)
-Repo → Settings → Secrets and variables → Actions: add secret `LLM_API_KEY`; optional variables `LLM_PROVIDER` (`anthropic` or `openai`) and `LLM_MODEL`. Without a key a fixed template briefing is used. AI text containing any number not in the data is rejected and replaced by the template.
+Repo → Settings → Secrets and variables → Actions: add secret `LLM_API_KEY`; optional variables `LLM_PROVIDER` (`gemini`, `anthropic` or `openai`) and `LLM_MODEL`. Without a key a fixed template briefing is used. AI text containing any number not in the data is rejected and replaced by the template.
 
 ## Limitations
 See the "Sources & method" tab.
