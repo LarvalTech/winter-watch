@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-19T21:14:56Z",
- "decision_time_local": "2026-11-19T21:14:56",
+ "generated_at": "2026-11-19T21:44:23Z",
+ "decision_time_local": "2026-11-19T21:44:23",
  "night": {
   "from": "2026-11-19 18:00:00",
   "to": "2026-11-20 08:00:00"
@@ -355,9 +355,9 @@
   "confidence": "LOW"
  },
  "briefing": {
-  "text": "Recommendation: GRIT TONIGHT. 17 of 26 routes are forecast to reach icy-road conditions. First truck leaves the yard at 00:15 and starts on R200. Coldest route is R190 with a forecast road surface minimum of -3.8 C. 17 routes are flagged REVIEW because the rules engine and the trained model disagree. The plan uses 6 of 9 trucks. Confidence is LOW: the rules engine and the trained model disagree on many routes, so check the flagged routes. This is a recommendation only. The Duty Engineer makes the final decision.",
-  "source": "template",
-  "detail": "template fallback (no LLM_API_KEY set)"
+  "text": "Good morning County Cavan Roads Duty Engineer. The system indicates a GO decision with LOW confidence. Out of 26 total routes, 17 are designated go, 2 are marginal, 17 are under review, and 6 trucks are used out of 9 available with 0 late departures. The first departure is scheduled for 00:15 on route R200, and the coldest route is R190 at -3.8 degrees. Please note that you make the final decision.",
+  "source": "llm",
+  "detail": "gemini-3.5-flash-lite"
  },
  "routes": [
   {
@@ -3516,7 +3516,7 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-19T21:14:56Z",
+   "fetched_at": "2026-11-19T21:44:23Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {
