@@ -1,0 +1,166 @@
+{
+ "source": "S3 + S5 backtest of the rules engine on ERA5 weather, designated routes only (not observed road conditions)",
+ "winters_covered": [
+  "2018/19",
+  "2019/20",
+  "2020/21",
+  "2021/22",
+  "2022/23",
+  "2023/24",
+  "2024/25"
+ ],
+ "nights_total": 1269,
+ "designated_routes": 26,
+ "per_winter": {
+  "2018/19": {
+   "nights_any_go": 36,
+   "nights_10plus_routes": 21,
+   "nights_20plus_routes": 15,
+   "avg_routes_go_on_go_nights": 13.3,
+   "coldest_night": "2019-01-30",
+   "coldest_surface_c": -8.2,
+   "nights_total": 181
+  },
+  "2019/20": {
+   "nights_any_go": 58,
+   "nights_10plus_routes": 30,
+   "nights_20plus_routes": 15,
+   "avg_routes_go_on_go_nights": 11.3,
+   "coldest_night": "2020-03-19",
+   "coldest_surface_c": -4.0,
+   "nights_total": 182
+  },
+  "2020/21": {
+   "nights_any_go": 49,
+   "nights_10plus_routes": 30,
+   "nights_20plus_routes": 25,
+   "avg_routes_go_on_go_nights": 15.8,
+   "coldest_night": "2021-01-08",
+   "coldest_surface_c": -5.4,
+   "nights_total": 181
+  },
+  "2021/22": {
+   "nights_any_go": 31,
+   "nights_10plus_routes": 15,
+   "nights_20plus_routes": 8,
+   "avg_routes_go_on_go_nights": 10.4,
+   "coldest_night": "2022-03-30",
+   "coldest_surface_c": -4.0,
+   "nights_total": 181
+  },
+  "2022/23": {
+   "nights_any_go": 46,
+   "nights_10plus_routes": 32,
+   "nights_20plus_routes": 24,
+   "avg_routes_go_on_go_nights": 16.6,
+   "coldest_night": "2023-03-09",
+   "coldest_surface_c": -7.6,
+   "nights_total": 181
+  },
+  "2023/24": {
+   "nights_any_go": 49,
+   "nights_10plus_routes": 30,
+   "nights_20plus_routes": 21,
+   "avg_routes_go_on_go_nights": 14.4,
+   "coldest_night": "2024-01-17",
+   "coldest_surface_c": -6.5,
+   "nights_total": 182
+  },
+  "2024/25": {
+   "nights_any_go": 51,
+   "nights_10plus_routes": 34,
+   "nights_20plus_routes": 31,
+   "avg_routes_go_on_go_nights": 17.0,
+   "coldest_night": "2025-01-08",
+   "coldest_surface_c": -5.9,
+   "nights_total": 181
+  }
+ },
+ "any_go_nights_by_month_all_winters": {
+  "Oct": 11,
+  "Nov": 37,
+  "Dec": 63,
+  "Jan": 92,
+  "Feb": 53,
+  "Mar": 64
+ },
+ "nights_with_at_least_k_routes_GO": {
+  "1": 320,
+  "2": 280,
+  "3": 248,
+  "4": 236,
+  "5": 224,
+  "6": 217,
+  "7": 207,
+  "8": 203,
+  "9": 197,
+  "10": 192,
+  "11": 184,
+  "12": 178,
+  "13": 172,
+  "14": 168,
+  "15": 162,
+  "16": 160,
+  "17": 153,
+  "18": 149,
+  "19": 145,
+  "20": 139,
+  "21": 129,
+  "22": 118,
+  "23": 110,
+  "24": 104,
+  "25": 95,
+  "26": 78
+ },
+ "coldest_nights": [
+  {
+   "night": "2019-01-30",
+   "winter": "2018/19",
+   "coldest_surface_c": -8.2,
+   "routes_go": 25
+  },
+  {
+   "night": "2023-03-09",
+   "winter": "2022/23",
+   "coldest_surface_c": -7.6,
+   "routes_go": 26
+  },
+  {
+   "night": "2019-01-31",
+   "winter": "2018/19",
+   "coldest_surface_c": -6.6,
+   "routes_go": 21
+  },
+  {
+   "night": "2019-02-01",
+   "winter": "2018/19",
+   "coldest_surface_c": -6.5,
+   "routes_go": 20
+  },
+  {
+   "night": "2024-01-17",
+   "winter": "2023/24",
+   "coldest_surface_c": -6.5,
+   "routes_go": 25
+  },
+  {
+   "night": "2019-02-02",
+   "winter": "2018/19",
+   "coldest_surface_c": -6.1,
+   "routes_go": 26
+  },
+  {
+   "night": "2025-01-08",
+   "winter": "2024/25",
+   "coldest_surface_c": -5.9,
+   "routes_go": 26
+  },
+  {
+   "night": "2022-12-14",
+   "winter": "2022/23",
+   "coldest_surface_c": -5.6,
+   "routes_go": 20
+  }
+ ],
+ "note": "Seasons here run Oct to Mar. Council call-outs (S7) run Oct to Apr and are not the same measure."
+}

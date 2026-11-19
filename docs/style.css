@@ -51,3 +51,9 @@ textarea,input,select{background:#0f1b2d;color:var(--ink);border:1px solid var(-
 .seg.c-GO{background:var(--go)}.seg.c-MARGINAL{background:var(--mg);color:#222}.seg.late{outline:2px dashed #fff}
 .drive{position:absolute;top:13px;height:4px;background:#5c6c8a;border-radius:2px}.ice{position:absolute;top:-4px;font-size:14px;color:#fff;transform:translateX(-50%);pointer-events:none;text-shadow:0 0 3px #000}
 .lim td:nth-child(-n+5){white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.qchip{background:#22375c;color:var(--ink);border:1px solid #3a4e75;border-radius:99px;padding:6px 12px;font-size:13px;cursor:pointer}.qchip:hover{background:#2c4673}
+.msgs{max-height:420px;overflow:auto;margin:8px 0}.msg{padding:9px 12px;border-radius:10px;margin:6px 0;max-width:92%;font-size:14px}
+.msg.user{background:#2c4673;margin-left:auto}.msg.bot{background:#101d33;border:1px solid var(--line)}
+.chatform{display:flex;gap:6px;align-items:center}.chatform input{margin:0;flex:1}
+.dots2 i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--mute);margin-right:4px;animation:bl 1s infinite}.dots2 i:nth-child(2){animation-delay:.2s}.dots2 i:nth-child(3){animation-delay:.4s}
+@keyframes bl{50%{opacity:.2}}

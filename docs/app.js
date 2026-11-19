@@ -88,6 +88,7 @@ function duty() {
   L_.geoJSON(GEO, {style: ft => ({color: by[ft.properties.ref]?.designated ? COL[by[ft.properties.ref].status] : "#6b7a93", weight: by[ft.properties.ref]?.designated ? 4 : 2, opacity: by[ft.properties.ref]?.designated ? .9 : .6, dashArray: by[ft.properties.ref]?.designated ? null : "4 4"}),
     onEachFeature: (ft, ly) => { layers[ft.properties.ref] = ly; ly.on("click", () => pick(ft.properties.ref)); ly.bindTooltip(ft.properties.ref); }}).addTo(MAP);
   MAP.invalidateSize(); MAP.fitBounds(L_.geoJSON(GEO).getBounds()); pick(PL[0].ref); decideUI();
+  if (window.initChat) initChat(L, () => selected);
 }
 
 function chart(r) {

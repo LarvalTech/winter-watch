@@ -15,6 +15,9 @@ Live page: `https://<your-username>.github.io/winter-watch/`
 - `scripts/run_forecast.py`: live forecast, decision, briefing, writes `docs/data/latest.json`
 - `.github/workflows/forecast.yml`: runs daily in the afternoon. The AI key lives only in GitHub Secrets and is read only by this job. The browser only ever sees the finished JSON.
 
+## Chat assistant (optional)
+See `worker/README.md`. A small Cloudflare Worker holds the Gemini key and answers questions from the tool's data (`docs/data/*.json`). `scripts/build_history.py` builds the history file the chat uses.
+
 ## AI key (optional)
 Repo → Settings → Secrets and variables → Actions: add secret `LLM_API_KEY`; optional variables `LLM_PROVIDER` (`gemini`, `anthropic` or `openai`) and `LLM_MODEL`. Without a key a fixed template briefing is used. AI text containing any number not in the data is rejected and replaced by the template.
 
