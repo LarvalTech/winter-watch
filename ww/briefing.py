@@ -1,7 +1,7 @@
 import os, re, json, requests
 
 def template_briefing(f):
-    lines = []
+    lines = ["Hello Duty Engineer."]
     if f["decision"] == "GO":
         lines.append(f"Recommendation: GRIT TONIGHT. {f['n_go']} of {f['n_routes']} routes are forecast to reach icy-road conditions.")
     elif f["decision"] == "MARGINAL":
@@ -19,9 +19,10 @@ def template_briefing(f):
     elif f.get("trucks_used"):
         lines.append(f"The plan uses {f['trucks_used']} of {f['trucks_available']} trucks.")
     lines.append(f"Confidence is {f['confidence']}: the rules engine and the trained model agree on most routes." if f["confidence"] != "LOW" else "Confidence is LOW: the rules engine and the trained model disagree on many routes, so check the flagged routes.")
-    lines.append("This is a recommendation only. The Duty Engineer makes the final decision.")
+    lines.append(CLOSING)
     return " ".join(lines)
 
+CLOSING = "As always, you have the final say."
 NUM = re.compile(r"\d+(?:\.\d+)?")
 
 def validate(text, facts):
@@ -35,9 +36,14 @@ def llm_briefing(facts):
     provider = os.environ.get("LLM_PROVIDER", "anthropic")
     default_model = {"anthropic": "claude-haiku-4-5", "gemini": "gemini-3.5-flash-lite"}.get(provider, "gpt-4o-mini")
     model = os.environ.get("LLM_MODEL") or default_model
-    system = ("You write a 3-5 sentence gritting briefing for a roads Duty Engineer in County Cavan. "
-              "Use ONLY the numbers in the JSON facts, copied exactly. Never compute or estimate new numbers. "
-              "State that the engineer makes the final decision. Plain text, no markdown.")
+    system = ("You write a short gritting briefing (4 to 6 plain sentences) for the Duty Engineer of County Cavan's roads team. "
+              "Start with a short, friendly greeting that is not specific to the time of day, such as 'Hello Duty Engineer.' Never say morning, afternoon, evening or night greetings. "
+              "Then give the call first (GRIT TONIGHT, BORDERLINE, or NO GRITTING NEEDED, matching the decision), how many routes need gritting out of the total, "
+              "how many of the available trucks are used, when the first truck leaves and on which route, and the coldest road and its surface temperature. "
+              "Mention the confidence level; if it is LOW, say the rules engine and the model disagree on many routes and the flagged ones should be checked. "
+              "If any routes are late, say so. Use ONLY the numbers in the JSON facts, copied exactly. Never compute or estimate new numbers. "
+              "Do not use the word 'designated'. Plain text, no markdown, no bullet points. "
+              f"End with exactly this sentence: {CLOSING}")
     user = json.dumps(facts)
     try:
         if provider == "anthropic":
@@ -64,4 +70,8 @@ def llm_briefing(facts):
     if not text.strip():
         return None, "LLM returned no text"
     ok, bad = validate(text, facts)
-    return (text.strip(), model) if ok else (None, f"validator rejected numbers {bad}")
+    if not ok: return None, f"validator rejected numbers {bad}"
+    text = text.strip()
+    if not text.endswith(CLOSING):
+        text = " ".join(x for x in re.split(r"(?<=[.!?])\s+", text) if "final decision" not in x.lower() and "final say" not in x.lower()) text = text.rstrip(". ") + ". " + CLOSING
+    return text, model
