@@ -73,7 +73,7 @@ function duty() {
   }
   const b = L.briefing;
   $("#brief").innerHTML = `<h2>Written summary <span class="tag">${b.source === "llm" ? "AI-written · numbers validated" : "template (no AI)"}</span></h2><p class="mute">${b.text}</p>
-    <p class="mute" style="font-size:12px">Every number in this text is checked against the computed data before display. ${b.detail}</p>`;
+    <p class="mute" style="font-size:12px">${b.source === "llm" ? `Written by the AI model <b>${b.detail}</b>. Every number in the text was checked against the computed data before display, and the AI cannot change the decision.` : `Every number in this text is checked against the computed data before display. ${b.detail}`}</p>`;
   $("#plan").innerHTML = `<tr><th>Route</th><th>Class</th><th>Status</th><th>Truck · starts</th><th>Surface min</th><th>Ice from</th><th>km</th><th>Model p</th></tr>` +
     PL.map(r => `<tr class="row" data-ref="${r.ref}"><td><b>${r.ref}</b> <span class="mute">${r.name}</span></td><td>P${r.priority}</td>
     <td><span class="pill p-${r.status}">${r.status}</span>${r.review ? '<span class="chip" title="Rules engine and model disagree. Cautious call shown.">REVIEW</span>' : ""}</td>
