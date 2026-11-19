@@ -2,7 +2,7 @@
   const CHAT_URL = (window.WW_CONFIG || {}).chatUrl;
   let history = [], busy = false;
   const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/^[-*] /gm, "• ")
+  const md = s => esc(s).replace(/\s*\[(?!S\d)[A-Za-z_ ]{2,30}\]/g, "").replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/^[-*] /gm, "• ")
     .replace(/\[(S\d{1,2}(?:\s*,\s*S\d{1,2})*)\]/g, (_, ids) => `<sup class="src" title="See Sources &amp; method" onclick="goSrc()">${ids.replace(/\s/g, "")}</sup>`).replace(/\n/g, "<br>");
 
   window.initChat = function (D, getFocus) {
