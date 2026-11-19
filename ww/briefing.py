@@ -73,5 +73,6 @@ def llm_briefing(facts):
     if not ok: return None, f"validator rejected numbers {bad}"
     text = text.strip()
     if not text.endswith(CLOSING):
-        text = " ".join(x for x in re.split(r"(?<=[.!?])\s+", text) if "final decision" not in x.lower() and "final say" not in x.lower()) text = text.rstrip(". ") + ". " + CLOSING
+        text = " ".join(x for x in re.split(r"(?<=[.!?])\s+", text) if "final decision" not in x.lower() and "final say" not in x.lower())
+        text = text.rstrip(". ") + ". " + CLOSING
     return text, model
