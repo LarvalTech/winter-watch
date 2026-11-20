@@ -1,24 +1,48 @@
 {
- "generated_at": "2026-11-19T22:37:25Z",
- "decision_time_local": "2026-11-19T22:37:25",
+ "generated_at": "2026-11-20T20:49:10Z",
+ "decision_time_local": "2026-11-20T20:49:10",
  "night": {
-  "from": "2026-11-19 18:00:00",
-  "to": "2026-11-20 08:00:00"
+  "from": "2026-11-20 18:00:00",
+  "to": "2026-11-21 08:00:00"
  },
  "decision": "GO",
  "confidence": {
-  "level": "LOW",
-  "agree": 9,
+  "level": "HIGH",
+  "agree": 20,
   "total": 26,
-  "percent": 35
+  "percent": 77
  },
  "fleet": {
   "trucks_available": 9,
-  "trucks_used": 6,
-  "late_routes": [],
-  "over_capacity": false,
-  "longest_run_min": 355,
-  "total_km": 360,
+  "trucks_used": 9,
+  "late_routes": [
+   "N54",
+   "R188",
+   "R191",
+   "N3",
+   "R212",
+   "R202",
+   "N87",
+   "R199",
+   "R194",
+   "N55",
+   "R162",
+   "R198",
+   "R207",
+   "R201",
+   "R164",
+   "R154",
+   "R178",
+   "R192",
+   "R935",
+   "R165",
+   "R197",
+   "R190",
+   "R205"
+  ],
+  "over_capacity": true,
+  "longest_run_min": 317,
+  "total_km": 468,
   "edition": "2023/24",
   "assumptions": {
    "safety_margin_min": 15,
@@ -33,171 +57,11 @@
  "trucks": [
   {
    "truck": 1,
-   "leaves_yard": "00:15",
-   "leave_now": false,
-   "finish": "05:40",
-   "km": 52.6,
-   "run_min": 355,
-   "stops": [
-    {
-     "ref": "R200",
-     "name": "Bellavally Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 24.8,
-     "start": "01:06",
-     "end": "02:20",
-     "ice_onset": "05:00",
-     "slack_min": 159,
-     "drive_min": 51,
-     "late": false
-    },
-    {
-     "ref": "R206",
-     "name": "Blacklion Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 15.7,
-     "start": "02:29",
-     "end": "03:16",
-     "ice_onset": "05:00",
-     "slack_min": 103,
-     "drive_min": 9,
-     "late": false
-    },
-    {
-     "ref": "R190",
-     "name": "Ballybay Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 5.0,
-     "start": "04:32",
-     "end": "04:47",
-     "ice_onset": "06:00",
-     "slack_min": 72,
-     "drive_min": 76,
-     "late": false
-    },
-    {
-     "ref": "R197",
-     "name": "Belturbet Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 7.1,
-     "start": "05:18",
-     "end": "05:40",
-     "ice_onset": "06:00",
-     "slack_min": 19,
-     "drive_min": 31,
-     "late": false
-    }
-   ]
-  },
-  {
-   "truck": 2,
-   "leaves_yard": "01:15",
-   "leave_now": false,
-   "finish": "06:36",
-   "km": 67.1,
-   "run_min": 351,
-   "stops": [
-    {
-     "ref": "R202",
-     "name": "Ballinamore Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 6.9,
-     "start": "01:52",
-     "end": "02:13",
-     "ice_onset": "06:00",
-     "slack_min": 226,
-     "drive_min": 38,
-     "late": false
-    },
-    {
-     "ref": "R165",
-     "name": "Bailieborough Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 50.0,
-     "start": "03:20",
-     "end": "05:50",
-     "ice_onset": "07:00",
-     "slack_min": 69,
-     "drive_min": 67,
-     "late": false
-    },
-    {
-     "ref": "R192",
-     "name": "Cootehill Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 10.2,
-     "start": "06:05",
-     "end": "06:36",
-     "ice_onset": "07:00",
-     "slack_min": 23,
-     "drive_min": 15,
-     "late": false
-    }
-   ]
-  },
-  {
-   "truck": 3,
-   "leaves_yard": "01:15",
-   "leave_now": false,
-   "finish": "06:34",
-   "km": 78.5,
-   "run_min": 349,
-   "stops": [
-    {
-     "ref": "R178",
-     "name": "Bailieborough Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 26.3,
-     "start": "01:48",
-     "end": "03:07",
-     "ice_onset": "07:00",
-     "slack_min": 232,
-     "drive_min": 34,
-     "late": false
-    },
-    {
-     "ref": "R188",
-     "name": "Cootehill Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 23.4,
-     "start": "03:34",
-     "end": "04:44",
-     "ice_onset": "07:00",
-     "slack_min": 135,
-     "drive_min": 27,
-     "late": false
-    },
-    {
-     "ref": "R191",
-     "name": "Bailieborough Road",
-     "priority": 2,
-     "status": "GO",
-     "km": 28.8,
-     "start": "05:07",
-     "end": "06:34",
-     "ice_onset": "07:00",
-     "slack_min": 25,
-     "drive_min": 23,
-     "late": false
-    }
-   ]
-  },
-  {
-   "truck": 4,
-   "leaves_yard": "02:15",
-   "leave_now": false,
-   "finish": "07:38",
-   "km": 91.3,
-   "run_min": 354,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "01:23",
+   "km": 61.3,
+   "run_min": 264,
    "stops": [
     {
      "ref": "N54",
@@ -205,48 +69,182 @@
      "priority": 1,
      "status": "GO",
      "km": 9.1,
-     "start": "02:28",
-     "end": "02:55",
-     "ice_onset": "06:00",
-     "slack_min": 184,
+     "start": "21:43",
+     "end": "22:10",
+     "ice_onset": "19:00",
+     "slack_min": -191,
      "drive_min": 13,
-     "late": false
+     "late": true
     },
+    {
+     "ref": "R188",
+     "name": "Cootehill Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 23.4,
+     "start": "22:24",
+     "end": "23:34",
+     "ice_onset": "20:00",
+     "slack_min": -215,
+     "drive_min": 14,
+     "late": true
+    },
+    {
+     "ref": "R191",
+     "name": "Bailieborough Road",
+     "priority": 2,
+     "status": "MARGINAL",
+     "km": 28.8,
+     "start": "23:57",
+     "end": "01:23",
+     "ice_onset": "01:00",
+     "slack_min": -24,
+     "drive_min": 23,
+     "late": true
+    }
+   ]
+  },
+  {
+   "truck": 2,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "01:34",
+   "km": 73.3,
+   "run_min": 274,
+   "stops": [
     {
      "ref": "N3",
      "name": "Dublin Road",
      "priority": 1,
      "status": "GO",
      "km": 56.0,
-     "start": "03:16",
-     "end": "06:04",
-     "ice_onset": "07:00",
-     "slack_min": 55,
-     "drive_min": 21,
-     "late": false
+     "start": "21:41",
+     "end": "00:29",
+     "ice_onset": "20:00",
+     "slack_min": -270,
+     "drive_min": 11,
+     "late": true
     },
     {
-     "ref": "N55",
-     "name": "Athlone Road",
+     "ref": "R212",
+     "name": "Dublin Road",
+     "priority": 2,
+     "status": "MARGINAL",
+     "km": 17.3,
+     "start": "00:42",
+     "end": "01:34",
+     "ice_onset": "22:00",
+     "slack_min": -215,
+     "drive_min": 13,
+     "late": true
+    }
+   ]
+  },
+  {
+   "truck": 3,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "01:34",
+   "km": 55.9,
+   "run_min": 275,
+   "stops": [
+    {
+     "ref": "R202",
+     "name": "Ballinamore Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 6.9,
+     "start": "22:07",
+     "end": "22:28",
+     "ice_onset": "19:00",
+     "slack_min": -209,
+     "drive_min": 38,
+     "late": true
+    },
+    {
+     "ref": "N87",
+     "name": "Bawn Road",
      "priority": 1,
      "status": "GO",
-     "km": 26.2,
-     "start": "06:20",
-     "end": "07:38",
+     "km": 28.3,
+     "start": "22:37",
+     "end": "00:02",
+     "ice_onset": "23:00",
+     "slack_min": -63,
+     "drive_min": 9,
+     "late": true
+    },
+    {
+     "ref": "R199",
+     "name": "Newtown Gore Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 16.3,
+     "start": "00:21",
+     "end": "01:10",
+     "ice_onset": "23:00",
+     "slack_min": -131,
+     "drive_min": 18,
+     "late": true
+    },
+    {
+     "ref": "R203",
+     "name": "Carrigallen Road",
+     "priority": 2,
+     "status": "MARGINAL",
+     "km": 4.4,
+     "start": "01:21",
+     "end": "01:34",
      "ice_onset": "08:00",
-     "slack_min": 21,
-     "drive_min": 15,
+     "slack_min": 385,
+     "drive_min": 11,
      "late": false
     }
    ]
   },
   {
+   "truck": 4,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "01:29",
+   "km": 63.3,
+   "run_min": 269,
+   "stops": [
+    {
+     "ref": "R194",
+     "name": "Granard Road",
+     "priority": 2,
+     "status": "MARGINAL",
+     "km": 37.1,
+     "start": "21:57",
+     "end": "23:48",
+     "ice_onset": "19:00",
+     "slack_min": -289,
+     "drive_min": 27,
+     "late": true
+    },
+    {
+     "ref": "N55",
+     "name": "Athlone Road",
+     "priority": 1,
+     "status": "MARGINAL",
+     "km": 26.2,
+     "start": "00:10",
+     "end": "01:29",
+     "ice_onset": "23:00",
+     "slack_min": -150,
+     "drive_min": 22,
+     "late": true
+    }
+   ]
+  },
+  {
    "truck": 5,
-   "leaves_yard": "03:15",
-   "leave_now": false,
-   "finish": "07:40",
-   "km": 41.9,
-   "run_min": 295,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "01:06",
+   "km": 40.8,
+   "run_min": 246,
    "stops": [
     {
      "ref": "R162",
@@ -254,38 +252,133 @@
      "priority": 2,
      "status": "GO",
      "km": 18.1,
-     "start": "03:57",
-     "end": "04:51",
-     "ice_onset": "08:00",
-     "slack_min": 188,
+     "start": "22:12",
+     "end": "23:06",
+     "ice_onset": "18:00",
+     "slack_min": -307,
      "drive_min": 42,
-     "late": false
+     "late": true
     },
     {
-     "ref": "R203",
-     "name": "Carrigallen Road",
+     "ref": "R198",
+     "name": "Cavan Road",
      "priority": 2,
      "status": "GO",
-     "km": 4.4,
-     "start": "05:53",
-     "end": "06:07",
-     "ice_onset": "08:00",
-     "slack_min": 112,
-     "drive_min": 62,
-     "late": false
+     "km": 22.7,
+     "start": "23:58",
+     "end": "01:06",
+     "ice_onset": "22:00",
+     "slack_min": -187,
+     "drive_min": 52,
+     "late": true
+    }
+   ]
+  },
+  {
+   "truck": 6,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "00:53",
+   "km": 30.9,
+   "run_min": 234,
+   "stops": [
+    {
+     "ref": "R207",
+     "name": "Blacklion Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 12.9,
+     "start": "22:32",
+     "end": "23:11",
+     "ice_onset": "18:00",
+     "slack_min": -312,
+     "drive_min": 63,
+     "late": true
     },
     {
-     "ref": "R212",
-     "name": "Dublin Road",
+     "ref": "R201",
+     "name": "Drumlane Road",
      "priority": 2,
      "status": "GO",
-     "km": 17.3,
-     "start": "06:33",
-     "end": "07:25",
-     "ice_onset": "08:00",
-     "slack_min": 34,
-     "drive_min": 27,
-     "late": false
+     "km": 18.0,
+     "start": "23:59",
+     "end": "00:53",
+     "ice_onset": "23:00",
+     "slack_min": -114,
+     "drive_min": 48,
+     "late": true
+    }
+   ]
+  },
+  {
+   "truck": 7,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "02:17",
+   "km": 54.6,
+   "run_min": 317,
+   "stops": [
+    {
+     "ref": "R164",
+     "name": "Kells Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 3.2,
+     "start": "22:18",
+     "end": "22:27",
+     "ice_onset": "19:00",
+     "slack_min": -208,
+     "drive_min": 48,
+     "late": true
+    },
+    {
+     "ref": "R154",
+     "name": "Ballinagh Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 25.1,
+     "start": "23:12",
+     "end": "00:27",
+     "ice_onset": "21:00",
+     "slack_min": -208,
+     "drive_min": 44,
+     "late": true
+    },
+    {
+     "ref": "R178",
+     "name": "Bailieborough Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 26.3,
+     "start": "00:58",
+     "end": "02:17",
+     "ice_onset": "02:00",
+     "slack_min": -18,
+     "drive_min": 31,
+     "late": true
+    }
+   ]
+  },
+  {
+   "truck": 8,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "02:10",
+   "km": 62.3,
+   "run_min": 310,
+   "stops": [
+    {
+     "ref": "R192",
+     "name": "Cootehill Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 10.2,
+     "start": "22:01",
+     "end": "22:32",
+     "ice_onset": "19:00",
+     "slack_min": -213,
+     "drive_min": 32,
+     "late": true
     },
     {
      "ref": "R935",
@@ -293,48 +386,74 @@
      "priority": 2,
      "status": "GO",
      "km": 2.1,
-     "start": "07:33",
-     "end": "07:40",
-     "ice_onset": "08:00",
-     "slack_min": 19,
-     "drive_min": 9,
-     "late": false
+     "start": "23:04",
+     "end": "23:11",
+     "ice_onset": "20:00",
+     "slack_min": -192,
+     "drive_min": 32,
+     "late": true
+    },
+    {
+     "ref": "R165",
+     "name": "Bailieborough Road",
+     "priority": 2,
+     "status": "MARGINAL",
+     "km": 50.0,
+     "start": "23:40",
+     "end": "02:10",
+     "ice_onset": "01:00",
+     "slack_min": -71,
+     "drive_min": 29,
+     "late": true
     }
    ]
   },
   {
-   "truck": 6,
-   "leaves_yard": "05:15",
-   "leave_now": false,
-   "finish": "07:41",
-   "km": 28.3,
-   "run_min": 176,
+   "truck": 9,
+   "leaves_yard": "21:30",
+   "leave_now": true,
+   "finish": "00:21",
+   "km": 25.2,
+   "run_min": 202,
    "stops": [
     {
-     "ref": "R154",
-     "name": "Ballinagh Road",
+     "ref": "R197",
+     "name": "Belturbet Road",
      "priority": 2,
-     "status": "MARGINAL",
-     "km": 25.1,
-     "start": "05:31",
-     "end": "06:47",
-     "ice_onset": "08:00",
-     "slack_min": 72,
+     "status": "GO",
+     "km": 7.1,
+     "start": "21:46",
+     "end": "22:07",
+     "ice_onset": "19:00",
+     "slack_min": -188,
      "drive_min": 17,
-     "late": false
+     "late": true
     },
     {
-     "ref": "R164",
-     "name": "Kells Road",
+     "ref": "R190",
+     "name": "Ballybay Road",
      "priority": 2,
-     "status": "MARGINAL",
-     "km": 3.2,
-     "start": "07:31",
-     "end": "07:41",
-     "ice_onset": "08:00",
-     "slack_min": 18,
-     "drive_min": 44,
-     "late": false
+     "status": "GO",
+     "km": 5.0,
+     "start": "22:38",
+     "end": "22:53",
+     "ice_onset": "20:00",
+     "slack_min": -174,
+     "drive_min": 31,
+     "late": true
+    },
+    {
+     "ref": "R205",
+     "name": "Ballinamore Road",
+     "priority": 2,
+     "status": "GO",
+     "km": 13.1,
+     "start": "23:42",
+     "end": "00:21",
+     "ice_onset": "23:00",
+     "slack_min": -82,
+     "drive_min": 49,
+     "late": true
     }
    ]
   }
@@ -342,20 +461,20 @@
  "facts": {
   "decision": "GO",
   "n_routes": 26,
-  "n_go": 17,
-  "n_marginal": 2,
-  "n_review": 17,
-  "trucks_used": 6,
+  "n_go": 18,
+  "n_marginal": 6,
+  "n_review": 6,
+  "trucks_used": 9,
   "trucks_available": 9,
-  "n_late": 0,
-  "first_departure": "00:15",
-  "first_route": "R200",
-  "coldest_route": "R190",
-  "coldest_ts": -3.8,
-  "confidence": "LOW"
+  "n_late": 23,
+  "first_departure": "21:30",
+  "first_route": "N54",
+  "coldest_route": "R192",
+  "coldest_ts": -3.6,
+  "confidence": "HIGH"
  },
  "briefing": {
-  "text": "Hi there Duty Engineer. We are a GO tonight, which means gritting is on. You will need to cover 17 routes out of 26, using 6 of your 9 available trucks. Things kick off at 00:15 on route R200, and our coldest road is the R190 down to -3.8 degrees. Confidence in the forecast is LOW because the rules engine and the model disagree on many routes, so it is worth checking the flagged ones. There are 0 late routes to worry about. As always, you have the final say.",
+  "text": "Hi there Duty Engineer. We are a GO for tonight, which means we need to get the grit down. We are treating 18 of the 26 routes, using all 9 of our available trucks. Our first truck leaves at 21:30 on the N54. The coldest road tonight is the R192, where the surface temperature will drop to -3.6 degrees. Confidence in the forecast is HIGH, though note that 23 routes are currently running late. As always, you have the final say.",
   "source": "llm",
   "detail": "gemini-3.5-flash-lite"
  },
@@ -368,93 +487,93 @@
    "length_km": 56.0,
    "elev_mean_m": 94,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.95,
+   "rules_status": "GO",
+   "model_prob": 0.41,
    "review": true,
-   "surface_min_c": -2.0,
-   "air_min_c": -1.1,
-   "precip_mm": 0.1,
-   "ice_onset": "07:00",
-   "depart": "03:16",
-   "depart_is_now": false,
-   "truck": 4,
-   "treat_end": "06:04",
-   "slack_min": 55,
+   "surface_min_c": 0.4,
+   "air_min_c": 1.2,
+   "precip_mm": 0.0,
+   "ice_onset": "20:00",
+   "depart": "21:41",
+   "depart_is_now": true,
+   "truck": 2,
+   "treat_end": "00:29",
+   "slack_min": -270,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
+     "surface_c": 2.8,
+     "air_c": 3.3
     },
     {
      "t": "19:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
+     "surface_c": 0.7,
+     "air_c": 1.7
     },
     {
      "t": "20:00",
-     "surface_c": 5.0,
-     "air_c": 5.2
+     "surface_c": 0.4,
+     "air_c": 1.5
     },
     {
      "t": "21:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": 2.2,
+     "air_c": 2.6
     },
     {
      "t": "22:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
+     "surface_c": 0.7,
+     "air_c": 1.3
     },
     {
      "t": "23:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
+     "surface_c": 0.6,
+     "air_c": 1.2
     },
     {
      "t": "00:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": 1.3,
+     "air_c": 1.9
     },
     {
      "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": 4.3,
+     "air_c": 4.6
     },
     {
      "t": "02:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
+     "surface_c": 2.0,
+     "air_c": 2.9
     },
     {
      "t": "03:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
+     "surface_c": 2.6,
+     "air_c": 2.9
     },
     {
      "t": "04:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "surface_c": 3.3,
+     "air_c": 4.2
     },
     {
      "t": "05:00",
-     "surface_c": 3.6,
-     "air_c": 3.7
+     "surface_c": 1.6,
+     "air_c": 1.9
     },
     {
      "t": "06:00",
-     "surface_c": 2.1,
-     "air_c": 2.4
+     "surface_c": 2.3,
+     "air_c": 3.2
     },
     {
      "t": "07:00",
-     "surface_c": -0.0,
-     "air_c": 0.8
+     "surface_c": 4.1,
+     "air_c": 4.1
     },
     {
      "t": "08:00",
-     "surface_c": -2.0,
-     "air_c": -1.1
+     "surface_c": 4.9,
+     "air_c": 5.2
     }
    ]
   },
@@ -466,191 +585,289 @@
    "length_km": 9.1,
    "elev_mean_m": 61,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.96,
-   "review": true,
-   "surface_min_c": -2.2,
-   "air_min_c": -1.3,
-   "precip_mm": 0.1,
-   "ice_onset": "06:00",
-   "depart": "02:28",
-   "depart_is_now": false,
-   "truck": 4,
-   "treat_end": "02:55",
-   "slack_min": 184,
+   "rules_status": "GO",
+   "model_prob": 0.99,
+   "review": false,
+   "surface_min_c": -2.0,
+   "air_min_c": -1.9,
+   "precip_mm": 0.0,
+   "ice_onset": "19:00",
+   "depart": "21:43",
+   "depart_is_now": true,
+   "truck": 1,
+   "treat_end": "22:10",
+   "slack_min": -191,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": -0.1,
+     "air_c": 0.4
     },
     {
      "t": "19:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": 0.3,
+     "air_c": 0.5
     },
     {
      "t": "20:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": -0.4,
+     "air_c": -0.2
     },
     {
      "t": "21:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": 1.5,
+     "air_c": 1.8
     },
     {
      "t": "22:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": 0.6,
+     "air_c": 1.1
     },
     {
      "t": "23:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
+     "surface_c": -1.7,
+     "air_c": -1.0
     },
     {
      "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": -0.5,
+     "air_c": -0.5
     },
     {
      "t": "01:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": -1.0,
+     "air_c": -0.2
     },
     {
      "t": "02:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": -0.2,
+     "air_c": -0.1
     },
     {
      "t": "03:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
+     "surface_c": -2.0,
+     "air_c": -1.9
     },
     {
      "t": "04:00",
-     "surface_c": 1.3,
-     "air_c": 1.7
+     "surface_c": -0.7,
+     "air_c": -0.4
     },
     {
      "t": "05:00",
-     "surface_c": 3.0,
-     "air_c": 3.1
+     "surface_c": -0.2,
+     "air_c": 0.1
     },
     {
      "t": "06:00",
      "surface_c": -0.5,
-     "air_c": -0.1
+     "air_c": 0.0
     },
     {
      "t": "07:00",
-     "surface_c": -1.8,
-     "air_c": -1.1
+     "surface_c": -1.2,
+     "air_c": 0.0
     },
     {
      "t": "08:00",
-     "surface_c": -2.2,
-     "air_c": -1.3
+     "surface_c": -1.0,
+     "air_c": -1.0
     }
    ]
   },
   {
-   "ref": "N55",
-   "name": "Athlone Road",
+   "ref": "N87",
+   "name": "Bawn Road",
    "priority": 1,
    "designated": true,
-   "length_km": 26.2,
-   "elev_mean_m": 85,
+   "length_km": 28.3,
+   "elev_mean_m": 69,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.56,
+   "rules_status": "GO",
+   "model_prob": 0.5,
    "review": true,
-   "surface_min_c": 0.5,
-   "air_min_c": 1.1,
+   "surface_min_c": -0.4,
+   "air_min_c": 0.9,
    "precip_mm": 0.0,
-   "ice_onset": "08:00",
-   "depart": "06:20",
+   "ice_onset": "23:00",
+   "depart": "22:37",
    "depart_is_now": false,
-   "truck": 4,
-   "treat_end": "07:38",
-   "slack_min": 21,
+   "truck": 3,
+   "treat_end": "00:02",
+   "slack_min": -63,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.3
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.5,
-     "air_c": 5.8
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.3,
-     "air_c": 5.5
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.5,
+     "surface_c": 4.0,
      "air_c": 4.6
     },
     {
-     "t": "02:00",
-     "surface_c": 5.2,
+     "t": "19:00",
+     "surface_c": 4.8,
      "air_c": 5.2
     },
     {
-     "t": "03:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
+     "t": "20:00",
+     "surface_c": 4.2,
+     "air_c": 4.8
     },
     {
-     "t": "04:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
+     "t": "21:00",
+     "surface_c": 4.2,
+     "air_c": 4.6
     },
     {
-     "t": "05:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "t": "22:00",
+     "surface_c": 3.1,
+     "air_c": 3.9
     },
     {
-     "t": "06:00",
-     "surface_c": 2.3,
+     "t": "23:00",
+     "surface_c": 0.7,
+     "air_c": 1.9
+    },
+    {
+     "t": "00:00",
+     "surface_c": 2.0,
      "air_c": 2.5
     },
     {
+     "t": "01:00",
+     "surface_c": 1.3,
+     "air_c": 2.0
+    },
+    {
+     "t": "02:00",
+     "surface_c": -0.4,
+     "air_c": 0.9
+    },
+    {
+     "t": "03:00",
+     "surface_c": 2.6,
+     "air_c": 2.8
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.4,
+     "air_c": 2.5
+    },
+    {
+     "t": "05:00",
+     "surface_c": 3.0,
+     "air_c": 3.4
+    },
+    {
+     "t": "06:00",
+     "surface_c": 2.4,
+     "air_c": 3.0
+    },
+    {
      "t": "07:00",
-     "surface_c": 1.8,
-     "air_c": 2.1
+     "surface_c": 2.6,
+     "air_c": 3.4
     },
     {
      "t": "08:00",
-     "surface_c": 0.5,
-     "air_c": 1.1
+     "surface_c": 3.3,
+     "air_c": 4.0
+    }
+   ]
+  },
+  {
+   "ref": "R154",
+   "name": "Ballinagh Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 25.1,
+   "elev_mean_m": 90,
+   "status": "GO",
+   "rules_status": "GO",
+   "model_prob": 0.64,
+   "review": false,
+   "surface_min_c": -0.4,
+   "air_min_c": 0.7,
+   "precip_mm": 0.0,
+   "ice_onset": "21:00",
+   "depart": "23:12",
+   "depart_is_now": false,
+   "truck": 7,
+   "treat_end": "00:27",
+   "slack_min": -208,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 4.8,
+     "air_c": 4.9
+    },
+    {
+     "t": "19:00",
+     "surface_c": 2.1,
+     "air_c": 2.7
+    },
+    {
+     "t": "20:00",
+     "surface_c": 1.5,
+     "air_c": 2.2
+    },
+    {
+     "t": "21:00",
+     "surface_c": 1.0,
+     "air_c": 1.6
+    },
+    {
+     "t": "22:00",
+     "surface_c": 0.4,
+     "air_c": 1.4
+    },
+    {
+     "t": "23:00",
+     "surface_c": -0.4,
+     "air_c": 0.7
+    },
+    {
+     "t": "00:00",
+     "surface_c": -0.0,
+     "air_c": 0.8
+    },
+    {
+     "t": "01:00",
+     "surface_c": 1.5,
+     "air_c": 1.8
+    },
+    {
+     "t": "02:00",
+     "surface_c": 0.8,
+     "air_c": 1.4
+    },
+    {
+     "t": "03:00",
+     "surface_c": 2.7,
+     "air_c": 2.9
+    },
+    {
+     "t": "04:00",
+     "surface_c": 0.1,
+     "air_c": 0.9
+    },
+    {
+     "t": "05:00",
+     "surface_c": 2.7,
+     "air_c": 2.9
+    },
+    {
+     "t": "06:00",
+     "surface_c": 1.7,
+     "air_c": 2.7
+    },
+    {
+     "t": "07:00",
+     "surface_c": 2.6,
+     "air_c": 2.6
+    },
+    {
+     "t": "08:00",
+     "surface_c": 3.2,
+     "air_c": 3.2
     }
    ]
   },
@@ -662,191 +879,191 @@
    "length_km": 18.1,
    "elev_mean_m": 123,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.94,
-   "review": true,
-   "surface_min_c": -2.1,
-   "air_min_c": -1.0,
+   "rules_status": "GO",
+   "model_prob": 0.57,
+   "review": false,
+   "surface_min_c": -0.1,
+   "air_min_c": 0.9,
    "precip_mm": 0.0,
-   "ice_onset": "08:00",
-   "depart": "03:57",
-   "depart_is_now": false,
+   "ice_onset": "18:00",
+   "depart": "22:12",
+   "depart_is_now": true,
    "truck": 5,
-   "treat_end": "04:51",
-   "slack_min": 188,
+   "treat_end": "23:06",
+   "slack_min": -307,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.6,
-     "air_c": 5.8
+     "surface_c": 0.6,
+     "air_c": 1.7
     },
     {
      "t": "19:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 0.1,
+     "air_c": 0.9
     },
     {
      "t": "20:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
+     "surface_c": 0.7,
+     "air_c": 1.3
     },
     {
      "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
+     "surface_c": -0.1,
+     "air_c": 0.9
     },
     {
      "t": "22:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
+     "surface_c": 3.7,
+     "air_c": 4.0
     },
     {
      "t": "23:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
+     "surface_c": 2.8,
+     "air_c": 3.3
     },
     {
      "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": 2.7,
+     "air_c": 2.9
     },
     {
      "t": "01:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
+     "surface_c": 1.6,
+     "air_c": 2.6
     },
     {
      "t": "02:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.2,
-     "air_c": 2.5
-    },
-    {
-     "t": "07:00",
-     "surface_c": 1.9,
+     "surface_c": 1.8,
      "air_c": 2.3
     },
     {
+     "t": "03:00",
+     "surface_c": 0.7,
+     "air_c": 1.6
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.5,
+     "air_c": 2.8
+    },
+    {
+     "t": "05:00",
+     "surface_c": 2.3,
+     "air_c": 2.7
+    },
+    {
+     "t": "06:00",
+     "surface_c": 3.1,
+     "air_c": 3.8
+    },
+    {
+     "t": "07:00",
+     "surface_c": 2.3,
+     "air_c": 3.1
+    },
+    {
      "t": "08:00",
-     "surface_c": -2.1,
-     "air_c": -1.0
+     "surface_c": 3.8,
+     "air_c": 4.0
     }
    ]
   },
   {
-   "ref": "R165",
-   "name": "Bailieborough Road",
+   "ref": "R164",
+   "name": "Kells Road",
    "priority": 2,
    "designated": true,
-   "length_km": 50.0,
-   "elev_mean_m": 133,
+   "length_km": 3.2,
+   "elev_mean_m": 140,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.74,
-   "review": true,
-   "surface_min_c": -0.5,
-   "air_min_c": 0.3,
+   "rules_status": "GO",
+   "model_prob": 0.67,
+   "review": false,
+   "surface_min_c": -0.9,
+   "air_min_c": 0.2,
    "precip_mm": 0.0,
-   "ice_onset": "07:00",
-   "depart": "03:20",
-   "depart_is_now": false,
-   "truck": 2,
-   "treat_end": "05:50",
-   "slack_min": 69,
+   "ice_onset": "19:00",
+   "depart": "22:18",
+   "depart_is_now": true,
+   "truck": 7,
+   "treat_end": "22:27",
+   "slack_min": -208,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.3,
-     "air_c": 6.3
+     "surface_c": 3.3,
+     "air_c": 3.6
     },
     {
      "t": "19:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
+     "surface_c": -0.2,
+     "air_c": 1.1
     },
     {
      "t": "20:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
+     "surface_c": -0.5,
+     "air_c": 0.8
     },
     {
      "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
+     "surface_c": 2.4,
+     "air_c": 2.6
     },
     {
      "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 2.4,
+     "air_c": 2.9
     },
     {
      "t": "23:00",
-     "surface_c": 5.1,
-     "air_c": 5.3
+     "surface_c": 0.3,
+     "air_c": 1.6
     },
     {
      "t": "00:00",
-     "surface_c": 4.9,
-     "air_c": 5.0
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.8,
-     "air_c": 4.9
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
-    },
-    {
-     "t": "06:00",
      "surface_c": 2.1,
      "air_c": 2.5
     },
     {
+     "t": "01:00",
+     "surface_c": -0.8,
+     "air_c": 0.6
+    },
+    {
+     "t": "02:00",
+     "surface_c": -0.9,
+     "air_c": 0.2
+    },
+    {
+     "t": "03:00",
+     "surface_c": -0.7,
+     "air_c": 0.6
+    },
+    {
+     "t": "04:00",
+     "surface_c": 0.3,
+     "air_c": 0.9
+    },
+    {
+     "t": "05:00",
+     "surface_c": 0.1,
+     "air_c": 0.6
+    },
+    {
+     "t": "06:00",
+     "surface_c": 1.5,
+     "air_c": 2.7
+    },
+    {
      "t": "07:00",
-     "surface_c": 0.6,
+     "surface_c": 0.3,
      "air_c": 1.5
     },
     {
      "t": "08:00",
-     "surface_c": -0.5,
-     "air_c": 0.3
+     "surface_c": 2.3,
+     "air_c": 2.7
     }
    ]
   },
@@ -858,93 +1075,93 @@
    "length_km": 26.3,
    "elev_mean_m": 138,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.75,
+   "rules_status": "GO",
+   "model_prob": 0.32,
    "review": true,
-   "surface_min_c": -0.6,
-   "air_min_c": 0.2,
+   "surface_min_c": 1.0,
+   "air_min_c": 1.7,
    "precip_mm": 0.0,
-   "ice_onset": "07:00",
-   "depart": "01:48",
+   "ice_onset": "02:00",
+   "depart": "00:58",
    "depart_is_now": false,
-   "truck": 3,
-   "treat_end": "03:07",
-   "slack_min": 232,
+   "truck": 7,
+   "treat_end": "02:17",
+   "slack_min": -18,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.2
+     "surface_c": 2.2,
+     "air_c": 2.9
     },
     {
      "t": "19:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
+     "surface_c": 2.9,
+     "air_c": 3.6
     },
     {
      "t": "20:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": 2.5,
+     "air_c": 2.9
     },
     {
      "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
+     "surface_c": 3.6,
+     "air_c": 3.9
     },
     {
      "t": "22:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 3.1,
+     "air_c": 3.6
     },
     {
      "t": "23:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
+     "surface_c": 2.4,
+     "air_c": 3.0
     },
     {
      "t": "00:00",
-     "surface_c": 4.8,
-     "air_c": 4.9
+     "surface_c": 3.6,
+     "air_c": 4.0
     },
     {
      "t": "01:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
+     "surface_c": 1.8,
+     "air_c": 2.7
     },
     {
      "t": "02:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": 1.0,
+     "air_c": 1.7
     },
     {
      "t": "03:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 2.7,
+     "air_c": 3.1
     },
     {
      "t": "04:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 2.4,
+     "air_c": 3.3
     },
     {
      "t": "05:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "surface_c": 3.9,
+     "air_c": 4.1
     },
     {
      "t": "06:00",
-     "surface_c": 2.0,
-     "air_c": 2.4
+     "surface_c": 2.7,
+     "air_c": 3.5
     },
     {
      "t": "07:00",
-     "surface_c": 0.6,
-     "air_c": 1.4
+     "surface_c": 3.9,
+     "air_c": 3.9
     },
     {
      "t": "08:00",
-     "surface_c": -0.6,
-     "air_c": 0.2
+     "surface_c": 3.4,
+     "air_c": 4.2
     }
    ]
   },
@@ -956,93 +1173,93 @@
    "length_km": 23.4,
    "elev_mean_m": 82,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.94,
+   "rules_status": "GO",
+   "model_prob": 0.38,
    "review": true,
-   "surface_min_c": -1.9,
-   "air_min_c": -1.0,
-   "precip_mm": 0.1,
-   "ice_onset": "07:00",
-   "depart": "03:34",
+   "surface_min_c": 0.4,
+   "air_min_c": 1.3,
+   "precip_mm": 0.0,
+   "ice_onset": "20:00",
+   "depart": "22:24",
    "depart_is_now": false,
-   "truck": 3,
-   "treat_end": "04:44",
-   "slack_min": 135,
+   "truck": 1,
+   "treat_end": "23:34",
+   "slack_min": -215,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
+     "surface_c": 2.8,
+     "air_c": 3.4
     },
     {
      "t": "19:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 0.8,
+     "air_c": 1.8
     },
     {
      "t": "20:00",
-     "surface_c": 5.0,
-     "air_c": 5.3
+     "surface_c": 0.4,
+     "air_c": 1.6
     },
     {
      "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
+     "surface_c": 2.3,
+     "air_c": 2.7
     },
     {
      "t": "22:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
+     "surface_c": 0.7,
+     "air_c": 1.4
     },
     {
      "t": "23:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
+     "surface_c": 0.7,
+     "air_c": 1.3
     },
     {
      "t": "00:00",
-     "surface_c": 4.9,
-     "air_c": 5.0
+     "surface_c": 1.4,
+     "air_c": 2.0
     },
     {
      "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 5.0
+     "surface_c": 4.4,
+     "air_c": 4.7
     },
     {
      "t": "02:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 2.1,
+     "air_c": 3.0
     },
     {
      "t": "03:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 2.7,
+     "air_c": 3.0
     },
     {
      "t": "04:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
+     "surface_c": 3.4,
+     "air_c": 4.3
     },
     {
      "t": "05:00",
-     "surface_c": 3.7,
-     "air_c": 3.8
+     "surface_c": 1.7,
+     "air_c": 2.0
     },
     {
      "t": "06:00",
-     "surface_c": 2.2,
-     "air_c": 2.5
+     "surface_c": 2.4,
+     "air_c": 3.3
     },
     {
      "t": "07:00",
-     "surface_c": 0.1,
-     "air_c": 0.9
+     "surface_c": 4.2,
+     "air_c": 4.2
     },
     {
      "t": "08:00",
-     "surface_c": -1.9,
-     "air_c": -1.0
+     "surface_c": 5.0,
+     "air_c": 5.3
     }
    ]
   },
@@ -1054,191 +1271,93 @@
    "length_km": 5.0,
    "elev_mean_m": 104,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.99,
-   "review": true,
-   "surface_min_c": -3.8,
-   "air_min_c": -2.6,
-   "precip_mm": 0.4,
-   "ice_onset": "06:00",
-   "depart": "04:32",
-   "depart_is_now": false,
-   "truck": 1,
-   "treat_end": "04:47",
-   "slack_min": 72,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 5.2,
-     "air_c": 5.6
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.3,
-     "air_c": 4.3
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.0,
-     "air_c": 4.0
-    },
-    {
-     "t": "06:00",
-     "surface_c": 0.7,
-     "air_c": 1.2
-    },
-    {
-     "t": "07:00",
-     "surface_c": -1.6,
-     "air_c": -0.6
-    },
-    {
-     "t": "08:00",
-     "surface_c": -3.8,
-     "air_c": -2.6
-    }
-   ]
-  },
-  {
-   "ref": "R191",
-   "name": "Bailieborough Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 28.8,
-   "elev_mean_m": 126,
-   "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.73,
-   "review": true,
-   "surface_min_c": -0.5,
-   "air_min_c": 0.3,
+   "rules_status": "GO",
+   "model_prob": 0.97,
+   "review": false,
+   "surface_min_c": -1.5,
+   "air_min_c": -1.4,
    "precip_mm": 0.0,
-   "ice_onset": "07:00",
-   "depart": "05:07",
+   "ice_onset": "20:00",
+   "depart": "22:38",
    "depart_is_now": false,
-   "truck": 3,
-   "treat_end": "06:34",
-   "slack_min": 25,
+   "truck": 9,
+   "treat_end": "22:53",
+   "slack_min": -174,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.3,
-     "air_c": 6.3
+     "surface_c": 3.1,
+     "air_c": 3.7
     },
     {
      "t": "19:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
+     "surface_c": 2.0,
+     "air_c": 2.4
     },
     {
      "t": "20:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
-    },
-    {
-     "t": "00:00",
-     "surface_c": 4.9,
-     "air_c": 5.0
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.1,
-     "air_c": 2.5
-    },
-    {
-     "t": "07:00",
      "surface_c": 0.6,
      "air_c": 1.5
     },
     {
+     "t": "21:00",
+     "surface_c": 1.3,
+     "air_c": 1.5
+    },
+    {
+     "t": "22:00",
+     "surface_c": 1.7,
+     "air_c": 1.8
+    },
+    {
+     "t": "23:00",
+     "surface_c": 0.2,
+     "air_c": 0.2
+    },
+    {
+     "t": "00:00",
+     "surface_c": 0.4,
+     "air_c": 0.4
+    },
+    {
+     "t": "01:00",
+     "surface_c": -0.6,
+     "air_c": 0.4
+    },
+    {
+     "t": "02:00",
+     "surface_c": 0.1,
+     "air_c": 0.7
+    },
+    {
+     "t": "03:00",
+     "surface_c": -0.4,
+     "air_c": -0.3
+    },
+    {
+     "t": "04:00",
+     "surface_c": 1.2,
+     "air_c": 1.2
+    },
+    {
+     "t": "05:00",
+     "surface_c": -1.5,
+     "air_c": -1.4
+    },
+    {
+     "t": "06:00",
+     "surface_c": 0.8,
+     "air_c": 1.6
+    },
+    {
+     "t": "07:00",
+     "surface_c": -1.2,
+     "air_c": -0.6
+    },
+    {
      "t": "08:00",
-     "surface_c": -0.5,
-     "air_c": 0.3
+     "surface_c": 0.1,
+     "air_c": 0.7
     }
    ]
   },
@@ -1250,93 +1369,93 @@
    "length_km": 10.2,
    "elev_mean_m": 105,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.98,
-   "review": true,
-   "surface_min_c": -2.8,
-   "air_min_c": -1.9,
+   "rules_status": "GO",
+   "model_prob": 0.99,
+   "review": false,
+   "surface_min_c": -3.6,
+   "air_min_c": -2.4,
    "precip_mm": 0.0,
-   "ice_onset": "07:00",
-   "depart": "06:05",
-   "depart_is_now": false,
-   "truck": 2,
-   "treat_end": "06:36",
-   "slack_min": 23,
+   "ice_onset": "19:00",
+   "depart": "22:01",
+   "depart_is_now": true,
+   "truck": 8,
+   "treat_end": "22:32",
+   "slack_min": -213,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.7,
-     "air_c": 5.9
+     "surface_c": 2.6,
+     "air_c": 3.3
     },
     {
      "t": "19:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": -1.2,
+     "air_c": -0.3
     },
     {
      "t": "20:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
+     "surface_c": -2.6,
+     "air_c": -1.8
     },
     {
      "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
+     "surface_c": -1.0,
+     "air_c": -1.0
     },
     {
      "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
+     "surface_c": 1.1,
+     "air_c": 1.2
     },
     {
      "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
+     "surface_c": -0.9,
+     "air_c": -0.5
     },
     {
      "t": "00:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
+     "surface_c": -1.5,
+     "air_c": -1.0
     },
     {
      "t": "01:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": -1.8,
+     "air_c": -1.1
     },
     {
      "t": "02:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": -1.5,
+     "air_c": -1.1
     },
     {
      "t": "03:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
+     "surface_c": -2.6,
+     "air_c": -2.3
     },
     {
      "t": "04:00",
-     "surface_c": 4.4,
-     "air_c": 4.4
+     "surface_c": -1.2,
+     "air_c": -1.2
     },
     {
      "t": "05:00",
-     "surface_c": 4.1,
-     "air_c": 4.1
+     "surface_c": -1.6,
+     "air_c": -1.3
     },
     {
      "t": "06:00",
-     "surface_c": 1.9,
-     "air_c": 2.2
+     "surface_c": -0.4,
+     "air_c": 0.6
     },
     {
      "t": "07:00",
-     "surface_c": 0.3,
-     "air_c": 0.8
+     "surface_c": -3.6,
+     "air_c": -2.4
     },
     {
      "t": "08:00",
-     "surface_c": -2.8,
-     "air_c": -1.9
+     "surface_c": -2.6,
+     "air_c": -2.3
     }
    ]
   },
@@ -1348,191 +1467,387 @@
    "length_km": 7.1,
    "elev_mean_m": 54,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.96,
-   "review": true,
-   "surface_min_c": -2.2,
-   "air_min_c": -1.2,
-   "precip_mm": 0.1,
-   "ice_onset": "06:00",
-   "depart": "05:18",
-   "depart_is_now": false,
-   "truck": 1,
-   "treat_end": "05:40",
-   "slack_min": 19,
+   "rules_status": "GO",
+   "model_prob": 0.98,
+   "review": false,
+   "surface_min_c": -2.0,
+   "air_min_c": -1.8,
+   "precip_mm": 0.0,
+   "ice_onset": "19:00",
+   "depart": "21:46",
+   "depart_is_now": true,
+   "truck": 9,
+   "treat_end": "22:07",
+   "slack_min": -188,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
+     "surface_c": -0.1,
+     "air_c": 0.5
     },
     {
      "t": "19:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 0.3,
+     "air_c": 0.6
     },
     {
      "t": "20:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
+     "surface_c": -0.3,
+     "air_c": -0.1
     },
     {
      "t": "21:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": 1.6,
+     "air_c": 1.9
     },
     {
      "t": "22:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 0.6,
+     "air_c": 1.2
     },
     {
      "t": "23:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
+     "surface_c": -1.6,
+     "air_c": -0.9
     },
     {
      "t": "00:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": -0.4,
+     "air_c": -0.4
     },
     {
      "t": "01:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": -0.9,
+     "air_c": -0.1
     },
     {
      "t": "02:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.6,
-     "air_c": 4.7
-    },
-    {
-     "t": "04:00",
-     "surface_c": 1.4,
-     "air_c": 1.8
-    },
-    {
-     "t": "05:00",
-     "surface_c": 3.0,
-     "air_c": 3.2
-    },
-    {
-     "t": "06:00",
-     "surface_c": -0.4,
+     "surface_c": -0.1,
      "air_c": -0.0
     },
     {
+     "t": "03:00",
+     "surface_c": -2.0,
+     "air_c": -1.8
+    },
+    {
+     "t": "04:00",
+     "surface_c": -0.7,
+     "air_c": -0.3
+    },
+    {
+     "t": "05:00",
+     "surface_c": -0.1,
+     "air_c": 0.2
+    },
+    {
+     "t": "06:00",
+     "surface_c": -0.5,
+     "air_c": 0.1
+    },
+    {
      "t": "07:00",
-     "surface_c": -1.8,
-     "air_c": -1.0
+     "surface_c": -1.1,
+     "air_c": 0.1
     },
     {
      "t": "08:00",
-     "surface_c": -2.2,
-     "air_c": -1.2
+     "surface_c": -0.9,
+     "air_c": -0.9
     }
    ]
   },
   {
-   "ref": "R200",
-   "name": "Bellavally Road",
+   "ref": "R198",
+   "name": "Cavan Road",
    "priority": 2,
    "designated": true,
-   "length_km": 24.8,
-   "elev_mean_m": 163,
+   "length_km": 22.7,
+   "elev_mean_m": 71,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.93,
-   "review": true,
-   "surface_min_c": -2.5,
-   "air_min_c": -1.3,
+   "rules_status": "GO",
+   "model_prob": 0.83,
+   "review": false,
+   "surface_min_c": 0.1,
+   "air_min_c": 0.1,
    "precip_mm": 0.0,
-   "ice_onset": "05:00",
-   "depart": "01:06",
+   "ice_onset": "22:00",
+   "depart": "23:58",
    "depart_is_now": false,
-   "truck": 1,
-   "treat_end": "02:20",
-   "slack_min": 159,
+   "truck": 5,
+   "treat_end": "01:06",
+   "slack_min": -187,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "20:00",
-     "surface_c": 4.6,
-     "air_c": 4.7
-    },
-    {
-     "t": "21:00",
      "surface_c": 4.5,
      "air_c": 4.6
     },
     {
-     "t": "22:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "23:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "00:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
-    },
-    {
-     "t": "02:00",
-     "surface_c": 3.7,
-     "air_c": 3.8
-    },
-    {
-     "t": "03:00",
-     "surface_c": 1.8,
-     "air_c": 2.5
-    },
-    {
-     "t": "04:00",
-     "surface_c": 2.8,
+     "t": "19:00",
+     "surface_c": 2.3,
      "air_c": 3.1
     },
     {
-     "t": "05:00",
+     "t": "20:00",
+     "surface_c": 2.0,
+     "air_c": 2.3
+    },
+    {
+     "t": "21:00",
+     "surface_c": 1.0,
+     "air_c": 2.2
+    },
+    {
+     "t": "22:00",
+     "surface_c": 1.0,
+     "air_c": 1.0
+    },
+    {
+     "t": "23:00",
+     "surface_c": 0.6,
+     "air_c": 0.6
+    },
+    {
+     "t": "00:00",
+     "surface_c": 1.0,
+     "air_c": 1.0
+    },
+    {
+     "t": "01:00",
+     "surface_c": 0.7,
+     "air_c": 0.7
+    },
+    {
+     "t": "02:00",
+     "surface_c": 0.4,
+     "air_c": 0.4
+    },
+    {
+     "t": "03:00",
+     "surface_c": 0.9,
+     "air_c": 0.9
+    },
+    {
+     "t": "04:00",
      "surface_c": 0.1,
+     "air_c": 0.1
+    },
+    {
+     "t": "05:00",
+     "surface_c": 0.6,
+     "air_c": 1.1
+    },
+    {
+     "t": "06:00",
+     "surface_c": 1.0,
+     "air_c": 1.5
+    },
+    {
+     "t": "07:00",
+     "surface_c": 1.8,
+     "air_c": 1.8
+    },
+    {
+     "t": "08:00",
+     "surface_c": 0.4,
+     "air_c": 0.8
+    }
+   ]
+  },
+  {
+   "ref": "R199",
+   "name": "Newtown Gore Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 16.3,
+   "elev_mean_m": 62,
+   "status": "GO",
+   "rules_status": "GO",
+   "model_prob": 0.82,
+   "review": false,
+   "surface_min_c": 0.2,
+   "air_min_c": 0.2,
+   "precip_mm": 0.0,
+   "ice_onset": "23:00",
+   "depart": "00:21",
+   "depart_is_now": false,
+   "truck": 3,
+   "treat_end": "01:10",
+   "slack_min": -131,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 4.5,
+     "air_c": 4.7
+    },
+    {
+     "t": "19:00",
+     "surface_c": 2.3,
+     "air_c": 3.2
+    },
+    {
+     "t": "20:00",
+     "surface_c": 2.0,
+     "air_c": 2.4
+    },
+    {
+     "t": "21:00",
+     "surface_c": 1.1,
+     "air_c": 2.3
+    },
+    {
+     "t": "22:00",
+     "surface_c": 1.1,
+     "air_c": 1.1
+    },
+    {
+     "t": "23:00",
+     "surface_c": 0.7,
+     "air_c": 0.7
+    },
+    {
+     "t": "00:00",
+     "surface_c": 1.1,
+     "air_c": 1.1
+    },
+    {
+     "t": "01:00",
+     "surface_c": 0.8,
+     "air_c": 0.8
+    },
+    {
+     "t": "02:00",
+     "surface_c": 0.5,
+     "air_c": 0.5
+    },
+    {
+     "t": "03:00",
+     "surface_c": 1.0,
+     "air_c": 1.0
+    },
+    {
+     "t": "04:00",
+     "surface_c": 0.2,
+     "air_c": 0.2
+    },
+    {
+     "t": "05:00",
+     "surface_c": 0.7,
      "air_c": 1.2
     },
     {
      "t": "06:00",
-     "surface_c": -2.5,
-     "air_c": -1.3
+     "surface_c": 1.0,
+     "air_c": 1.6
     },
     {
      "t": "07:00",
-     "surface_c": -1.6,
-     "air_c": -0.3
+     "surface_c": 1.9,
+     "air_c": 1.9
     },
     {
      "t": "08:00",
-     "surface_c": -2.4,
-     "air_c": -1.0
+     "surface_c": 0.5,
+     "air_c": 0.9
+    }
+   ]
+  },
+  {
+   "ref": "R201",
+   "name": "Drumlane Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 18.0,
+   "elev_mean_m": 56,
+   "status": "GO",
+   "rules_status": "GO",
+   "model_prob": 0.81,
+   "review": false,
+   "surface_min_c": 0.2,
+   "air_min_c": 0.2,
+   "precip_mm": 0.0,
+   "ice_onset": "23:00",
+   "depart": "23:59",
+   "depart_is_now": false,
+   "truck": 6,
+   "treat_end": "00:53",
+   "slack_min": -114,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 4.6,
+     "air_c": 4.7
+    },
+    {
+     "t": "19:00",
+     "surface_c": 2.4,
+     "air_c": 3.2
+    },
+    {
+     "t": "20:00",
+     "surface_c": 2.1,
+     "air_c": 2.4
+    },
+    {
+     "t": "21:00",
+     "surface_c": 1.1,
+     "air_c": 2.3
+    },
+    {
+     "t": "22:00",
+     "surface_c": 1.1,
+     "air_c": 1.1
+    },
+    {
+     "t": "23:00",
+     "surface_c": 0.7,
+     "air_c": 0.7
+    },
+    {
+     "t": "00:00",
+     "surface_c": 1.1,
+     "air_c": 1.1
+    },
+    {
+     "t": "01:00",
+     "surface_c": 0.8,
+     "air_c": 0.8
+    },
+    {
+     "t": "02:00",
+     "surface_c": 0.5,
+     "air_c": 0.5
+    },
+    {
+     "t": "03:00",
+     "surface_c": 1.0,
+     "air_c": 1.0
+    },
+    {
+     "t": "04:00",
+     "surface_c": 0.2,
+     "air_c": 0.2
+    },
+    {
+     "t": "05:00",
+     "surface_c": 0.7,
+     "air_c": 1.2
+    },
+    {
+     "t": "06:00",
+     "surface_c": 1.1,
+     "air_c": 1.6
+    },
+    {
+     "t": "07:00",
+     "surface_c": 1.9,
+     "air_c": 1.9
+    },
+    {
+     "t": "08:00",
+     "surface_c": 0.5,
+     "air_c": 0.9
     }
    ]
   },
@@ -1544,387 +1859,289 @@
    "length_km": 6.9,
    "elev_mean_m": 85,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.67,
-   "review": true,
-   "surface_min_c": -0.4,
-   "air_min_c": 0.4,
+   "rules_status": "GO",
+   "model_prob": 0.85,
+   "review": false,
+   "surface_min_c": -0.9,
+   "air_min_c": -0.4,
    "precip_mm": 0.0,
-   "ice_onset": "06:00",
-   "depart": "01:52",
-   "depart_is_now": false,
-   "truck": 2,
-   "treat_end": "02:13",
-   "slack_min": 226,
+   "ice_onset": "19:00",
+   "depart": "22:07",
+   "depart_is_now": true,
+   "truck": 3,
+   "treat_end": "22:28",
+   "slack_min": -209,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.2
+     "surface_c": 1.3,
+     "air_c": 1.8
     },
     {
      "t": "19:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 0.5,
+     "air_c": 1.4
     },
     {
      "t": "20:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "00:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "01:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.0,
-     "air_c": 4.1
-    },
-    {
-     "t": "04:00",
-     "surface_c": 1.4,
+     "surface_c": 1.9,
      "air_c": 2.1
     },
     {
+     "t": "21:00",
+     "surface_c": 1.9,
+     "air_c": 2.6
+    },
+    {
+     "t": "22:00",
+     "surface_c": -0.6,
+     "air_c": 0.4
+    },
+    {
+     "t": "23:00",
+     "surface_c": -0.4,
+     "air_c": 0.2
+    },
+    {
+     "t": "00:00",
+     "surface_c": -0.4,
+     "air_c": 0.5
+    },
+    {
+     "t": "01:00",
+     "surface_c": -0.8,
+     "air_c": -0.4
+    },
+    {
+     "t": "02:00",
+     "surface_c": -0.9,
+     "air_c": 0.3
+    },
+    {
+     "t": "03:00",
+     "surface_c": 0.4,
+     "air_c": 0.5
+    },
+    {
+     "t": "04:00",
+     "surface_c": 0.0,
+     "air_c": 0.4
+    },
+    {
      "t": "05:00",
-     "surface_c": 1.7,
-     "air_c": 2.4
+     "surface_c": 1.1,
+     "air_c": 1.5
     },
     {
      "t": "06:00",
-     "surface_c": 0.9,
-     "air_c": 1.6
+     "surface_c": 0.2,
+     "air_c": 0.6
     },
     {
      "t": "07:00",
-     "surface_c": 0.1,
-     "air_c": 0.9
+     "surface_c": 0.7,
+     "air_c": 1.5
     },
     {
      "t": "08:00",
-     "surface_c": -0.4,
-     "air_c": 0.4
+     "surface_c": 2.4,
+     "air_c": 2.8
     }
    ]
   },
   {
-   "ref": "R203",
-   "name": "Carrigallen Road",
+   "ref": "R205",
+   "name": "Ballinamore Road",
    "priority": 2,
    "designated": true,
-   "length_km": 4.4,
-   "elev_mean_m": 73,
+   "length_km": 13.1,
+   "elev_mean_m": 63,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.73,
+   "rules_status": "GO",
+   "model_prob": 0.48,
    "review": true,
-   "surface_min_c": -0.8,
-   "air_min_c": 0.1,
+   "surface_min_c": -0.4,
+   "air_min_c": 0.9,
    "precip_mm": 0.0,
-   "ice_onset": "08:00",
-   "depart": "05:53",
+   "ice_onset": "23:00",
+   "depart": "23:42",
    "depart_is_now": false,
-   "truck": 5,
-   "treat_end": "06:07",
-   "slack_min": 112,
+   "truck": 9,
+   "treat_end": "00:21",
+   "slack_min": -82,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.6,
-     "air_c": 6.0
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.2,
-     "air_c": 5.7
-    },
-    {
-     "t": "20:00",
-     "surface_c": 4.8,
-     "air_c": 5.1
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "02:00",
-     "surface_c": 3.4,
-     "air_c": 4.0
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.3,
-     "air_c": 4.3
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.6,
+     "surface_c": 4.1,
      "air_c": 4.6
     },
     {
-     "t": "05:00",
+     "t": "19:00",
+     "surface_c": 4.9,
+     "air_c": 5.2
+    },
+    {
+     "t": "20:00",
      "surface_c": 4.2,
-     "air_c": 4.2
+     "air_c": 4.8
     },
     {
-     "t": "06:00",
-     "surface_c": 3.0,
-     "air_c": 3.1
+     "t": "21:00",
+     "surface_c": 4.3,
+     "air_c": 4.6
     },
     {
-     "t": "07:00",
-     "surface_c": 1.5,
+     "t": "22:00",
+     "surface_c": 3.2,
+     "air_c": 3.9
+    },
+    {
+     "t": "23:00",
+     "surface_c": 0.8,
      "air_c": 1.9
     },
     {
-     "t": "08:00",
-     "surface_c": -0.8,
-     "air_c": 0.1
-    }
-   ]
-  },
-  {
-   "ref": "R206",
-   "name": "Blacklion Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 15.7,
-   "elev_mean_m": 108,
-   "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.89,
-   "review": true,
-   "surface_min_c": -2.1,
-   "air_min_c": -0.9,
-   "precip_mm": 0.0,
-   "ice_onset": "05:00",
-   "depart": "02:29",
-   "depart_is_now": false,
-   "truck": 1,
-   "treat_end": "03:16",
-   "slack_min": 103,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
-    },
-    {
-     "t": "21:00",
-     "surface_c": 4.9,
-     "air_c": 5.0
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
-    },
-    {
      "t": "00:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
+     "surface_c": 2.1,
+     "air_c": 2.5
     },
     {
      "t": "01:00",
-     "surface_c": 4.9,
-     "air_c": 5.0
+     "surface_c": 1.4,
+     "air_c": 2.0
     },
     {
      "t": "02:00",
-     "surface_c": 4.0,
-     "air_c": 4.2
+     "surface_c": -0.4,
+     "air_c": 0.9
     },
     {
      "t": "03:00",
-     "surface_c": 2.2,
-     "air_c": 2.9
-    },
-    {
-     "t": "04:00",
-     "surface_c": 3.1,
-     "air_c": 3.5
-    },
-    {
-     "t": "05:00",
-     "surface_c": 0.5,
-     "air_c": 1.6
-    },
-    {
-     "t": "06:00",
-     "surface_c": -2.1,
-     "air_c": -0.9
-    },
-    {
-     "t": "07:00",
-     "surface_c": -1.3,
-     "air_c": 0.1
-    },
-    {
-     "t": "08:00",
-     "surface_c": -2.0,
-     "air_c": -0.6
-    }
-   ]
-  },
-  {
-   "ref": "R212",
-   "name": "Dublin Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 17.3,
-   "elev_mean_m": 94,
-   "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.82,
-   "review": true,
-   "surface_min_c": -0.9,
-   "air_min_c": -0.0,
-   "precip_mm": 0.1,
-   "ice_onset": "08:00",
-   "depart": "06:33",
-   "depart_is_now": false,
-   "truck": 5,
-   "treat_end": "07:25",
-   "slack_min": 34,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
-    },
-    {
-     "t": "00:00",
-     "surface_c": 4.8,
-     "air_c": 5.0
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.8,
-     "air_c": 4.9
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
-    },
-    {
-     "t": "05:00",
      "surface_c": 2.6,
-     "air_c": 3.0
+     "air_c": 2.8
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.4,
+     "air_c": 2.5
+    },
+    {
+     "t": "05:00",
+     "surface_c": 3.1,
+     "air_c": 3.4
     },
     {
      "t": "06:00",
      "surface_c": 2.5,
-     "air_c": 2.8
+     "air_c": 3.0
     },
     {
      "t": "07:00",
-     "surface_c": 1.8,
-     "air_c": 2.2
+     "surface_c": 2.6,
+     "air_c": 3.4
     },
     {
      "t": "08:00",
-     "surface_c": -0.9,
-     "air_c": -0.0
+     "surface_c": 3.3,
+     "air_c": 4.0
+    }
+   ]
+  },
+  {
+   "ref": "R207",
+   "name": "Blacklion Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 12.9,
+   "elev_mean_m": 80,
+   "status": "GO",
+   "rules_status": "GO",
+   "model_prob": 0.45,
+   "review": true,
+   "surface_min_c": -0.2,
+   "air_min_c": 0.8,
+   "precip_mm": 0.0,
+   "ice_onset": "18:00",
+   "depart": "22:32",
+   "depart_is_now": true,
+   "truck": 6,
+   "treat_end": "23:11",
+   "slack_min": -312,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": -0.2,
+     "air_c": 0.9
+    },
+    {
+     "t": "19:00",
+     "surface_c": 1.2,
+     "air_c": 2.2
+    },
+    {
+     "t": "20:00",
+     "surface_c": -0.2,
+     "air_c": 0.8
+    },
+    {
+     "t": "21:00",
+     "surface_c": 2.4,
+     "air_c": 3.5
+    },
+    {
+     "t": "22:00",
+     "surface_c": 1.4,
+     "air_c": 2.0
+    },
+    {
+     "t": "23:00",
+     "surface_c": 2.1,
+     "air_c": 3.0
+    },
+    {
+     "t": "00:00",
+     "surface_c": 1.2,
+     "air_c": 2.1
+    },
+    {
+     "t": "01:00",
+     "surface_c": 2.9,
+     "air_c": 3.8
+    },
+    {
+     "t": "02:00",
+     "surface_c": 2.8,
+     "air_c": 3.6
+    },
+    {
+     "t": "03:00",
+     "surface_c": 4.9,
+     "air_c": 5.0
+    },
+    {
+     "t": "04:00",
+     "surface_c": 4.0,
+     "air_c": 4.5
+    },
+    {
+     "t": "05:00",
+     "surface_c": 5.1,
+     "air_c": 5.3
+    },
+    {
+     "t": "06:00",
+     "surface_c": 2.2,
+     "air_c": 3.4
+    },
+    {
+     "t": "07:00",
+     "surface_c": 4.6,
+     "air_c": 5.1
+    },
+    {
+     "t": "08:00",
+     "surface_c": 4.3,
+     "air_c": 4.7
     }
    ]
   },
@@ -1936,93 +2153,191 @@
    "length_km": 2.1,
    "elev_mean_m": 82,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.93,
-   "review": true,
-   "surface_min_c": -1.9,
-   "air_min_c": -1.0,
-   "precip_mm": 0.3,
-   "ice_onset": "08:00",
-   "depart": "07:33",
+   "rules_status": "GO",
+   "model_prob": 0.97,
+   "review": false,
+   "surface_min_c": -3.2,
+   "air_min_c": -1.9,
+   "precip_mm": 0.0,
+   "ice_onset": "20:00",
+   "depart": "23:04",
    "depart_is_now": false,
-   "truck": 5,
-   "treat_end": "07:40",
-   "slack_min": 19,
+   "truck": 8,
+   "treat_end": "23:11",
+   "slack_min": -192,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.3
+     "surface_c": 2.6,
+     "air_c": 2.7
     },
     {
      "t": "19:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.4,
-     "air_c": 4.6
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.4,
-     "air_c": 4.4
-    },
-    {
-     "t": "05:00",
-     "surface_c": 2.8,
+     "surface_c": 2.6,
      "air_c": 3.0
     },
     {
+     "t": "20:00",
+     "surface_c": 0.5,
+     "air_c": 1.0
+    },
+    {
+     "t": "21:00",
+     "surface_c": 1.3,
+     "air_c": 1.8
+    },
+    {
+     "t": "22:00",
+     "surface_c": -1.0,
+     "air_c": 0.2
+    },
+    {
+     "t": "23:00",
+     "surface_c": -2.2,
+     "air_c": -1.1
+    },
+    {
+     "t": "00:00",
+     "surface_c": -1.8,
+     "air_c": -0.8
+    },
+    {
+     "t": "01:00",
+     "surface_c": -1.9,
+     "air_c": -1.3
+    },
+    {
+     "t": "02:00",
+     "surface_c": -1.9,
+     "air_c": -0.5
+    },
+    {
+     "t": "03:00",
+     "surface_c": 0.0,
+     "air_c": 0.3
+    },
+    {
+     "t": "04:00",
+     "surface_c": -3.2,
+     "air_c": -1.9
+    },
+    {
+     "t": "05:00",
+     "surface_c": 0.4,
+     "air_c": 0.8
+    },
+    {
      "t": "06:00",
-     "surface_c": 2.0,
-     "air_c": 2.2
+     "surface_c": -2.0,
+     "air_c": -0.7
     },
     {
      "t": "07:00",
-     "surface_c": 1.4,
-     "air_c": 1.7
+     "surface_c": 0.1,
+     "air_c": 0.1
     },
     {
      "t": "08:00",
-     "surface_c": -1.9,
-     "air_c": -1.0
+     "surface_c": -1.2,
+     "air_c": -0.7
+    }
+   ]
+  },
+  {
+   "ref": "R179",
+   "name": "Carrickmacross Road",
+   "priority": 3,
+   "designated": false,
+   "length_km": 2.8,
+   "elev_mean_m": 35,
+   "status": "GO",
+   "rules_status": "GO",
+   "model_prob": 0.42,
+   "review": true,
+   "surface_min_c": -0.2,
+   "air_min_c": 0.9,
+   "precip_mm": 0.0,
+   "ice_onset": "19:00",
+   "depart": null,
+   "depart_is_now": false,
+   "truck": null,
+   "treat_end": null,
+   "slack_min": null,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 4.0,
+     "air_c": 4.3
+    },
+    {
+     "t": "19:00",
+     "surface_c": 0.5,
+     "air_c": 1.8
+    },
+    {
+     "t": "20:00",
+     "surface_c": 0.2,
+     "air_c": 1.5
+    },
+    {
+     "t": "21:00",
+     "surface_c": 3.1,
+     "air_c": 3.3
+    },
+    {
+     "t": "22:00",
+     "surface_c": 3.1,
+     "air_c": 3.6
+    },
+    {
+     "t": "23:00",
+     "surface_c": 1.0,
+     "air_c": 2.3
+    },
+    {
+     "t": "00:00",
+     "surface_c": 2.8,
+     "air_c": 3.2
+    },
+    {
+     "t": "01:00",
+     "surface_c": -0.1,
+     "air_c": 1.3
+    },
+    {
+     "t": "02:00",
+     "surface_c": -0.2,
+     "air_c": 0.9
+    },
+    {
+     "t": "03:00",
+     "surface_c": -0.1,
+     "air_c": 1.3
+    },
+    {
+     "t": "04:00",
+     "surface_c": 1.0,
+     "air_c": 1.6
+    },
+    {
+     "t": "05:00",
+     "surface_c": 0.8,
+     "air_c": 1.3
+    },
+    {
+     "t": "06:00",
+     "surface_c": 2.2,
+     "air_c": 3.4
+    },
+    {
+     "t": "07:00",
+     "surface_c": 1.0,
+     "air_c": 2.2
+    },
+    {
+     "t": "08:00",
+     "surface_c": 3.0,
+     "air_c": 3.4
     }
    ]
   },
@@ -2034,13 +2349,13 @@
    "length_km": 2.4,
    "elev_mean_m": 114,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.93,
-   "review": true,
-   "surface_min_c": -2.1,
-   "air_min_c": -0.9,
+   "rules_status": "GO",
+   "model_prob": 0.55,
+   "review": false,
+   "surface_min_c": -0.0,
+   "air_min_c": 1.0,
    "precip_mm": 0.0,
-   "ice_onset": "08:00",
+   "ice_onset": "18:00",
    "depart": null,
    "depart_is_now": false,
    "truck": null,
@@ -2049,78 +2364,274 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.7,
-     "air_c": 5.9
+     "surface_c": 0.6,
+     "air_c": 1.8
     },
     {
      "t": "19:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
+     "surface_c": 0.2,
+     "air_c": 1.0
     },
     {
      "t": "20:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
+     "surface_c": 0.7,
+     "air_c": 1.4
     },
     {
      "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.8
+     "surface_c": -0.0,
+     "air_c": 1.0
     },
     {
      "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
+     "surface_c": 3.7,
+     "air_c": 4.1
     },
     {
      "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
+     "surface_c": 2.9,
+     "air_c": 3.4
     },
     {
      "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 2.8,
+     "air_c": 3.0
     },
     {
      "t": "01:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
+     "surface_c": 1.7,
+     "air_c": 2.7
     },
     {
      "t": "02:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "04:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.7,
-     "air_c": 4.8
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.2,
-     "air_c": 2.6
-    },
-    {
-     "t": "07:00",
-     "surface_c": 2.0,
+     "surface_c": 1.9,
      "air_c": 2.4
     },
     {
+     "t": "03:00",
+     "surface_c": 0.7,
+     "air_c": 1.7
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.6,
+     "air_c": 2.9
+    },
+    {
+     "t": "05:00",
+     "surface_c": 2.4,
+     "air_c": 2.8
+    },
+    {
+     "t": "06:00",
+     "surface_c": 3.2,
+     "air_c": 3.9
+    },
+    {
+     "t": "07:00",
+     "surface_c": 2.4,
+     "air_c": 3.2
+    },
+    {
      "t": "08:00",
-     "surface_c": -2.1,
-     "air_c": -0.9
+     "surface_c": 3.8,
+     "air_c": 4.1
+    }
+   ]
+  },
+  {
+   "ref": "R195",
+   "name": "Oldcastle Road",
+   "priority": 3,
+   "designated": false,
+   "length_km": 5.8,
+   "elev_mean_m": 99,
+   "status": "GO",
+   "rules_status": "GO",
+   "model_prob": 0.82,
+   "review": false,
+   "surface_min_c": -0.2,
+   "air_min_c": 0.1,
+   "precip_mm": 0.0,
+   "ice_onset": "19:00",
+   "depart": null,
+   "depart_is_now": false,
+   "truck": null,
+   "treat_end": null,
+   "slack_min": null,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 2.0,
+     "air_c": 2.3
+    },
+    {
+     "t": "19:00",
+     "surface_c": 0.3,
+     "air_c": 1.3
+    },
+    {
+     "t": "20:00",
+     "surface_c": 2.0,
+     "air_c": 2.3
+    },
+    {
+     "t": "21:00",
+     "surface_c": -0.2,
+     "air_c": 0.7
+    },
+    {
+     "t": "22:00",
+     "surface_c": 0.6,
+     "air_c": 1.4
+    },
+    {
+     "t": "23:00",
+     "surface_c": 2.0,
+     "air_c": 2.2
+    },
+    {
+     "t": "00:00",
+     "surface_c": 0.7,
+     "air_c": 1.5
+    },
+    {
+     "t": "01:00",
+     "surface_c": 1.4,
+     "air_c": 1.8
+    },
+    {
+     "t": "02:00",
+     "surface_c": 0.5,
+     "air_c": 0.5
+    },
+    {
+     "t": "03:00",
+     "surface_c": -0.1,
+     "air_c": 0.1
+    },
+    {
+     "t": "04:00",
+     "surface_c": 0.5,
+     "air_c": 0.5
+    },
+    {
+     "t": "05:00",
+     "surface_c": 2.6,
+     "air_c": 2.8
+    },
+    {
+     "t": "06:00",
+     "surface_c": 0.7,
+     "air_c": 1.6
+    },
+    {
+     "t": "07:00",
+     "surface_c": 1.3,
+     "air_c": 1.8
+    },
+    {
+     "t": "08:00",
+     "surface_c": 2.0,
+     "air_c": 2.0
+    }
+   ]
+  },
+  {
+   "ref": "R394",
+   "name": "Finea Road",
+   "priority": 3,
+   "designated": false,
+   "length_km": 9.0,
+   "elev_mean_m": 80,
+   "status": "GO",
+   "rules_status": "GO",
+   "model_prob": 0.25,
+   "review": true,
+   "surface_min_c": 0.8,
+   "air_min_c": 1.9,
+   "precip_mm": 0.0,
+   "ice_onset": "23:00",
+   "depart": null,
+   "depart_is_now": false,
+   "truck": null,
+   "treat_end": null,
+   "slack_min": null,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 4.5,
+     "air_c": 4.9
+    },
+    {
+     "t": "19:00",
+     "surface_c": 3.4,
+     "air_c": 4.1
+    },
+    {
+     "t": "20:00",
+     "surface_c": 2.6,
+     "air_c": 3.3
+    },
+    {
+     "t": "21:00",
+     "surface_c": 2.9,
+     "air_c": 3.6
+    },
+    {
+     "t": "22:00",
+     "surface_c": 1.7,
+     "air_c": 2.7
+    },
+    {
+     "t": "23:00",
+     "surface_c": 0.8,
+     "air_c": 1.9
+    },
+    {
+     "t": "00:00",
+     "surface_c": 1.1,
+     "air_c": 1.9
+    },
+    {
+     "t": "01:00",
+     "surface_c": 1.8,
+     "air_c": 2.8
+    },
+    {
+     "t": "02:00",
+     "surface_c": 2.6,
+     "air_c": 2.9
+    },
+    {
+     "t": "03:00",
+     "surface_c": 3.1,
+     "air_c": 3.1
+    },
+    {
+     "t": "04:00",
+     "surface_c": 1.3,
+     "air_c": 2.1
+    },
+    {
+     "t": "05:00",
+     "surface_c": 2.0,
+     "air_c": 2.9
+    },
+    {
+     "t": "06:00",
+     "surface_c": 1.8,
+     "air_c": 2.8
+    },
+    {
+     "t": "07:00",
+     "surface_c": 3.1,
+     "air_c": 3.1
+    },
+    {
+     "t": "08:00",
+     "surface_c": 2.6,
+     "air_c": 3.6
     }
    ]
   },
@@ -2132,13 +2643,13 @@
    "length_km": 0.9,
    "elev_mean_m": 70,
    "status": "GO",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.92,
-   "review": true,
-   "surface_min_c": -1.8,
-   "air_min_c": -0.9,
-   "precip_mm": 0.3,
-   "ice_onset": "08:00",
+   "rules_status": "GO",
+   "model_prob": 0.97,
+   "review": false,
+   "surface_min_c": -3.1,
+   "air_min_c": -1.8,
+   "precip_mm": 0.0,
+   "ice_onset": "20:00",
    "depart": null,
    "depart_is_now": false,
    "truck": null,
@@ -2147,274 +2658,666 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.3,
-     "air_c": 6.4
+     "surface_c": 2.7,
+     "air_c": 2.8
     },
     {
      "t": "19:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.5,
-     "air_c": 4.7
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.8,
-     "air_c": 4.9
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
-    },
-    {
-     "t": "05:00",
-     "surface_c": 2.9,
+     "surface_c": 2.6,
      "air_c": 3.1
     },
     {
-     "t": "06:00",
-     "surface_c": 2.1,
-     "air_c": 2.3
-    },
-    {
-     "t": "07:00",
-     "surface_c": 1.5,
-     "air_c": 1.8
-    },
-    {
-     "t": "08:00",
-     "surface_c": -1.8,
-     "air_c": -0.9
-    }
-   ]
-  },
-  {
-   "ref": "R154",
-   "name": "Ballinagh Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 25.1,
-   "elev_mean_m": 90,
-   "status": "MARGINAL",
-   "rules_status": "MARGINAL",
-   "model_prob": 0.35,
-   "review": false,
-   "surface_min_c": 0.9,
-   "air_min_c": 1.7,
-   "precip_mm": 0.1,
-   "ice_onset": "08:00",
-   "depart": "05:31",
-   "depart_is_now": false,
-   "truck": 6,
-   "treat_end": "06:47",
-   "slack_min": 72,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.3
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
      "t": "20:00",
-     "surface_c": 5.1,
-     "air_c": 5.3
+     "surface_c": 0.5,
+     "air_c": 1.1
     },
     {
      "t": "21:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
+     "surface_c": 1.4,
+     "air_c": 1.9
     },
     {
      "t": "22:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
+     "surface_c": -1.0,
+     "air_c": 0.3
     },
     {
      "t": "23:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
+     "surface_c": -2.2,
+     "air_c": -1.0
     },
     {
      "t": "00:00",
-     "surface_c": 4.8,
-     "air_c": 4.9
+     "surface_c": -1.7,
+     "air_c": -0.7
     },
     {
      "t": "01:00",
-     "surface_c": 4.5,
-     "air_c": 4.6
+     "surface_c": -1.8,
+     "air_c": -1.2
     },
     {
      "t": "02:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": -1.8,
+     "air_c": -0.4
     },
     {
      "t": "03:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": 0.1,
+     "air_c": 0.4
     },
     {
      "t": "04:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": -3.1,
+     "air_c": -1.8
     },
     {
      "t": "05:00",
-     "surface_c": 4.5,
-     "air_c": 4.5
+     "surface_c": 0.5,
+     "air_c": 0.9
     },
     {
      "t": "06:00",
-     "surface_c": 2.1,
-     "air_c": 2.6
+     "surface_c": -2.0,
+     "air_c": -0.6
     },
     {
      "t": "07:00",
-     "surface_c": 2.3,
-     "air_c": 2.6
+     "surface_c": 0.2,
+     "air_c": 0.2
     },
     {
      "t": "08:00",
-     "surface_c": 0.9,
-     "air_c": 1.7
+     "surface_c": -1.2,
+     "air_c": -0.6
     }
    ]
   },
   {
-   "ref": "R164",
-   "name": "Kells Road",
-   "priority": 2,
+   "ref": "N55",
+   "name": "Athlone Road",
+   "priority": 1,
    "designated": true,
-   "length_km": 3.2,
-   "elev_mean_m": 140,
+   "length_km": 26.2,
+   "elev_mean_m": 85,
    "status": "MARGINAL",
    "rules_status": "MARGINAL",
-   "model_prob": 0.25,
+   "model_prob": 0.14,
    "review": false,
-   "surface_min_c": 0.7,
-   "air_min_c": 1.6,
-   "precip_mm": 0.3,
-   "ice_onset": "08:00",
-   "depart": "07:31",
+   "surface_min_c": 1.7,
+   "air_min_c": 2.6,
+   "precip_mm": 0.0,
+   "ice_onset": "23:00",
+   "depart": "00:10",
    "depart_is_now": false,
-   "truck": 6,
-   "treat_end": "07:41",
-   "slack_min": 18,
+   "truck": 4,
+   "treat_end": "01:29",
+   "slack_min": -150,
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.2
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "04:00",
-     "surface_c": 5.0,
+     "surface_c": 4.9,
      "air_c": 5.0
     },
     {
+     "t": "19:00",
+     "surface_c": 4.2,
+     "air_c": 4.6
+    },
+    {
+     "t": "20:00",
+     "surface_c": 3.8,
+     "air_c": 4.2
+    },
+    {
+     "t": "21:00",
+     "surface_c": 2.1,
+     "air_c": 3.0
+    },
+    {
+     "t": "22:00",
+     "surface_c": 2.5,
+     "air_c": 3.4
+    },
+    {
+     "t": "23:00",
+     "surface_c": 1.7,
+     "air_c": 2.6
+    },
+    {
+     "t": "00:00",
+     "surface_c": 2.2,
+     "air_c": 2.9
+    },
+    {
+     "t": "01:00",
+     "surface_c": 2.6,
+     "air_c": 3.4
+    },
+    {
+     "t": "02:00",
+     "surface_c": 2.0,
+     "air_c": 2.7
+    },
+    {
+     "t": "03:00",
+     "surface_c": 2.6,
+     "air_c": 2.9
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.4,
+     "air_c": 3.2
+    },
+    {
      "t": "05:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
+     "surface_c": 3.3,
+     "air_c": 3.7
     },
     {
      "t": "06:00",
-     "surface_c": 3.1,
-     "air_c": 3.5
+     "surface_c": 3.5,
+     "air_c": 4.2
     },
     {
      "t": "07:00",
+     "surface_c": 3.6,
+     "air_c": 3.6
+    },
+    {
+     "t": "08:00",
+     "surface_c": 3.9,
+     "air_c": 3.9
+    }
+   ]
+  },
+  {
+   "ref": "R165",
+   "name": "Bailieborough Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 50.0,
+   "elev_mean_m": 133,
+   "status": "MARGINAL",
+   "rules_status": "MARGINAL",
+   "model_prob": 0.31,
+   "review": false,
+   "surface_min_c": 1.0,
+   "air_min_c": 1.8,
+   "precip_mm": 0.0,
+   "ice_onset": "01:00",
+   "depart": "23:40",
+   "depart_is_now": false,
+   "truck": 8,
+   "treat_end": "02:10",
+   "slack_min": -71,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 2.2,
+     "air_c": 3.0
+    },
+    {
+     "t": "19:00",
+     "surface_c": 2.9,
+     "air_c": 3.7
+    },
+    {
+     "t": "20:00",
+     "surface_c": 2.5,
+     "air_c": 3.0
+    },
+    {
+     "t": "21:00",
+     "surface_c": 3.6,
+     "air_c": 4.0
+    },
+    {
+     "t": "22:00",
+     "surface_c": 3.1,
+     "air_c": 3.7
+    },
+    {
+     "t": "23:00",
+     "surface_c": 2.5,
+     "air_c": 3.1
+    },
+    {
+     "t": "00:00",
+     "surface_c": 3.7,
+     "air_c": 4.1
+    },
+    {
+     "t": "01:00",
+     "surface_c": 1.8,
+     "air_c": 2.8
+    },
+    {
+     "t": "02:00",
+     "surface_c": 1.0,
+     "air_c": 1.8
+    },
+    {
+     "t": "03:00",
+     "surface_c": 2.8,
+     "air_c": 3.2
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.5,
+     "air_c": 3.4
+    },
+    {
+     "t": "05:00",
+     "surface_c": 4.0,
+     "air_c": 4.2
+    },
+    {
+     "t": "06:00",
+     "surface_c": 2.7,
+     "air_c": 3.6
+    },
+    {
+     "t": "07:00",
+     "surface_c": 4.0,
+     "air_c": 4.0
+    },
+    {
+     "t": "08:00",
+     "surface_c": 3.4,
+     "air_c": 4.3
+    }
+   ]
+  },
+  {
+   "ref": "R191",
+   "name": "Bailieborough Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 28.8,
+   "elev_mean_m": 126,
+   "status": "MARGINAL",
+   "rules_status": "MARGINAL",
+   "model_prob": 0.29,
+   "review": false,
+   "surface_min_c": 1.0,
+   "air_min_c": 1.8,
+   "precip_mm": 0.0,
+   "ice_onset": "01:00",
+   "depart": "23:57",
+   "depart_is_now": false,
+   "truck": 1,
+   "treat_end": "01:23",
+   "slack_min": -24,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 2.2,
+     "air_c": 3.0
+    },
+    {
+     "t": "19:00",
+     "surface_c": 3.0,
+     "air_c": 3.7
+    },
+    {
+     "t": "20:00",
+     "surface_c": 2.6,
+     "air_c": 3.0
+    },
+    {
+     "t": "21:00",
+     "surface_c": 3.6,
+     "air_c": 4.0
+    },
+    {
+     "t": "22:00",
+     "surface_c": 3.2,
+     "air_c": 3.7
+    },
+    {
+     "t": "23:00",
+     "surface_c": 2.5,
+     "air_c": 3.1
+    },
+    {
+     "t": "00:00",
+     "surface_c": 3.7,
+     "air_c": 4.1
+    },
+    {
+     "t": "01:00",
+     "surface_c": 1.9,
+     "air_c": 2.8
+    },
+    {
+     "t": "02:00",
+     "surface_c": 1.0,
+     "air_c": 1.8
+    },
+    {
+     "t": "03:00",
+     "surface_c": 2.8,
+     "air_c": 3.2
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.5,
+     "air_c": 3.4
+    },
+    {
+     "t": "05:00",
+     "surface_c": 4.0,
+     "air_c": 4.2
+    },
+    {
+     "t": "06:00",
+     "surface_c": 2.7,
+     "air_c": 3.6
+    },
+    {
+     "t": "07:00",
+     "surface_c": 4.0,
+     "air_c": 4.0
+    },
+    {
+     "t": "08:00",
+     "surface_c": 3.5,
+     "air_c": 4.3
+    }
+   ]
+  },
+  {
+   "ref": "R194",
+   "name": "Granard Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 37.1,
+   "elev_mean_m": 102,
+   "status": "MARGINAL",
+   "rules_status": "MARGINAL",
+   "model_prob": 0.33,
+   "review": false,
+   "surface_min_c": 1.3,
+   "air_min_c": 1.9,
+   "precip_mm": 0.0,
+   "ice_onset": "19:00",
+   "depart": "21:57",
+   "depart_is_now": true,
+   "truck": 4,
+   "treat_end": "23:48",
+   "slack_min": -289,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 4.0,
+     "air_c": 4.3
+    },
+    {
+     "t": "19:00",
+     "surface_c": 1.8,
+     "air_c": 2.7
+    },
+    {
+     "t": "20:00",
+     "surface_c": 2.8,
+     "air_c": 3.2
+    },
+    {
+     "t": "21:00",
+     "surface_c": 2.1,
+     "air_c": 2.5
+    },
+    {
+     "t": "22:00",
+     "surface_c": 1.6,
+     "air_c": 2.3
+    },
+    {
+     "t": "23:00",
+     "surface_c": 1.7,
+     "air_c": 2.2
+    },
+    {
+     "t": "00:00",
      "surface_c": 1.3,
      "air_c": 2.2
     },
     {
+     "t": "01:00",
+     "surface_c": 2.7,
+     "air_c": 3.0
+    },
+    {
+     "t": "02:00",
+     "surface_c": 1.8,
+     "air_c": 2.4
+    },
+    {
+     "t": "03:00",
+     "surface_c": 1.7,
+     "air_c": 2.4
+    },
+    {
+     "t": "04:00",
+     "surface_c": 1.4,
+     "air_c": 1.9
+    },
+    {
+     "t": "05:00",
+     "surface_c": 2.0,
+     "air_c": 2.6
+    },
+    {
+     "t": "06:00",
+     "surface_c": 3.1,
+     "air_c": 3.4
+    },
+    {
+     "t": "07:00",
+     "surface_c": 2.4,
+     "air_c": 2.4
+    },
+    {
      "t": "08:00",
-     "surface_c": 0.7,
-     "air_c": 1.6
+     "surface_c": 2.7,
+     "air_c": 2.7
+    }
+   ]
+  },
+  {
+   "ref": "R203",
+   "name": "Carrigallen Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 4.4,
+   "elev_mean_m": 73,
+   "status": "MARGINAL",
+   "rules_status": "MARGINAL",
+   "model_prob": 0.16,
+   "review": false,
+   "surface_min_c": 1.6,
+   "air_min_c": 2.5,
+   "precip_mm": 0.0,
+   "ice_onset": "08:00",
+   "depart": "01:21",
+   "depart_is_now": false,
+   "truck": 3,
+   "treat_end": "01:34",
+   "slack_min": 385,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 4.3,
+     "air_c": 4.5
+    },
+    {
+     "t": "19:00",
+     "surface_c": 3.0,
+     "air_c": 3.7
+    },
+    {
+     "t": "20:00",
+     "surface_c": 4.2,
+     "air_c": 4.5
+    },
+    {
+     "t": "21:00",
+     "surface_c": 2.8,
+     "air_c": 3.5
+    },
+    {
+     "t": "22:00",
+     "surface_c": 2.5,
+     "air_c": 3.0
+    },
+    {
+     "t": "23:00",
+     "surface_c": 2.8,
+     "air_c": 3.3
+    },
+    {
+     "t": "00:00",
+     "surface_c": 2.4,
+     "air_c": 2.8
+    },
+    {
+     "t": "01:00",
+     "surface_c": 2.1,
+     "air_c": 2.6
+    },
+    {
+     "t": "02:00",
+     "surface_c": 2.0,
+     "air_c": 2.6
+    },
+    {
+     "t": "03:00",
+     "surface_c": 2.6,
+     "air_c": 2.7
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.7,
+     "air_c": 2.7
+    },
+    {
+     "t": "05:00",
+     "surface_c": 2.2,
+     "air_c": 2.9
+    },
+    {
+     "t": "06:00",
+     "surface_c": 2.0,
+     "air_c": 2.7
+    },
+    {
+     "t": "07:00",
+     "surface_c": 2.9,
+     "air_c": 2.9
+    },
+    {
+     "t": "08:00",
+     "surface_c": 1.6,
+     "air_c": 2.5
+    }
+   ]
+  },
+  {
+   "ref": "R212",
+   "name": "Dublin Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 17.3,
+   "elev_mean_m": 94,
+   "status": "MARGINAL",
+   "rules_status": "MARGINAL",
+   "model_prob": 0.2,
+   "review": false,
+   "surface_min_c": 1.4,
+   "air_min_c": 2.4,
+   "precip_mm": 0.0,
+   "ice_onset": "22:00",
+   "depart": "00:42",
+   "depart_is_now": false,
+   "truck": 2,
+   "treat_end": "01:34",
+   "slack_min": -215,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 3.8,
+     "air_c": 4.0
+    },
+    {
+     "t": "19:00",
+     "surface_c": 4.5,
+     "air_c": 4.7
+    },
+    {
+     "t": "20:00",
+     "surface_c": 2.8,
+     "air_c": 3.2
+    },
+    {
+     "t": "21:00",
+     "surface_c": 3.2,
+     "air_c": 3.6
+    },
+    {
+     "t": "22:00",
+     "surface_c": 1.4,
+     "air_c": 2.4
+    },
+    {
+     "t": "23:00",
+     "surface_c": 3.6,
+     "air_c": 4.1
+    },
+    {
+     "t": "00:00",
+     "surface_c": 3.0,
+     "air_c": 3.5
+    },
+    {
+     "t": "01:00",
+     "surface_c": 3.0,
+     "air_c": 3.3
+    },
+    {
+     "t": "02:00",
+     "surface_c": 1.7,
+     "air_c": 2.6
+    },
+    {
+     "t": "03:00",
+     "surface_c": 3.4,
+     "air_c": 3.6
+    },
+    {
+     "t": "04:00",
+     "surface_c": 2.3,
+     "air_c": 2.7
+    },
+    {
+     "t": "05:00",
+     "surface_c": 4.2,
+     "air_c": 4.4
+    },
+    {
+     "t": "06:00",
+     "surface_c": 3.6,
+     "air_c": 4.1
+    },
+    {
+     "t": "07:00",
+     "surface_c": 3.5,
+     "air_c": 3.5
+    },
+    {
+     "t": "08:00",
+     "surface_c": 4.0,
+     "air_c": 4.0
     }
    ]
   },
@@ -2427,12 +3330,12 @@
    "elev_mean_m": 108,
    "status": "MARGINAL",
    "rules_status": "MARGINAL",
-   "model_prob": 0.49,
+   "model_prob": 0.19,
    "review": false,
-   "surface_min_c": 0.5,
-   "air_min_c": 1.3,
+   "surface_min_c": 1.5,
+   "air_min_c": 2.3,
    "precip_mm": 0.0,
-   "ice_onset": "08:00",
+   "ice_onset": "23:00",
    "depart": null,
    "depart_is_now": false,
    "truck": null,
@@ -2441,682 +3344,94 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.3
+     "surface_c": 3.8,
+     "air_c": 3.9
     },
     {
      "t": "19:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 2.5,
+     "air_c": 3.2
     },
     {
      "t": "20:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
+     "surface_c": 3.3,
+     "air_c": 3.9
     },
     {
      "t": "21:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
+     "surface_c": 2.4,
+     "air_c": 3.3
     },
     {
      "t": "22:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
+     "surface_c": 3.0,
+     "air_c": 3.8
     },
     {
      "t": "23:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
+     "surface_c": 1.5,
+     "air_c": 2.3
     },
     {
      "t": "00:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
+     "surface_c": 3.1,
+     "air_c": 3.4
     },
     {
      "t": "01:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
+     "surface_c": 2.7,
+     "air_c": 3.1
     },
     {
      "t": "02:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.7,
-     "air_c": 3.0
-    },
-    {
-     "t": "07:00",
-     "surface_c": 2.2,
+     "surface_c": 1.5,
      "air_c": 2.4
     },
     {
-     "t": "08:00",
-     "surface_c": 0.5,
-     "air_c": 1.3
-    }
-   ]
-  },
-  {
-   "ref": "N87",
-   "name": "Bawn Road",
-   "priority": 1,
-   "designated": true,
-   "length_km": 28.3,
-   "elev_mean_m": 69,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.01,
-   "review": false,
-   "surface_min_c": 3.1,
-   "air_min_c": 3.9,
-   "precip_mm": 0.0,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "00:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
      "t": "03:00",
-     "surface_c": 3.9,
-     "air_c": 4.6
+     "surface_c": 3.0,
+     "air_c": 3.2
     },
     {
      "t": "04:00",
-     "surface_c": 4.1,
-     "air_c": 4.5
+     "surface_c": 2.9,
+     "air_c": 3.2
     },
     {
      "t": "05:00",
-     "surface_c": 4.5,
-     "air_c": 4.7
-    },
-    {
-     "t": "06:00",
      "surface_c": 3.4,
-     "air_c": 4.1
-    },
-    {
-     "t": "07:00",
-     "surface_c": 3.1,
-     "air_c": 3.9
-    },
-    {
-     "t": "08:00",
-     "surface_c": 3.1,
-     "air_c": 3.9
-    }
-   ]
-  },
-  {
-   "ref": "R194",
-   "name": "Granard Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 37.1,
-   "elev_mean_m": 102,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.04,
-   "review": false,
-   "surface_min_c": 3.3,
-   "air_min_c": 3.5,
-   "precip_mm": 0.0,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.4,
-     "air_c": 6.5
-    },
-    {
-     "t": "19:00",
-     "surface_c": 6.1,
-     "air_c": 6.2
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.6
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.2,
-     "air_c": 4.4
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
-    },
-    {
-     "t": "04:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "05:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
+     "air_c": 3.8
     },
     {
      "t": "06:00",
-     "surface_c": 3.9,
-     "air_c": 4.1
+     "surface_c": 2.0,
+     "air_c": 2.9
     },
     {
      "t": "07:00",
      "surface_c": 3.3,
-     "air_c": 3.5
+     "air_c": 3.3
     },
     {
      "t": "08:00",
-     "surface_c": 3.5,
-     "air_c": 3.6
+     "surface_c": 4.4,
+     "air_c": 4.4
     }
    ]
   },
   {
-   "ref": "R198",
-   "name": "Cavan Road",
+   "ref": "R200",
+   "name": "Bellavally Road",
    "priority": 2,
    "designated": true,
-   "length_km": 22.7,
-   "elev_mean_m": 71,
+   "length_km": 24.8,
+   "elev_mean_m": 163,
    "status": "NO-GO",
    "rules_status": "NO-GO",
-   "model_prob": 0.31,
-   "review": false,
-   "surface_min_c": 1.1,
-   "air_min_c": 1.5,
-   "precip_mm": 0.1,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.4,
-     "air_c": 6.4
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.6,
-     "air_c": 5.7
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.1,
-     "air_c": 5.1
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.7,
-     "air_c": 4.9
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.9,
-     "air_c": 4.9
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.6,
-     "air_c": 4.6
-    },
-    {
-     "t": "05:00",
-     "surface_c": 3.5,
-     "air_c": 3.7
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.4,
-     "air_c": 2.7
-    },
-    {
-     "t": "07:00",
-     "surface_c": 1.9,
-     "air_c": 2.2
-    },
-    {
-     "t": "08:00",
-     "surface_c": 1.1,
-     "air_c": 1.5
-    }
-   ]
-  },
-  {
-   "ref": "R199",
-   "name": "Newtown Gore Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 16.3,
-   "elev_mean_m": 62,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.29,
-   "review": false,
-   "surface_min_c": 1.2,
-   "air_min_c": 1.6,
-   "precip_mm": 0.1,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.5,
-     "air_c": 6.5
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.5,
-     "air_c": 5.6
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.8,
-     "air_c": 5.0
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
-    },
-    {
-     "t": "05:00",
-     "surface_c": 3.6,
-     "air_c": 3.8
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.4,
-     "air_c": 2.8
-    },
-    {
-     "t": "07:00",
-     "surface_c": 1.9,
-     "air_c": 2.3
-    },
-    {
-     "t": "08:00",
-     "surface_c": 1.2,
-     "air_c": 1.6
-    }
-   ]
-  },
-  {
-   "ref": "R201",
-   "name": "Drumlane Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 18.0,
-   "elev_mean_m": 56,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.28,
-   "review": false,
-   "surface_min_c": 1.2,
-   "air_min_c": 1.6,
-   "precip_mm": 0.1,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.5,
-     "air_c": 6.5
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.3,
-     "air_c": 5.4
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.1,
-     "air_c": 5.2
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.8,
-     "air_c": 5.0
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.7,
-     "air_c": 4.7
-    },
-    {
-     "t": "05:00",
-     "surface_c": 3.6,
-     "air_c": 3.8
-    },
-    {
-     "t": "06:00",
-     "surface_c": 2.5,
-     "air_c": 2.8
-    },
-    {
-     "t": "07:00",
-     "surface_c": 2.0,
-     "air_c": 2.3
-    },
-    {
-     "t": "08:00",
-     "surface_c": 1.2,
-     "air_c": 1.6
-    }
-   ]
-  },
-  {
-   "ref": "R205",
-   "name": "Ballinamore Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 13.1,
-   "elev_mean_m": 63,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.01,
-   "review": false,
-   "surface_min_c": 3.2,
-   "air_min_c": 3.9,
-   "precip_mm": 0.0,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.1,
-     "air_c": 6.1
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.8,
-     "air_c": 5.8
-    },
-    {
-     "t": "00:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.0,
-     "air_c": 4.6
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.1,
-     "air_c": 4.5
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.5,
-     "air_c": 4.7
-    },
-    {
-     "t": "06:00",
-     "surface_c": 3.4,
-     "air_c": 4.1
-    },
-    {
-     "t": "07:00",
-     "surface_c": 3.2,
-     "air_c": 3.9
-    },
-    {
-     "t": "08:00",
-     "surface_c": 3.2,
-     "air_c": 3.9
-    }
-   ]
-  },
-  {
-   "ref": "R207",
-   "name": "Blacklion Road",
-   "priority": 2,
-   "designated": true,
-   "length_km": 12.9,
-   "elev_mean_m": 80,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.04,
+   "model_prob": 0.08,
    "review": false,
    "surface_min_c": 2.1,
-   "air_min_c": 2.9,
+   "air_min_c": 2.8,
    "precip_mm": 0.0,
    "ice_onset": null,
    "depart": null,
@@ -3127,372 +3442,176 @@
    "hourly": [
     {
      "t": "18:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
+     "surface_c": 2.3,
+     "air_c": 2.8
     },
     {
      "t": "19:00",
-     "surface_c": 5.3,
-     "air_c": 5.5
+     "surface_c": 2.7,
+     "air_c": 3.2
     },
     {
      "t": "20:00",
-     "surface_c": 5.2,
-     "air_c": 5.3
+     "surface_c": 2.7,
+     "air_c": 3.1
     },
     {
      "t": "21:00",
-     "surface_c": 4.7,
-     "air_c": 4.9
+     "surface_c": 2.8,
+     "air_c": 3.3
     },
     {
      "t": "22:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
+     "surface_c": 2.6,
+     "air_c": 3.4
     },
     {
      "t": "23:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.5,
-     "air_c": 5.5
-    },
-    {
-     "t": "01:00",
-     "surface_c": 5.4,
-     "air_c": 5.4
-    },
-    {
-     "t": "02:00",
-     "surface_c": 4.6,
-     "air_c": 4.8
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.4,
-     "air_c": 4.6
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.2,
-     "air_c": 4.4
-    },
-    {
-     "t": "05:00",
-     "surface_c": 3.2,
-     "air_c": 3.8
-    },
-    {
-     "t": "06:00",
      "surface_c": 2.1,
      "air_c": 2.9
     },
     {
-     "t": "07:00",
-     "surface_c": 2.6,
-     "air_c": 3.3
-    },
-    {
-     "t": "08:00",
-     "surface_c": 2.2,
-     "air_c": 3.0
-    }
-   ]
-  },
-  {
-   "ref": "R179",
-   "name": "Carrickmacross Road",
-   "priority": 3,
-   "designated": false,
-   "length_km": 2.8,
-   "elev_mean_m": 35,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.1,
-   "review": false,
-   "surface_min_c": 1.4,
-   "air_min_c": 2.3,
-   "precip_mm": 0.3,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.9,
-     "air_c": 6.9
-    },
-    {
-     "t": "19:00",
-     "surface_c": 6.6,
-     "air_c": 6.7
-    },
-    {
-     "t": "20:00",
-     "surface_c": 6.4,
-     "air_c": 6.4
-    },
-    {
-     "t": "21:00",
-     "surface_c": 6.6,
-     "air_c": 6.6
-    },
-    {
-     "t": "22:00",
-     "surface_c": 6.5,
-     "air_c": 6.5
-    },
-    {
-     "t": "23:00",
-     "surface_c": 6.3,
-     "air_c": 6.3
-    },
-    {
      "t": "00:00",
-     "surface_c": 6.0,
-     "air_c": 6.1
+     "surface_c": 2.8,
+     "air_c": 3.6
     },
     {
      "t": "01:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.9,
-     "air_c": 5.9
-    },
-    {
-     "t": "04:00",
-     "surface_c": 5.7,
-     "air_c": 5.7
-    },
-    {
-     "t": "05:00",
-     "surface_c": 5.6,
-     "air_c": 5.6
-    },
-    {
-     "t": "06:00",
-     "surface_c": 3.8,
+     "surface_c": 3.4,
      "air_c": 4.2
     },
     {
-     "t": "07:00",
-     "surface_c": 2.0,
-     "air_c": 2.9
-    },
-    {
-     "t": "08:00",
-     "surface_c": 1.4,
-     "air_c": 2.3
-    }
-   ]
-  },
-  {
-   "ref": "R195",
-   "name": "Oldcastle Road",
-   "priority": 3,
-   "designated": false,
-   "length_km": 5.8,
-   "elev_mean_m": 99,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.09,
-   "review": false,
-   "surface_min_c": 2.5,
-   "air_min_c": 2.7,
-   "precip_mm": 0.0,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.2,
-     "air_c": 6.4
-    },
-    {
-     "t": "19:00",
-     "surface_c": 6.1,
-     "air_c": 6.2
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.8,
-     "air_c": 5.9
-    },
-    {
-     "t": "21:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.9,
-     "air_c": 6.0
-    },
-    {
-     "t": "23:00",
-     "surface_c": 6.0,
-     "air_c": 6.0
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.2,
-     "air_c": 5.5
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.7,
-     "air_c": 4.9
-    },
-    {
      "t": "02:00",
-     "surface_c": 5.3,
-     "air_c": 5.3
-    },
-    {
-     "t": "03:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "04:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "05:00",
-     "surface_c": 5.0,
-     "air_c": 5.0
-    },
-    {
-     "t": "06:00",
-     "surface_c": 3.5,
-     "air_c": 3.8
-    },
-    {
-     "t": "07:00",
      "surface_c": 2.5,
-     "air_c": 2.7
-    },
-    {
-     "t": "08:00",
-     "surface_c": 2.8,
-     "air_c": 2.9
-    }
-   ]
-  },
-  {
-   "ref": "R394",
-   "name": "Finea Road",
-   "priority": 3,
-   "designated": false,
-   "length_km": 9.0,
-   "elev_mean_m": 80,
-   "status": "NO-GO",
-   "rules_status": "NO-GO",
-   "model_prob": 0.39,
-   "review": false,
-   "surface_min_c": 1.0,
-   "air_min_c": 1.5,
-   "precip_mm": 0.0,
-   "ice_onset": null,
-   "depart": null,
-   "depart_is_now": false,
-   "truck": null,
-   "treat_end": null,
-   "slack_min": null,
-   "hourly": [
-    {
-     "t": "18:00",
-     "surface_c": 6.7,
-     "air_c": 6.8
-    },
-    {
-     "t": "19:00",
-     "surface_c": 5.6,
-     "air_c": 5.8
-    },
-    {
-     "t": "20:00",
-     "surface_c": 5.6,
-     "air_c": 5.8
-    },
-    {
-     "t": "21:00",
-     "surface_c": 5.7,
-     "air_c": 5.9
-    },
-    {
-     "t": "22:00",
-     "surface_c": 5.7,
-     "air_c": 5.8
-    },
-    {
-     "t": "23:00",
-     "surface_c": 5.4,
-     "air_c": 5.7
-    },
-    {
-     "t": "00:00",
-     "surface_c": 5.4,
-     "air_c": 5.5
-    },
-    {
-     "t": "01:00",
-     "surface_c": 4.6,
-     "air_c": 4.8
-    },
-    {
-     "t": "02:00",
-     "surface_c": 5.0,
-     "air_c": 5.1
-    },
-    {
-     "t": "03:00",
-     "surface_c": 5.2,
-     "air_c": 5.2
-    },
-    {
-     "t": "04:00",
-     "surface_c": 4.8,
-     "air_c": 4.8
-    },
-    {
-     "t": "05:00",
-     "surface_c": 4.7,
-     "air_c": 4.8
-    },
-    {
-     "t": "06:00",
-     "surface_c": 4.2,
-     "air_c": 4.3
-    },
-    {
-     "t": "07:00",
-     "surface_c": 3.0,
      "air_c": 3.3
     },
     {
+     "t": "03:00",
+     "surface_c": 3.7,
+     "air_c": 4.1
+    },
+    {
+     "t": "04:00",
+     "surface_c": 3.2,
+     "air_c": 3.9
+    },
+    {
+     "t": "05:00",
+     "surface_c": 3.5,
+     "air_c": 4.2
+    },
+    {
+     "t": "06:00",
+     "surface_c": 3.3,
+     "air_c": 4.0
+    },
+    {
+     "t": "07:00",
+     "surface_c": 3.6,
+     "air_c": 4.1
+    },
+    {
      "t": "08:00",
-     "surface_c": 1.0,
-     "air_c": 1.5
+     "surface_c": 4.3,
+     "air_c": 4.8
+    }
+   ]
+  },
+  {
+   "ref": "R206",
+   "name": "Blacklion Road",
+   "priority": 2,
+   "designated": true,
+   "length_km": 15.7,
+   "elev_mean_m": 108,
+   "status": "NO-GO",
+   "rules_status": "NO-GO",
+   "model_prob": 0.04,
+   "review": false,
+   "surface_min_c": 2.4,
+   "air_min_c": 3.2,
+   "precip_mm": 0.0,
+   "ice_onset": null,
+   "depart": null,
+   "depart_is_now": false,
+   "truck": null,
+   "treat_end": null,
+   "slack_min": null,
+   "hourly": [
+    {
+     "t": "18:00",
+     "surface_c": 2.7,
+     "air_c": 3.2
+    },
+    {
+     "t": "19:00",
+     "surface_c": 3.0,
+     "air_c": 3.6
+    },
+    {
+     "t": "20:00",
+     "surface_c": 3.0,
+     "air_c": 3.5
+    },
+    {
+     "t": "21:00",
+     "surface_c": 3.1,
+     "air_c": 3.7
+    },
+    {
+     "t": "22:00",
+     "surface_c": 2.9,
+     "air_c": 3.8
+    },
+    {
+     "t": "23:00",
+     "surface_c": 2.4,
+     "air_c": 3.3
+    },
+    {
+     "t": "00:00",
+     "surface_c": 3.1,
+     "air_c": 4.0
+    },
+    {
+     "t": "01:00",
+     "surface_c": 3.8,
+     "air_c": 4.6
+    },
+    {
+     "t": "02:00",
+     "surface_c": 2.8,
+     "air_c": 3.7
+    },
+    {
+     "t": "03:00",
+     "surface_c": 4.0,
+     "air_c": 4.5
+    },
+    {
+     "t": "04:00",
+     "surface_c": 3.5,
+     "air_c": 4.3
+    },
+    {
+     "t": "05:00",
+     "surface_c": 3.9,
+     "air_c": 4.6
+    },
+    {
+     "t": "06:00",
+     "surface_c": 3.6,
+     "air_c": 4.4
+    },
+    {
+     "t": "07:00",
+     "surface_c": 3.9,
+     "air_c": 4.5
+    },
+    {
+     "t": "08:00",
+     "surface_c": 4.7,
+     "air_c": 5.2
     }
    ]
   }
@@ -3516,7 +3635,7 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-19T22:37:25Z",
+   "fetched_at": "2026-11-20T20:49:10Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {
