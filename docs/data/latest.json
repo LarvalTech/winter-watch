@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-21T19:51:39Z",
- "decision_time_local": "2026-11-21T19:51:39",
+ "generated_at": "2026-11-21T20:38:06Z",
+ "decision_time_local": "2026-11-21T20:38:06",
  "night": {
   "from": "2026-11-21 18:00:00",
   "to": "2026-11-22 08:00:00"
@@ -47,7 +47,7 @@
   "confidence": "HIGH"
  },
  "briefing": {
-  "text": "Hi there, Duty Engineer. Tonight's decision is NO GRITTING NEEDED, which means we can all stand down and no routes need to be treated. We have 0 of our 9 trucks used across the 26 routes, so everything stays parked. The coldest road is the R190, holding steady with a surface temperature of 6.3 degrees. Confidence in this call is HIGH, so we are in a very solid place tonight. As always, you have the final say.",
+  "text": "Hi there, Duty Engineer. The call for tonight is NO GRITTING NEEDED, which means all roads are staying clear and no treatment is required. There are 26 routes in total, and none of them need gritting tonight, so we are keeping all 9 of our trucks in the yard with 0 trucks used. The coldest road will be the R190, staying comfortably above freezing with a surface temperature of 6.3 degrees. Confidence in this forecast is HIGH, so we can rest easy tonight. As always, you have the final say.",
   "source": "llm",
   "detail": "gemini-3.5-flash-lite"
  },
@@ -3208,7 +3208,7 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-21T19:51:39Z",
+   "fetched_at": "2026-11-21T20:38:06Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {
