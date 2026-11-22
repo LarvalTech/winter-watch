@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-22T20:00:08Z",
- "decision_time_local": "2026-11-22T20:00:08",
+ "generated_at": "2026-11-22T20:47:38Z",
+ "decision_time_local": "2026-11-22T20:47:38",
  "night": {
   "from": "2026-11-22 18:00:00",
   "to": "2026-11-23 08:00:00"
@@ -71,7 +71,7 @@
   "confidence": "HIGH"
  },
  "briefing": {
-  "text": "Hi there Duty Engineer. \n\nTonight's call is BORDERLINE, with just 1 route needing gritting out of the 26 routes, using 1 of our 9 trucks available. The first truck heads out at 06:00 on route R207, which is also our coldest road with a surface temperature of 1.5 degrees. We have high confidence in this forecast tonight. As always, you have the final say.",
+  "text": "Hi there Duty Engineer. The call for tonight is BORDERLINE, with just 1 of our 26 routes needing a run. We are deploying 1 of our 9 available trucks, and we have high confidence in this call. The first truck heads out at 06:00 on the R207, which is also our coldest road with a surface temperature of 1.5 degrees. As always, you have the final say.",
   "source": "llm",
   "detail": "gemini-3.5-flash-lite"
  },
@@ -3232,7 +3232,7 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-22T20:00:08Z",
+   "fetched_at": "2026-11-22T20:47:38Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {
