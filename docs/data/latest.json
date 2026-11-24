@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-24T00:26:33Z",
- "decision_time_local": "2026-11-24T00:26:33",
+ "generated_at": "2026-11-24T01:48:32Z",
+ "decision_time_local": "2026-11-24T01:48:32",
  "night": {
   "from": "2026-11-23 18:00:00",
   "to": "2026-11-24 08:00:00"
@@ -43,13 +43,13 @@
   "first_departure": null,
   "first_route": null,
   "coldest_route": "R200",
-  "coldest_ts": 7.3,
+  "coldest_ts": 7.2,
   "confidence": "HIGH"
  },
  "briefing": {
-  "text": "Hi there Duty Engineer. NO GRITTING NEEDED tonight across County Cavan, so we are keeping all 9 trucks parked and ready in the yard. The mildest part of the night looks to be on the R200 where the surface temperature should stay right around 7.3 degrees. My confidence in this call is HIGH, so you can safely plan for a quiet night ahead without any winter maintenance runs. As always, you have the final say.",
-  "source": "llm",
-  "detail": "gemini-3.5-flash-lite"
+  "text": "Hello Duty Engineer. Recommendation: NO GRITTING NEEDED on current forecast. Coldest route is R200 with a forecast road surface minimum of 7.2 C. Confidence is HIGH: the rules engine and the trained model agree on most routes. As always, you have the final say.",
+  "source": "template",
+  "detail": "template fallback (LLM call failed: HTTPError (HTTP 503))"
  },
  "routes": [
   {
@@ -63,9 +63,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.3,
-   "air_min_c": 8.3,
-   "precip_mm": 13.7,
+   "surface_min_c": 8.0,
+   "air_min_c": 8.0,
+   "precip_mm": 10.5,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -85,68 +85,68 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "21:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "22:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "23:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "00:00",
-     "surface_c": 9.7,
-     "air_c": 9.7
+     "surface_c": 9.6,
+     "air_c": 9.6
     },
     {
      "t": "01:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "02:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "03:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "04:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
-    },
-    {
-     "t": "05:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
-    },
-    {
-     "t": "06:00",
      "surface_c": 10.8,
      "air_c": 10.8
     },
     {
+     "t": "05:00",
+     "surface_c": 10.6,
+     "air_c": 10.6
+    },
+    {
+     "t": "06:00",
+     "surface_c": 10.7,
+     "air_c": 10.7
+    },
+    {
      "t": "07:00",
-     "surface_c": 10.0,
-     "air_c": 10.0
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "08:00",
-     "surface_c": 8.3,
-     "air_c": 8.3
+     "surface_c": 8.0,
+     "air_c": 8.0
     }
    ]
   },
@@ -161,9 +161,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.3,
-   "air_min_c": 8.3,
-   "precip_mm": 10.3,
+   "surface_min_c": 8.0,
+   "air_min_c": 8.0,
+   "precip_mm": 7.6,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -183,43 +183,43 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "21:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "22:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
-    },
-    {
-     "t": "23:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
-    },
-    {
-     "t": "00:00",
      "surface_c": 9.5,
      "air_c": 9.5
     },
     {
+     "t": "23:00",
+     "surface_c": 9.3,
+     "air_c": 9.3
+    },
+    {
+     "t": "00:00",
+     "surface_c": 9.3,
+     "air_c": 9.3
+    },
+    {
      "t": "01:00",
-     "surface_c": 10.1,
-     "air_c": 10.1
+     "surface_c": 9.9,
+     "air_c": 9.9
     },
     {
      "t": "02:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.3,
+     "air_c": 10.3
     },
     {
      "t": "03:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "04:00",
@@ -228,23 +228,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
-    },
-    {
-     "t": "06:00",
      "surface_c": 10.7,
      "air_c": 10.7
     },
     {
+     "t": "06:00",
+     "surface_c": 10.5,
+     "air_c": 10.5
+    },
+    {
      "t": "07:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
+     "surface_c": 9.1,
+     "air_c": 9.1
     },
     {
      "t": "08:00",
-     "surface_c": 8.3,
-     "air_c": 8.3
+     "surface_c": 8.0,
+     "air_c": 8.0
     }
    ]
   },
@@ -259,9 +259,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.8,
-   "air_min_c": 7.8,
-   "precip_mm": 11.8,
+   "surface_min_c": 7.5,
+   "air_min_c": 7.5,
+   "precip_mm": 7.6,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -281,23 +281,23 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "21:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "22:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
+     "surface_c": 9.5,
+     "air_c": 9.5
     },
     {
      "t": "23:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "00:00",
@@ -306,43 +306,43 @@
     },
     {
      "t": "01:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "02:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
+     "surface_c": 10.9,
+     "air_c": 10.9
     },
     {
      "t": "03:00",
-     "surface_c": 11.2,
-     "air_c": 11.2
-    },
-    {
-     "t": "04:00",
      "surface_c": 11.1,
      "air_c": 11.1
     },
     {
-     "t": "05:00",
+     "t": "04:00",
      "surface_c": 11.2,
      "air_c": 11.2
     },
     {
+     "t": "05:00",
+     "surface_c": 10.8,
+     "air_c": 10.8
+    },
+    {
      "t": "06:00",
-     "surface_c": 10.4,
-     "air_c": 10.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "07:00",
-     "surface_c": 8.0,
-     "air_c": 8.0
+     "surface_c": 7.7,
+     "air_c": 7.7
     },
     {
      "t": "08:00",
-     "surface_c": 7.8,
-     "air_c": 7.8
+     "surface_c": 7.5,
+     "air_c": 7.5
     }
    ]
   },
@@ -357,9 +357,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.6,
-   "air_min_c": 8.6,
-   "precip_mm": 11.2,
+   "surface_min_c": 8.2,
+   "air_min_c": 8.2,
+   "precip_mm": 9.3,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -384,23 +384,23 @@
     },
     {
      "t": "21:00",
+     "surface_c": 9.2,
+     "air_c": 9.2
+    },
+    {
+     "t": "22:00",
      "surface_c": 9.4,
      "air_c": 9.4
     },
     {
-     "t": "22:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
-    },
-    {
      "t": "23:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
+     "surface_c": 9.5,
+     "air_c": 9.5
     },
     {
      "t": "00:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "01:00",
@@ -409,38 +409,38 @@
     },
     {
      "t": "02:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "03:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
-    },
-    {
-     "t": "04:00",
      "surface_c": 10.9,
      "air_c": 10.9
     },
     {
-     "t": "05:00",
+     "t": "04:00",
      "surface_c": 11.0,
      "air_c": 11.0
     },
     {
+     "t": "05:00",
+     "surface_c": 10.9,
+     "air_c": 10.9
+    },
+    {
      "t": "06:00",
-     "surface_c": 10.1,
-     "air_c": 10.1
+     "surface_c": 9.8,
+     "air_c": 9.8
     },
     {
      "t": "07:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "08:00",
-     "surface_c": 8.6,
-     "air_c": 8.6
+     "surface_c": 8.2,
+     "air_c": 8.2
     }
    ]
   },
@@ -455,9 +455,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.0,
-   "air_min_c": 8.0,
-   "precip_mm": 13.0,
+   "surface_min_c": 7.5,
+   "air_min_c": 7.5,
+   "precip_mm": 7.4,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -477,23 +477,23 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.9,
-     "air_c": 8.9
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "21:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "22:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "23:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "00:00",
@@ -502,8 +502,8 @@
     },
     {
      "t": "01:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.3,
+     "air_c": 10.3
     },
     {
      "t": "02:00",
@@ -512,33 +512,33 @@
     },
     {
      "t": "03:00",
+     "surface_c": 10.9,
+     "air_c": 10.9
+    },
+    {
+     "t": "04:00",
      "surface_c": 11.0,
      "air_c": 11.0
     },
     {
-     "t": "04:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
-    },
-    {
      "t": "05:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.7,
+     "air_c": 10.7
     },
     {
      "t": "06:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.2,
+     "air_c": 10.2
     },
     {
      "t": "07:00",
-     "surface_c": 8.4,
-     "air_c": 8.4
+     "surface_c": 7.8,
+     "air_c": 7.8
     },
     {
      "t": "08:00",
-     "surface_c": 8.0,
-     "air_c": 8.0
+     "surface_c": 7.5,
+     "air_c": 7.5
     }
    ]
   },
@@ -555,7 +555,7 @@
    "review": false,
    "surface_min_c": 8.0,
    "air_min_c": 8.0,
-   "precip_mm": 17.4,
+   "precip_mm": 14.0,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -575,38 +575,38 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.6,
-     "air_c": 8.6
+     "surface_c": 8.5,
+     "air_c": 8.5
     },
     {
      "t": "21:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "22:00",
+     "surface_c": 8.9,
+     "air_c": 8.9
+    },
+    {
+     "t": "23:00",
      "surface_c": 9.0,
      "air_c": 9.0
     },
     {
-     "t": "23:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
-    },
-    {
      "t": "00:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "01:00",
-     "surface_c": 9.9,
-     "air_c": 9.9
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "02:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "03:00",
@@ -630,13 +630,13 @@
     },
     {
      "t": "07:00",
-     "surface_c": 10.4,
-     "air_c": 10.4
+     "surface_c": 10.2,
+     "air_c": 10.2
     },
     {
      "t": "08:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 8.9,
+     "air_c": 8.9
     }
    ]
   },
@@ -653,7 +653,7 @@
    "review": false,
    "surface_min_c": 8.0,
    "air_min_c": 8.0,
-   "precip_mm": 11.7,
+   "precip_mm": 14.6,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -673,48 +673,48 @@
     },
     {
      "t": "20:00",
+     "surface_c": 8.5,
+     "air_c": 8.5
+    },
+    {
+     "t": "21:00",
      "surface_c": 8.6,
      "air_c": 8.6
     },
     {
-     "t": "21:00",
-     "surface_c": 8.8,
-     "air_c": 8.8
-    },
-    {
      "t": "22:00",
-     "surface_c": 8.8,
-     "air_c": 8.8
+     "surface_c": 8.7,
+     "air_c": 8.7
     },
     {
      "t": "23:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "00:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.1,
+     "air_c": 9.1
     },
     {
      "t": "01:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.6,
+     "air_c": 9.6
     },
     {
      "t": "02:00",
-     "surface_c": 10.0,
-     "air_c": 10.0
+     "surface_c": 9.9,
+     "air_c": 9.9
     },
     {
      "t": "03:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "04:00",
-     "surface_c": 10.4,
-     "air_c": 10.4
+     "surface_c": 10.3,
+     "air_c": 10.3
     },
     {
      "t": "05:00",
@@ -723,18 +723,18 @@
     },
     {
      "t": "06:00",
-     "surface_c": 10.4,
-     "air_c": 10.4
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "07:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.0,
+     "air_c": 10.0
     },
     {
      "t": "08:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 8.9,
+     "air_c": 8.9
     }
    ]
   },
@@ -749,9 +749,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.0,
-   "air_min_c": 8.0,
-   "precip_mm": 15.7,
+   "surface_min_c": 7.9,
+   "air_min_c": 7.9,
+   "precip_mm": 11.1,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -771,38 +771,38 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.7,
-     "air_c": 8.7
+     "surface_c": 8.6,
+     "air_c": 8.6
     },
     {
      "t": "21:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "22:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "23:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "00:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "01:00",
-     "surface_c": 9.9,
-     "air_c": 9.9
+     "surface_c": 9.8,
+     "air_c": 9.8
     },
     {
      "t": "02:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "03:00",
@@ -816,23 +816,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "06:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "07:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "08:00",
-     "surface_c": 8.3,
-     "air_c": 8.3
+     "surface_c": 7.9,
+     "air_c": 7.9
     }
    ]
   },
@@ -847,9 +847,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.9,
-   "air_min_c": 7.9,
-   "precip_mm": 15.7,
+   "surface_min_c": 7.8,
+   "air_min_c": 7.8,
+   "precip_mm": 11.1,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -869,38 +869,38 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.6,
-     "air_c": 8.6
+     "surface_c": 8.5,
+     "air_c": 8.5
     },
     {
      "t": "21:00",
-     "surface_c": 8.9,
-     "air_c": 8.9
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "22:00",
-     "surface_c": 8.9,
-     "air_c": 8.9
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "23:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "00:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "01:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "02:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 10.0,
+     "air_c": 10.0
     },
     {
      "t": "03:00",
@@ -914,23 +914,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "06:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "07:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 9.6,
+     "air_c": 9.6
     },
     {
      "t": "08:00",
-     "surface_c": 8.2,
-     "air_c": 8.2
+     "surface_c": 7.8,
+     "air_c": 7.8
     }
    ]
   },
@@ -945,9 +945,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.4,
-   "air_min_c": 8.4,
-   "precip_mm": 13.7,
+   "surface_min_c": 8.1,
+   "air_min_c": 8.1,
+   "precip_mm": 10.5,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -967,68 +967,68 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "21:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "22:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "23:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "00:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "01:00",
-     "surface_c": 10.4,
-     "air_c": 10.4
+     "surface_c": 10.2,
+     "air_c": 10.2
     },
     {
      "t": "02:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "03:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
+     "surface_c": 10.7,
+     "air_c": 10.7
     },
     {
      "t": "04:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
-    },
-    {
-     "t": "05:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
-    },
-    {
-     "t": "06:00",
      "surface_c": 10.9,
      "air_c": 10.9
     },
     {
+     "t": "05:00",
+     "surface_c": 10.7,
+     "air_c": 10.7
+    },
+    {
+     "t": "06:00",
+     "surface_c": 10.8,
+     "air_c": 10.8
+    },
+    {
      "t": "07:00",
-     "surface_c": 10.1,
-     "air_c": 10.1
+     "surface_c": 9.8,
+     "air_c": 9.8
     },
     {
      "t": "08:00",
-     "surface_c": 8.4,
-     "air_c": 8.4
+     "surface_c": 8.1,
+     "air_c": 8.1
     }
    ]
   },
@@ -1043,9 +1043,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.1,
-   "air_min_c": 8.1,
-   "precip_mm": 11.8,
+   "surface_min_c": 7.9,
+   "air_min_c": 7.9,
+   "precip_mm": 12.2,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1070,38 +1070,38 @@
     },
     {
      "t": "21:00",
+     "surface_c": 8.9,
+     "air_c": 8.9
+    },
+    {
+     "t": "22:00",
      "surface_c": 9.0,
      "air_c": 9.0
     },
     {
-     "t": "22:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
-    },
-    {
      "t": "23:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "00:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "01:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.6,
+     "air_c": 9.6
     },
     {
      "t": "02:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 10.0,
+     "air_c": 10.0
     },
     {
      "t": "03:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.2,
+     "air_c": 10.2
     },
     {
      "t": "04:00",
@@ -1110,23 +1110,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "06:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "07:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "08:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 7.9,
+     "air_c": 7.9
     }
    ]
   },
@@ -1141,9 +1141,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.0,
-   "air_min_c": 8.0,
-   "precip_mm": 15.7,
+   "surface_min_c": 7.9,
+   "air_min_c": 7.9,
+   "precip_mm": 11.1,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1163,38 +1163,38 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.7,
-     "air_c": 8.7
+     "surface_c": 8.6,
+     "air_c": 8.6
     },
     {
      "t": "21:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "22:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "23:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "00:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "01:00",
-     "surface_c": 9.9,
-     "air_c": 9.9
+     "surface_c": 9.8,
+     "air_c": 9.8
     },
     {
      "t": "02:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "03:00",
@@ -1208,23 +1208,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "06:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "07:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "08:00",
-     "surface_c": 8.3,
-     "air_c": 8.3
+     "surface_c": 7.9,
+     "air_c": 7.9
     }
    ]
   },
@@ -1241,7 +1241,7 @@
    "review": false,
    "surface_min_c": 8.2,
    "air_min_c": 8.2,
-   "precip_mm": 15.0,
+   "precip_mm": 9.3,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1261,43 +1261,43 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.8,
-     "air_c": 8.8
+     "surface_c": 8.6,
+     "air_c": 8.6
     },
     {
      "t": "21:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "22:00",
+     "surface_c": 9.0,
+     "air_c": 9.0
+    },
+    {
+     "t": "23:00",
      "surface_c": 9.1,
      "air_c": 9.1
     },
     {
-     "t": "23:00",
-     "surface_c": 9.2,
-     "air_c": 9.2
-    },
-    {
      "t": "00:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "01:00",
-     "surface_c": 10.0,
-     "air_c": 10.0
+     "surface_c": 9.9,
+     "air_c": 9.9
     },
     {
      "t": "02:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.2,
+     "air_c": 10.2
     },
     {
      "t": "03:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "04:00",
@@ -1311,18 +1311,18 @@
     },
     {
      "t": "06:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
+     "surface_c": 10.9,
+     "air_c": 10.9
     },
     {
      "t": "07:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.2,
+     "air_c": 10.2
     },
     {
      "t": "08:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.5,
+     "air_c": 8.5
     }
    ]
   },
@@ -1337,9 +1337,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.7,
-   "air_min_c": 7.7,
-   "precip_mm": 11.8,
+   "surface_min_c": 7.4,
+   "air_min_c": 7.4,
+   "precip_mm": 9.7,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1359,13 +1359,13 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.9,
-     "air_c": 8.9
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "21:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "22:00",
@@ -1374,28 +1374,28 @@
     },
     {
      "t": "23:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "00:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "01:00",
+     "surface_c": 10.6,
+     "air_c": 10.6
+    },
+    {
+     "t": "02:00",
      "surface_c": 10.8,
      "air_c": 10.8
     },
     {
-     "t": "02:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
-    },
-    {
      "t": "03:00",
-     "surface_c": 11.1,
-     "air_c": 11.1
+     "surface_c": 11.0,
+     "air_c": 11.0
     },
     {
      "t": "04:00",
@@ -1404,23 +1404,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
+     "surface_c": 10.7,
+     "air_c": 10.7
     },
     {
      "t": "06:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "07:00",
-     "surface_c": 8.7,
-     "air_c": 8.7
+     "surface_c": 7.9,
+     "air_c": 7.9
     },
     {
      "t": "08:00",
-     "surface_c": 7.7,
-     "air_c": 7.7
+     "surface_c": 7.4,
+     "air_c": 7.4
     }
    ]
   },
@@ -1435,9 +1435,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.4,
-   "air_min_c": 8.4,
-   "precip_mm": 10.3,
+   "surface_min_c": 8.1,
+   "air_min_c": 8.1,
+   "precip_mm": 7.6,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1457,43 +1457,43 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "21:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "22:00",
-     "surface_c": 9.7,
-     "air_c": 9.7
-    },
-    {
-     "t": "23:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
-    },
-    {
-     "t": "00:00",
      "surface_c": 9.6,
      "air_c": 9.6
     },
     {
+     "t": "23:00",
+     "surface_c": 9.4,
+     "air_c": 9.4
+    },
+    {
+     "t": "00:00",
+     "surface_c": 9.4,
+     "air_c": 9.4
+    },
+    {
      "t": "01:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 10.0,
+     "air_c": 10.0
     },
     {
      "t": "02:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "03:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.7,
+     "air_c": 10.7
     },
     {
      "t": "04:00",
@@ -1502,23 +1502,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
-    },
-    {
-     "t": "06:00",
      "surface_c": 10.8,
      "air_c": 10.8
     },
     {
+     "t": "06:00",
+     "surface_c": 10.6,
+     "air_c": 10.6
+    },
+    {
      "t": "07:00",
-     "surface_c": 9.7,
-     "air_c": 9.7
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "08:00",
-     "surface_c": 8.4,
-     "air_c": 8.4
+     "surface_c": 8.1,
+     "air_c": 8.1
     }
    ]
   },
@@ -1533,9 +1533,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.9,
-   "air_min_c": 7.9,
-   "precip_mm": 10.9,
+   "surface_min_c": 7.6,
+   "air_min_c": 7.6,
+   "precip_mm": 10.5,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1555,23 +1555,23 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.9,
-     "air_c": 8.9
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "21:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "22:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "23:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "00:00",
@@ -1585,8 +1585,8 @@
     },
     {
      "t": "02:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "03:00",
@@ -1600,23 +1600,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.6,
-     "air_c": 10.6
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "06:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "07:00",
-     "surface_c": 8.3,
-     "air_c": 8.3
+     "surface_c": 8.1,
+     "air_c": 8.1
     },
     {
      "t": "08:00",
-     "surface_c": 7.9,
-     "air_c": 7.9
+     "surface_c": 7.6,
+     "air_c": 7.6
     }
    ]
   },
@@ -1631,9 +1631,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.0,
-   "air_min_c": 8.0,
-   "precip_mm": 10.9,
+   "surface_min_c": 7.7,
+   "air_min_c": 7.7,
+   "precip_mm": 10.5,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1653,23 +1653,23 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "21:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "22:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "23:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "00:00",
@@ -1683,8 +1683,8 @@
     },
     {
      "t": "02:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "03:00",
@@ -1698,23 +1698,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "06:00",
-     "surface_c": 9.9,
-     "air_c": 9.9
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "07:00",
-     "surface_c": 8.4,
-     "air_c": 8.4
+     "surface_c": 8.2,
+     "air_c": 8.2
     },
     {
      "t": "08:00",
-     "surface_c": 8.0,
-     "air_c": 8.0
+     "surface_c": 7.7,
+     "air_c": 7.7
     }
    ]
   },
@@ -1729,9 +1729,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.3,
-   "air_min_c": 7.3,
-   "precip_mm": 32.9,
+   "surface_min_c": 7.2,
+   "air_min_c": 7.2,
+   "precip_mm": 30.7,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1751,68 +1751,68 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.2,
-     "air_c": 8.2
+     "surface_c": 8.1,
+     "air_c": 8.1
     },
     {
      "t": "21:00",
-     "surface_c": 8.6,
-     "air_c": 8.6
+     "surface_c": 8.5,
+     "air_c": 8.5
     },
     {
      "t": "22:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "23:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "00:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "01:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
+     "surface_c": 9.5,
+     "air_c": 9.5
     },
     {
      "t": "02:00",
+     "surface_c": 9.7,
+     "air_c": 9.7
+    },
+    {
+     "t": "03:00",
      "surface_c": 10.2,
      "air_c": 10.2
     },
     {
-     "t": "03:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
-    },
-    {
      "t": "04:00",
-     "surface_c": 10.4,
-     "air_c": 10.4
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "05:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.2,
+     "air_c": 8.2
     },
     {
      "t": "06:00",
-     "surface_c": 7.7,
-     "air_c": 7.7
+     "surface_c": 7.5,
+     "air_c": 7.5
     },
     {
      "t": "07:00",
-     "surface_c": 7.4,
-     "air_c": 7.4
+     "surface_c": 7.3,
+     "air_c": 7.3
     },
     {
      "t": "08:00",
-     "surface_c": 7.3,
-     "air_c": 7.3
+     "surface_c": 7.2,
+     "air_c": 7.2
     }
    ]
   },
@@ -1827,9 +1827,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.0,
-   "air_min_c": 8.0,
-   "precip_mm": 10.9,
+   "surface_min_c": 7.7,
+   "air_min_c": 7.7,
+   "precip_mm": 10.5,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1849,23 +1849,23 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "21:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "22:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "23:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "00:00",
@@ -1879,8 +1879,8 @@
     },
     {
      "t": "02:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "03:00",
@@ -1894,23 +1894,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "06:00",
-     "surface_c": 9.9,
-     "air_c": 9.9
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "07:00",
-     "surface_c": 8.4,
-     "air_c": 8.4
+     "surface_c": 8.2,
+     "air_c": 8.2
     },
     {
      "t": "08:00",
-     "surface_c": 8.0,
-     "air_c": 8.0
+     "surface_c": 7.7,
+     "air_c": 7.7
     }
    ]
   },
@@ -1925,9 +1925,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.0,
-   "air_min_c": 8.0,
-   "precip_mm": 15.8,
+   "surface_min_c": 7.4,
+   "air_min_c": 7.4,
+   "precip_mm": 10.6,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -1947,18 +1947,18 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.6,
-     "air_c": 8.6
+     "surface_c": 8.5,
+     "air_c": 8.5
     },
     {
      "t": "21:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "22:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "23:00",
@@ -1982,13 +1982,13 @@
     },
     {
      "t": "03:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "04:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.9,
+     "air_c": 10.9
     },
     {
      "t": "05:00",
@@ -1997,18 +1997,18 @@
     },
     {
      "t": "06:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "07:00",
-     "surface_c": 8.3,
-     "air_c": 8.3
+     "surface_c": 8.0,
+     "air_c": 8.0
     },
     {
      "t": "08:00",
-     "surface_c": 8.0,
-     "air_c": 8.0
+     "surface_c": 7.4,
+     "air_c": 7.4
     }
    ]
   },
@@ -2023,9 +2023,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.8,
-   "air_min_c": 7.8,
-   "precip_mm": 12.6,
+   "surface_min_c": 7.4,
+   "air_min_c": 7.4,
+   "precip_mm": 10.3,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2045,28 +2045,28 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.8,
-     "air_c": 8.8
+     "surface_c": 8.7,
+     "air_c": 8.7
     },
     {
      "t": "21:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 9.2,
+     "air_c": 9.2
     },
     {
      "t": "22:00",
-     "surface_c": 9.7,
-     "air_c": 9.7
+     "surface_c": 9.6,
+     "air_c": 9.6
     },
     {
      "t": "23:00",
-     "surface_c": 9.7,
-     "air_c": 9.7
+     "surface_c": 9.6,
+     "air_c": 9.6
     },
     {
      "t": "00:00",
-     "surface_c": 9.7,
-     "air_c": 9.7
+     "surface_c": 9.8,
+     "air_c": 9.8
     },
     {
      "t": "01:00",
@@ -2075,38 +2075,38 @@
     },
     {
      "t": "02:00",
+     "surface_c": 10.6,
+     "air_c": 10.6
+    },
+    {
+     "t": "03:00",
+     "surface_c": 10.9,
+     "air_c": 10.9
+    },
+    {
+     "t": "04:00",
      "surface_c": 10.8,
      "air_c": 10.8
     },
     {
-     "t": "03:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
-    },
-    {
-     "t": "04:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
-    },
-    {
      "t": "05:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "06:00",
-     "surface_c": 8.3,
-     "air_c": 8.3
+     "surface_c": 7.6,
+     "air_c": 7.6
     },
     {
      "t": "07:00",
-     "surface_c": 7.8,
-     "air_c": 7.8
+     "surface_c": 7.6,
+     "air_c": 7.6
     },
     {
      "t": "08:00",
-     "surface_c": 7.9,
-     "air_c": 7.9
+     "surface_c": 7.4,
+     "air_c": 7.4
     }
    ]
   },
@@ -2121,9 +2121,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.6,
-   "air_min_c": 8.6,
-   "precip_mm": 11.2,
+   "surface_min_c": 8.2,
+   "air_min_c": 8.2,
+   "precip_mm": 9.3,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2148,23 +2148,23 @@
     },
     {
      "t": "21:00",
+     "surface_c": 9.2,
+     "air_c": 9.2
+    },
+    {
+     "t": "22:00",
      "surface_c": 9.4,
      "air_c": 9.4
     },
     {
-     "t": "22:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
-    },
-    {
      "t": "23:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
+     "surface_c": 9.5,
+     "air_c": 9.5
     },
     {
      "t": "00:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "01:00",
@@ -2173,38 +2173,38 @@
     },
     {
      "t": "02:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "03:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
-    },
-    {
-     "t": "04:00",
      "surface_c": 10.9,
      "air_c": 10.9
     },
     {
-     "t": "05:00",
+     "t": "04:00",
      "surface_c": 11.0,
      "air_c": 11.0
     },
     {
+     "t": "05:00",
+     "surface_c": 10.9,
+     "air_c": 10.9
+    },
+    {
      "t": "06:00",
-     "surface_c": 10.1,
-     "air_c": 10.1
+     "surface_c": 9.8,
+     "air_c": 9.8
     },
     {
      "t": "07:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "08:00",
-     "surface_c": 8.6,
-     "air_c": 8.6
+     "surface_c": 8.2,
+     "air_c": 8.2
     }
    ]
   },
@@ -2219,9 +2219,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.7,
-   "air_min_c": 7.7,
-   "precip_mm": 32.9,
+   "surface_min_c": 7.6,
+   "air_min_c": 7.6,
+   "precip_mm": 30.7,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2241,68 +2241,68 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.6,
-     "air_c": 8.6
+     "surface_c": 8.5,
+     "air_c": 8.5
     },
     {
      "t": "21:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "22:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "23:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "00:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "01:00",
-     "surface_c": 10.0,
-     "air_c": 10.0
+     "surface_c": 9.9,
+     "air_c": 9.9
     },
     {
      "t": "02:00",
+     "surface_c": 10.1,
+     "air_c": 10.1
+    },
+    {
+     "t": "03:00",
      "surface_c": 10.6,
      "air_c": 10.6
     },
     {
-     "t": "03:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
-    },
-    {
      "t": "04:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
+     "surface_c": 10.9,
+     "air_c": 10.9
     },
     {
      "t": "05:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 8.6,
+     "air_c": 8.6
     },
     {
      "t": "06:00",
-     "surface_c": 8.1,
-     "air_c": 8.1
+     "surface_c": 7.9,
+     "air_c": 7.9
     },
     {
      "t": "07:00",
-     "surface_c": 7.8,
-     "air_c": 7.8
+     "surface_c": 7.7,
+     "air_c": 7.7
     },
     {
      "t": "08:00",
-     "surface_c": 7.7,
-     "air_c": 7.7
+     "surface_c": 7.6,
+     "air_c": 7.6
     }
    ]
   },
@@ -2317,9 +2317,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.9,
-   "air_min_c": 7.9,
-   "precip_mm": 19.9,
+   "surface_min_c": 7.5,
+   "air_min_c": 7.5,
+   "precip_mm": 17.5,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2339,68 +2339,68 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "21:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "22:00",
-     "surface_c": 9.9,
-     "air_c": 9.9
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "23:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "00:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "01:00",
+     "surface_c": 10.4,
+     "air_c": 10.4
+    },
+    {
+     "t": "02:00",
+     "surface_c": 10.5,
+     "air_c": 10.5
+    },
+    {
+     "t": "03:00",
      "surface_c": 10.7,
      "air_c": 10.7
     },
     {
-     "t": "02:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
-    },
-    {
-     "t": "03:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
-    },
-    {
      "t": "04:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "05:00",
-     "surface_c": 8.7,
-     "air_c": 8.7
+     "surface_c": 8.4,
+     "air_c": 8.4
     },
     {
      "t": "06:00",
-     "surface_c": 8.2,
-     "air_c": 8.2
+     "surface_c": 8.1,
+     "air_c": 8.1
     },
     {
      "t": "07:00",
-     "surface_c": 8.0,
-     "air_c": 8.0
+     "surface_c": 7.7,
+     "air_c": 7.7
     },
     {
      "t": "08:00",
-     "surface_c": 7.9,
-     "air_c": 7.9
+     "surface_c": 7.5,
+     "air_c": 7.5
     }
    ]
   },
@@ -2415,9 +2415,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.4,
-   "air_min_c": 8.4,
-   "precip_mm": 14.5,
+   "surface_min_c": 8.0,
+   "air_min_c": 8.0,
+   "precip_mm": 9.2,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2437,53 +2437,53 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.9,
-     "air_c": 8.9
+     "surface_c": 8.8,
+     "air_c": 8.8
     },
     {
      "t": "21:00",
+     "surface_c": 9.2,
+     "air_c": 9.2
+    },
+    {
+     "t": "22:00",
      "surface_c": 9.3,
      "air_c": 9.3
     },
     {
-     "t": "22:00",
+     "t": "23:00",
+     "surface_c": 9.2,
+     "air_c": 9.2
+    },
+    {
+     "t": "00:00",
      "surface_c": 9.4,
      "air_c": 9.4
     },
     {
-     "t": "23:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
-    },
-    {
-     "t": "00:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
-    },
-    {
      "t": "01:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "02:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "03:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
-    },
-    {
-     "t": "04:00",
      "surface_c": 10.7,
      "air_c": 10.7
     },
     {
-     "t": "05:00",
+     "t": "04:00",
      "surface_c": 10.8,
      "air_c": 10.8
+    },
+    {
+     "t": "05:00",
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "06:00",
@@ -2492,13 +2492,13 @@
     },
     {
      "t": "07:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.2,
+     "air_c": 8.2
     },
     {
      "t": "08:00",
-     "surface_c": 8.7,
-     "air_c": 8.7
+     "surface_c": 8.0,
+     "air_c": 8.0
     }
    ]
   },
@@ -2513,9 +2513,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.5,
-   "air_min_c": 8.5,
-   "precip_mm": 11.9,
+   "surface_min_c": 7.9,
+   "air_min_c": 7.9,
+   "precip_mm": 8.3,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2535,23 +2535,23 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "21:00",
+     "surface_c": 9.4,
+     "air_c": 9.4
+    },
+    {
+     "t": "22:00",
      "surface_c": 9.5,
      "air_c": 9.5
     },
     {
-     "t": "22:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
-    },
-    {
      "t": "23:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "00:00",
@@ -2560,43 +2560,43 @@
     },
     {
      "t": "01:00",
-     "surface_c": 10.4,
-     "air_c": 10.4
+     "surface_c": 10.2,
+     "air_c": 10.2
     },
     {
      "t": "02:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.7,
+     "air_c": 10.7
     },
     {
      "t": "03:00",
+     "surface_c": 11.0,
+     "air_c": 11.0
+    },
+    {
+     "t": "04:00",
      "surface_c": 11.1,
      "air_c": 11.1
     },
     {
-     "t": "04:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
-    },
-    {
      "t": "05:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 11.0,
+     "air_c": 11.0
     },
     {
      "t": "06:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "07:00",
-     "surface_c": 8.7,
-     "air_c": 8.7
+     "surface_c": 8.3,
+     "air_c": 8.3
     },
     {
      "t": "08:00",
-     "surface_c": 8.5,
-     "air_c": 8.5
+     "surface_c": 7.9,
+     "air_c": 7.9
     }
    ]
   },
@@ -2613,7 +2613,7 @@
    "review": false,
    "surface_min_c": 8.7,
    "air_min_c": 8.7,
-   "precip_mm": 11.7,
+   "precip_mm": 14.6,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2633,48 +2633,48 @@
     },
     {
      "t": "20:00",
+     "surface_c": 9.2,
+     "air_c": 9.2
+    },
+    {
+     "t": "21:00",
      "surface_c": 9.3,
      "air_c": 9.3
     },
     {
-     "t": "21:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
-    },
-    {
      "t": "22:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "23:00",
-     "surface_c": 9.7,
-     "air_c": 9.7
+     "surface_c": 9.6,
+     "air_c": 9.6
     },
     {
      "t": "00:00",
-     "surface_c": 10.0,
-     "air_c": 10.0
+     "surface_c": 9.8,
+     "air_c": 9.8
     },
     {
      "t": "01:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.3,
+     "air_c": 10.3
     },
     {
      "t": "02:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "03:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.8,
+     "air_c": 10.8
     },
     {
      "t": "04:00",
-     "surface_c": 11.1,
-     "air_c": 11.1
+     "surface_c": 11.0,
+     "air_c": 11.0
     },
     {
      "t": "05:00",
@@ -2683,18 +2683,18 @@
     },
     {
      "t": "06:00",
-     "surface_c": 11.1,
-     "air_c": 11.1
+     "surface_c": 11.2,
+     "air_c": 11.2
     },
     {
      "t": "07:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
+     "surface_c": 10.7,
+     "air_c": 10.7
     },
     {
      "t": "08:00",
-     "surface_c": 10.1,
-     "air_c": 10.1
+     "surface_c": 9.6,
+     "air_c": 9.6
     }
    ]
   },
@@ -2711,7 +2711,7 @@
    "review": false,
    "surface_min_c": 8.1,
    "air_min_c": 8.1,
-   "precip_mm": 17.4,
+   "precip_mm": 14.0,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2731,38 +2731,38 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.7,
-     "air_c": 8.7
+     "surface_c": 8.6,
+     "air_c": 8.6
     },
     {
      "t": "21:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "22:00",
+     "surface_c": 9.0,
+     "air_c": 9.0
+    },
+    {
+     "t": "23:00",
      "surface_c": 9.1,
      "air_c": 9.1
     },
     {
-     "t": "23:00",
-     "surface_c": 9.2,
-     "air_c": 9.2
-    },
-    {
      "t": "00:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "01:00",
-     "surface_c": 10.0,
-     "air_c": 10.0
+     "surface_c": 9.8,
+     "air_c": 9.8
     },
     {
      "t": "02:00",
-     "surface_c": 10.3,
-     "air_c": 10.3
+     "surface_c": 10.2,
+     "air_c": 10.2
     },
     {
      "t": "03:00",
@@ -2786,13 +2786,13 @@
     },
     {
      "t": "07:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.3,
+     "air_c": 10.3
     },
     {
      "t": "08:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.0,
+     "air_c": 9.0
     }
    ]
   },
@@ -2807,9 +2807,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.6,
-   "air_min_c": 7.6,
-   "precip_mm": 15.1,
+   "surface_min_c": 7.4,
+   "air_min_c": 7.4,
+   "precip_mm": 12.0,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2834,33 +2834,33 @@
     },
     {
      "t": "21:00",
-     "surface_c": 9.2,
-     "air_c": 9.2
+     "surface_c": 9.1,
+     "air_c": 9.1
     },
     {
      "t": "22:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "23:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "00:00",
-     "surface_c": 9.6,
-     "air_c": 9.6
+     "surface_c": 9.5,
+     "air_c": 9.5
     },
     {
      "t": "01:00",
-     "surface_c": 10.2,
-     "air_c": 10.2
+     "surface_c": 10.1,
+     "air_c": 10.1
     },
     {
      "t": "02:00",
-     "surface_c": 10.8,
-     "air_c": 10.8
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "03:00",
@@ -2874,23 +2874,23 @@
     },
     {
      "t": "05:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.4,
+     "air_c": 10.4
     },
     {
      "t": "06:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.6,
+     "air_c": 10.6
     },
     {
      "t": "07:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 8.3,
+     "air_c": 8.3
     },
     {
      "t": "08:00",
-     "surface_c": 7.6,
-     "air_c": 7.6
+     "surface_c": 7.4,
+     "air_c": 7.4
     }
    ]
   },
@@ -2905,9 +2905,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.9,
-   "air_min_c": 7.9,
-   "precip_mm": 13.1,
+   "surface_min_c": 7.5,
+   "air_min_c": 7.5,
+   "precip_mm": 8.8,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -2927,38 +2927,38 @@
     },
     {
      "t": "20:00",
-     "surface_c": 8.8,
-     "air_c": 8.8
+     "surface_c": 8.7,
+     "air_c": 8.7
     },
     {
      "t": "21:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "22:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "23:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "00:00",
-     "surface_c": 9.4,
-     "air_c": 9.4
+     "surface_c": 9.3,
+     "air_c": 9.3
     },
     {
      "t": "01:00",
-     "surface_c": 10.1,
-     "air_c": 10.1
+     "surface_c": 9.9,
+     "air_c": 9.9
     },
     {
      "t": "02:00",
-     "surface_c": 10.4,
-     "air_c": 10.4
+     "surface_c": 10.3,
+     "air_c": 10.3
     },
     {
      "t": "03:00",
@@ -2967,28 +2967,28 @@
     },
     {
      "t": "04:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
-    },
-    {
-     "t": "05:00",
      "surface_c": 10.6,
      "air_c": 10.6
     },
     {
+     "t": "05:00",
+     "surface_c": 10.3,
+     "air_c": 10.3
+    },
+    {
      "t": "06:00",
-     "surface_c": 10.7,
-     "air_c": 10.7
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "07:00",
-     "surface_c": 9.3,
-     "air_c": 9.3
+     "surface_c": 8.3,
+     "air_c": 8.3
     },
     {
      "t": "08:00",
-     "surface_c": 7.9,
-     "air_c": 7.9
+     "surface_c": 7.5,
+     "air_c": 7.5
     }
    ]
   },
@@ -3003,9 +3003,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 7.8,
-   "air_min_c": 7.8,
-   "precip_mm": 10.3,
+   "surface_min_c": 7.5,
+   "air_min_c": 7.5,
+   "precip_mm": 8.5,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -3025,18 +3025,18 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.0,
-     "air_c": 9.0
+     "surface_c": 8.9,
+     "air_c": 8.9
     },
     {
      "t": "21:00",
-     "surface_c": 9.2,
-     "air_c": 9.2
+     "surface_c": 9.1,
+     "air_c": 9.1
     },
     {
      "t": "22:00",
-     "surface_c": 9.8,
-     "air_c": 9.8
+     "surface_c": 9.7,
+     "air_c": 9.7
     },
     {
      "t": "23:00",
@@ -3045,48 +3045,48 @@
     },
     {
      "t": "00:00",
-     "surface_c": 9.9,
-     "air_c": 9.9
+     "surface_c": 10.0,
+     "air_c": 10.0
     },
     {
      "t": "01:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.7,
+     "air_c": 10.7
     },
     {
      "t": "02:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.8,
+     "air_c": 10.8
     },
     {
      "t": "03:00",
-     "surface_c": 11.1,
-     "air_c": 11.1
-    },
-    {
-     "t": "04:00",
-     "surface_c": 11.1,
-     "air_c": 11.1
-    },
-    {
-     "t": "05:00",
      "surface_c": 11.0,
      "air_c": 11.0
     },
     {
+     "t": "04:00",
+     "surface_c": 11.0,
+     "air_c": 11.0
+    },
+    {
+     "t": "05:00",
+     "surface_c": 10.8,
+     "air_c": 10.8
+    },
+    {
      "t": "06:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 8.3,
+     "air_c": 8.3
     },
     {
      "t": "07:00",
-     "surface_c": 7.9,
-     "air_c": 7.9
+     "surface_c": 7.5,
+     "air_c": 7.5
     },
     {
      "t": "08:00",
-     "surface_c": 7.8,
-     "air_c": 7.8
+     "surface_c": 7.5,
+     "air_c": 7.5
     }
    ]
   },
@@ -3101,9 +3101,9 @@
    "rules_status": "NO-GO",
    "model_prob": 0.0,
    "review": false,
-   "surface_min_c": 8.6,
-   "air_min_c": 8.6,
-   "precip_mm": 11.9,
+   "surface_min_c": 8.0,
+   "air_min_c": 8.0,
+   "precip_mm": 8.3,
    "ice_onset": null,
    "depart": null,
    "depart_is_now": false,
@@ -3123,23 +3123,23 @@
     },
     {
      "t": "20:00",
-     "surface_c": 9.1,
-     "air_c": 9.1
+     "surface_c": 9.0,
+     "air_c": 9.0
     },
     {
      "t": "21:00",
+     "surface_c": 9.5,
+     "air_c": 9.5
+    },
+    {
+     "t": "22:00",
      "surface_c": 9.6,
      "air_c": 9.6
     },
     {
-     "t": "22:00",
-     "surface_c": 9.7,
-     "air_c": 9.7
-    },
-    {
      "t": "23:00",
-     "surface_c": 9.5,
-     "air_c": 9.5
+     "surface_c": 9.4,
+     "air_c": 9.4
     },
     {
      "t": "00:00",
@@ -3148,43 +3148,43 @@
     },
     {
      "t": "01:00",
-     "surface_c": 10.5,
-     "air_c": 10.5
+     "surface_c": 10.3,
+     "air_c": 10.3
     },
     {
      "t": "02:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
+     "surface_c": 10.8,
+     "air_c": 10.8
     },
     {
      "t": "03:00",
+     "surface_c": 11.1,
+     "air_c": 11.1
+    },
+    {
+     "t": "04:00",
      "surface_c": 11.2,
      "air_c": 11.2
     },
     {
-     "t": "04:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
-    },
-    {
      "t": "05:00",
-     "surface_c": 11.0,
-     "air_c": 11.0
+     "surface_c": 11.1,
+     "air_c": 11.1
     },
     {
      "t": "06:00",
-     "surface_c": 10.9,
-     "air_c": 10.9
+     "surface_c": 10.5,
+     "air_c": 10.5
     },
     {
      "t": "07:00",
-     "surface_c": 8.8,
-     "air_c": 8.8
+     "surface_c": 8.4,
+     "air_c": 8.4
     },
     {
      "t": "08:00",
-     "surface_c": 8.6,
-     "air_c": 8.6
+     "surface_c": 8.0,
+     "air_c": 8.0
     }
    ]
   }
@@ -3208,7 +3208,7 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-24T00:26:33Z",
+   "fetched_at": "2026-11-24T01:48:32Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {
