@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-27T21:41:56Z",
- "decision_time_local": "2026-11-27T21:41:56",
+ "generated_at": "2026-11-27T22:51:45Z",
+ "decision_time_local": "2026-11-27T22:51:45",
  "night": {
   "from": "2026-11-27 18:00:00",
   "to": "2026-11-28 08:00:00"
@@ -50,9 +50,9 @@
  "trucks": [
   {
    "truck": 1,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "00:02",
+   "finish": "01:17",
    "km": 25.4,
    "run_min": 137,
    "stops": [
@@ -62,10 +62,10 @@
      "priority": 1,
      "status": "GO",
      "km": 9.1,
-     "start": "22:28",
-     "end": "22:55",
+     "start": "23:43",
+     "end": "00:10",
      "ice_onset": "18:00",
-     "slack_min": -296,
+     "slack_min": -371,
      "drive_min": 13,
      "late": true
     },
@@ -75,10 +75,10 @@
      "priority": 2,
      "status": "GO",
      "km": 16.3,
-     "start": "23:13",
-     "end": "00:02",
+     "start": "00:28",
+     "end": "01:17",
      "ice_onset": "19:00",
-     "slack_min": -303,
+     "slack_min": -378,
      "drive_min": 18,
      "late": true
     }
@@ -86,9 +86,9 @@
   },
   {
    "truck": 2,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "00:21",
+   "finish": "01:36",
    "km": 30.4,
    "run_min": 156,
    "stops": [
@@ -98,10 +98,10 @@
      "priority": 2,
      "status": "GO",
      "km": 2.1,
-     "start": "22:17",
-     "end": "22:23",
+     "start": "23:32",
+     "end": "23:38",
      "ice_onset": "18:00",
-     "slack_min": -264,
+     "slack_min": -339,
      "drive_min": 3,
      "late": true
     },
@@ -111,10 +111,10 @@
      "priority": 1,
      "status": "GO",
      "km": 28.3,
-     "start": "22:56",
-     "end": "00:21",
+     "start": "00:11",
+     "end": "01:36",
      "ice_onset": "19:00",
-     "slack_min": -322,
+     "slack_min": -397,
      "drive_min": 33,
      "late": true
     }
@@ -122,9 +122,9 @@
   },
   {
    "truck": 3,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "23:47",
+   "finish": "01:02",
    "km": 25.1,
    "run_min": 122,
    "stops": [
@@ -134,10 +134,10 @@
      "priority": 2,
      "status": "GO",
      "km": 25.1,
-     "start": "22:31",
-     "end": "23:47",
+     "start": "23:46",
+     "end": "01:02",
      "ice_onset": "18:00",
-     "slack_min": -348,
+     "slack_min": -423,
      "drive_min": 17,
      "late": true
     }
@@ -145,9 +145,9 @@
   },
   {
    "truck": 4,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "23:51",
+   "finish": "01:06",
    "km": 18.1,
    "run_min": 127,
    "stops": [
@@ -157,10 +157,10 @@
      "priority": 2,
      "status": "GO",
      "km": 18.1,
-     "start": "22:57",
-     "end": "23:51",
+     "start": "00:12",
+     "end": "01:06",
      "ice_onset": "18:00",
-     "slack_min": -352,
+     "slack_min": -427,
      "drive_min": 42,
      "late": true
     }
@@ -168,9 +168,9 @@
   },
   {
    "truck": 5,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "23:40",
+   "finish": "00:55",
    "km": 8.2,
    "run_min": 116,
    "stops": [
@@ -180,10 +180,10 @@
      "priority": 2,
      "status": "GO",
      "km": 5.0,
-     "start": "22:43",
-     "end": "22:58",
+     "start": "23:58",
+     "end": "00:13",
      "ice_onset": "18:00",
-     "slack_min": -299,
+     "slack_min": -374,
      "drive_min": 28,
      "late": true
     },
@@ -193,10 +193,10 @@
      "priority": 2,
      "status": "GO",
      "km": 3.2,
-     "start": "23:30",
-     "end": "23:40",
+     "start": "00:45",
+     "end": "00:55",
      "ice_onset": "19:00",
-     "slack_min": -281,
+     "slack_min": -356,
      "drive_min": 33,
      "late": true
     }
@@ -204,9 +204,9 @@
   },
   {
    "truck": 6,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "00:51",
+   "finish": "02:06",
    "km": 23.3,
    "run_min": 186,
    "stops": [
@@ -216,10 +216,10 @@
      "priority": 2,
      "status": "GO",
      "km": 10.2,
-     "start": "22:46",
-     "end": "23:17",
+     "start": "00:01",
+     "end": "00:32",
      "ice_onset": "18:00",
-     "slack_min": -318,
+     "slack_min": -393,
      "drive_min": 32,
      "late": true
     },
@@ -229,10 +229,10 @@
      "priority": 2,
      "status": "GO",
      "km": 13.1,
-     "start": "00:11",
-     "end": "00:51",
+     "start": "01:26",
+     "end": "02:06",
      "ice_onset": "19:00",
-     "slack_min": -352,
+     "slack_min": -427,
      "drive_min": 54,
      "late": true
     }
@@ -240,9 +240,9 @@
   },
   {
    "truck": 7,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "00:21",
+   "finish": "01:36",
    "km": 20.0,
    "run_min": 157,
    "stops": [
@@ -252,10 +252,10 @@
      "priority": 2,
      "status": "GO",
      "km": 7.1,
-     "start": "22:31",
-     "end": "22:52",
+     "start": "23:46",
+     "end": "00:07",
      "ice_onset": "18:00",
-     "slack_min": -293,
+     "slack_min": -368,
      "drive_min": 17,
      "late": true
     },
@@ -265,10 +265,10 @@
      "priority": 2,
      "status": "GO",
      "km": 12.9,
-     "start": "23:43",
-     "end": "00:21",
+     "start": "00:58",
+     "end": "01:36",
      "ice_onset": "18:00",
-     "slack_min": -382,
+     "slack_min": -457,
      "drive_min": 50,
      "late": true
     }
@@ -276,9 +276,9 @@
   },
   {
    "truck": 8,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "01:55",
+   "finish": "03:10",
    "km": 59.8,
    "run_min": 251,
    "stops": [
@@ -288,10 +288,10 @@
      "priority": 2,
      "status": "GO",
      "km": 22.7,
-     "start": "22:25",
-     "end": "23:33",
+     "start": "23:40",
+     "end": "00:48",
      "ice_onset": "18:00",
-     "slack_min": -334,
+     "slack_min": -409,
      "drive_min": 11,
      "late": true
     },
@@ -301,10 +301,10 @@
      "priority": 2,
      "status": "MARGINAL",
      "km": 37.1,
-     "start": "00:04",
-     "end": "01:55",
+     "start": "01:19",
+     "end": "03:10",
      "ice_onset": "21:00",
-     "slack_min": -296,
+     "slack_min": -371,
      "drive_min": 30,
      "late": true
     }
@@ -312,9 +312,9 @@
   },
   {
    "truck": 9,
-   "leaves_yard": "22:15",
+   "leaves_yard": "23:30",
    "leave_now": true,
-   "finish": "00:31",
+   "finish": "01:46",
    "km": 24.9,
    "run_min": 166,
    "stops": [
@@ -324,10 +324,10 @@
      "priority": 2,
      "status": "GO",
      "km": 6.9,
-     "start": "22:52",
-     "end": "23:13",
+     "start": "00:07",
+     "end": "00:28",
      "ice_onset": "18:00",
-     "slack_min": -314,
+     "slack_min": -389,
      "drive_min": 38,
      "late": true
     },
@@ -337,10 +337,10 @@
      "priority": 2,
      "status": "GO",
      "km": 18.0,
-     "start": "23:37",
-     "end": "00:31",
+     "start": "00:52",
+     "end": "01:46",
      "ice_onset": "19:00",
-     "slack_min": -332,
+     "slack_min": -407,
      "drive_min": 24,
      "late": true
     }
@@ -356,14 +356,14 @@
   "trucks_used": 9,
   "trucks_available": 9,
   "n_late": 16,
-  "first_departure": "22:15",
+  "first_departure": "23:30",
   "first_route": "N54",
   "coldest_route": "N54",
   "coldest_ts": -2.4,
   "confidence": "HIGH"
  },
  "briefing": {
-  "text": "Hi there Duty Engineer. We are a GO tonight, which means treating 15 routes out of 26. We are using all 9 of our available trucks to get this done. The first truck leaves at 22:15 on the N54, which is also our coldest road with a surface temperature of -2.4 degrees. Just a heads up that 16 routes are showing as late, and our confidence is HIGH. As always, you have the final say.",
+  "text": "Hi there, \n\nWe are calling a GRIT TONIGHT, which means 15 of our 26 routes need gritting, using all 9 of our available trucks. The first truck leaves at 23:30 on the N54, which is also our coldest road with a surface temperature of -2.4 degrees. We have 16 routes showing as late right now. Our confidence in the forecast is HIGH, so we can trust the plan as it stands. As always, you have the final say.",
   "source": "llm",
   "detail": "gemini-3.5-flash-lite"
  },
@@ -383,11 +383,11 @@
    "air_min_c": -1.2,
    "precip_mm": 0.1,
    "ice_onset": "18:00",
-   "depart": "22:28",
+   "depart": "23:43",
    "depart_is_now": true,
    "truck": 1,
-   "treat_end": "22:55",
-   "slack_min": -296,
+   "treat_end": "00:10",
+   "slack_min": -371,
    "hourly": [
     {
      "t": "18:00",
@@ -481,11 +481,11 @@
    "air_min_c": 0.5,
    "precip_mm": 0.4,
    "ice_onset": "19:00",
-   "depart": "22:56",
+   "depart": "00:11",
    "depart_is_now": false,
    "truck": 2,
-   "treat_end": "00:21",
-   "slack_min": -322,
+   "treat_end": "01:36",
+   "slack_min": -397,
    "hourly": [
     {
      "t": "18:00",
@@ -579,11 +579,11 @@
    "air_min_c": 0.7,
    "precip_mm": 0.0,
    "ice_onset": "18:00",
-   "depart": "22:31",
+   "depart": "23:46",
    "depart_is_now": true,
    "truck": 3,
-   "treat_end": "23:47",
-   "slack_min": -348,
+   "treat_end": "01:02",
+   "slack_min": -423,
    "hourly": [
     {
      "t": "18:00",
@@ -677,11 +677,11 @@
    "air_min_c": 1.6,
    "precip_mm": 0.0,
    "ice_onset": "18:00",
-   "depart": "22:57",
+   "depart": "00:12",
    "depart_is_now": true,
    "truck": 4,
-   "treat_end": "23:51",
-   "slack_min": -352,
+   "treat_end": "01:06",
+   "slack_min": -427,
    "hourly": [
     {
      "t": "18:00",
@@ -775,11 +775,11 @@
    "air_min_c": 0.4,
    "precip_mm": 0.0,
    "ice_onset": "19:00",
-   "depart": "23:30",
+   "depart": "00:45",
    "depart_is_now": false,
    "truck": 5,
-   "treat_end": "23:40",
-   "slack_min": -281,
+   "treat_end": "00:55",
+   "slack_min": -356,
    "hourly": [
     {
      "t": "18:00",
@@ -873,11 +873,11 @@
    "air_min_c": -0.4,
    "precip_mm": 0.0,
    "ice_onset": "18:00",
-   "depart": "22:43",
+   "depart": "23:58",
    "depart_is_now": true,
    "truck": 5,
-   "treat_end": "22:58",
-   "slack_min": -299,
+   "treat_end": "00:13",
+   "slack_min": -374,
    "hourly": [
     {
      "t": "18:00",
@@ -971,11 +971,11 @@
    "air_min_c": -0.7,
    "precip_mm": 0.0,
    "ice_onset": "18:00",
-   "depart": "22:46",
+   "depart": "00:01",
    "depart_is_now": true,
    "truck": 6,
-   "treat_end": "23:17",
-   "slack_min": -318,
+   "treat_end": "00:32",
+   "slack_min": -393,
    "hourly": [
     {
      "t": "18:00",
@@ -1069,11 +1069,11 @@
    "air_min_c": -1.1,
    "precip_mm": 0.1,
    "ice_onset": "18:00",
-   "depart": "22:31",
+   "depart": "23:46",
    "depart_is_now": true,
    "truck": 7,
-   "treat_end": "22:52",
-   "slack_min": -293,
+   "treat_end": "00:07",
+   "slack_min": -368,
    "hourly": [
     {
      "t": "18:00",
@@ -1167,11 +1167,11 @@
    "air_min_c": 1.5,
    "precip_mm": 0.1,
    "ice_onset": "18:00",
-   "depart": "22:25",
+   "depart": "23:40",
    "depart_is_now": true,
    "truck": 8,
-   "treat_end": "23:33",
-   "slack_min": -334,
+   "treat_end": "00:48",
+   "slack_min": -409,
    "hourly": [
     {
      "t": "18:00",
@@ -1265,11 +1265,11 @@
    "air_min_c": 1.6,
    "precip_mm": 0.1,
    "ice_onset": "19:00",
-   "depart": "23:13",
+   "depart": "00:28",
    "depart_is_now": false,
    "truck": 1,
-   "treat_end": "00:02",
-   "slack_min": -303,
+   "treat_end": "01:17",
+   "slack_min": -378,
    "hourly": [
     {
      "t": "18:00",
@@ -1363,11 +1363,11 @@
    "air_min_c": 1.6,
    "precip_mm": 0.1,
    "ice_onset": "19:00",
-   "depart": "23:37",
+   "depart": "00:52",
    "depart_is_now": false,
    "truck": 9,
-   "treat_end": "00:31",
-   "slack_min": -332,
+   "treat_end": "01:46",
+   "slack_min": -407,
    "hourly": [
     {
      "t": "18:00",
@@ -1461,11 +1461,11 @@
    "air_min_c": 0.1,
    "precip_mm": 0.6,
    "ice_onset": "18:00",
-   "depart": "22:52",
+   "depart": "00:07",
    "depart_is_now": true,
    "truck": 9,
-   "treat_end": "23:13",
-   "slack_min": -314,
+   "treat_end": "00:28",
+   "slack_min": -389,
    "hourly": [
     {
      "t": "18:00",
@@ -1559,11 +1559,11 @@
    "air_min_c": 0.5,
    "precip_mm": 0.4,
    "ice_onset": "19:00",
-   "depart": "00:11",
+   "depart": "01:26",
    "depart_is_now": false,
    "truck": 6,
-   "treat_end": "00:51",
-   "slack_min": -352,
+   "treat_end": "02:06",
+   "slack_min": -427,
    "hourly": [
     {
      "t": "18:00",
@@ -1657,11 +1657,11 @@
    "air_min_c": 0.3,
    "precip_mm": 0.8,
    "ice_onset": "18:00",
-   "depart": "23:43",
+   "depart": "00:58",
    "depart_is_now": false,
    "truck": 7,
-   "treat_end": "00:21",
-   "slack_min": -382,
+   "treat_end": "01:36",
+   "slack_min": -457,
    "hourly": [
     {
      "t": "18:00",
@@ -1755,11 +1755,11 @@
    "air_min_c": -0.0,
    "precip_mm": 0.0,
    "ice_onset": "18:00",
-   "depart": "22:17",
+   "depart": "23:32",
    "depart_is_now": true,
    "truck": 2,
-   "treat_end": "22:23",
-   "slack_min": -264,
+   "treat_end": "23:38",
+   "slack_min": -339,
    "hourly": [
     {
      "t": "18:00",
@@ -2245,11 +2245,11 @@
    "air_min_c": 2.0,
    "precip_mm": 0.0,
    "ice_onset": "21:00",
-   "depart": "00:04",
+   "depart": "01:19",
    "depart_is_now": false,
    "truck": 8,
-   "treat_end": "01:55",
-   "slack_min": -296,
+   "treat_end": "03:10",
+   "slack_min": -371,
    "hourly": [
     {
      "t": "18:00",
@@ -3524,7 +3524,7 @@
   "S1": {
    "name": "Open-Meteo forecast API",
    "url": "https://api.open-meteo.com/v1/forecast",
-   "fetched_at": "2026-11-27T21:41:56Z",
+   "fetched_at": "2026-11-27T22:51:45Z",
    "what": "hourly air temp, dew point, precipitation, cloud, wind at 22 grid cells"
   },
   "S2": {
